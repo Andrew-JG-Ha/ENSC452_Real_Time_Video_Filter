@@ -1,0 +1,73 @@
+/*
+ * Real_Time_Video_Filter.h
+ *
+ * Main header file.
+ */
+
+#ifndef REAL_TIME_VIDEO_FILTER_H_
+#define REAL_TIME_VIDEO_FILTER_H_
+
+/* ---------------------------------------------------------------------------- *
+ * 								Header Files									*
+ * ---------------------------------------------------------------------------- */
+#include <stdio.h>
+#include <xil_io.h>
+#include <sleep.h>
+#include "xiicps.h"
+#include <xil_printf.h>
+#include <xparameters.h>
+#include "xgpio.h"
+#include "xuartps.h"
+#include "stdlib.h"
+
+#include "xscugic.h"
+#include "xil_exception.h"
+
+
+/* ---------------------------------------------------------------------------- *
+ * 							Custom IP Header Files								*
+ * ---------------------------------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------------------------------- *
+ * 							Prototype Functions									*
+ * ---------------------------------------------------------------------------- */
+void menu();
+unsigned char gpio_init();
+void BTN_Intr_Handler(void *baseaddr_p);
+int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
+int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+
+
+/* ---------------------------------------------------------------------------- *
+ * 						Redefinitions from xparameters.h 						*
+ * ---------------------------------------------------------------------------- */
+
+#define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
+
+#define BUTTON_SWITCH_BASE XPAR_GPIO_1_BASEADDR
+#define BUTTON_SWITCH_ID XPAR_GPIO_1_DEVICE_ID
+
+/* ---------------------------------------------------------------------------- *
+ * 							Define GPIO Channels								*
+ * ---------------------------------------------------------------------------- */
+#define BUTTON_CHANNEL 1
+#define SWITCH_CHANNEL 2
+
+/* ---------------------------------------------------------------------------- *
+ * 							Global Variables									*
+ * ---------------------------------------------------------------------------- */
+XIicPs Iic;
+XGpio BTNInst;
+XScuGic INTCInst;
+int btn_value;
+
+
+//Parameter Definitions
+#define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
+#define BTN_INT 			XGPIO_IR_CH1_MASK
+//#define INTC_DEVICE_ID 		XPAR_PS7_SCUGIC_0_DEVICE_ID
+//#define BTNS_DEVICE_ID		XPAR_AXI_GPIO_1_DEVICE_ID
+
+#endif /* REAL_TIME_VIDEO_FILTER_H_ */

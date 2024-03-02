@@ -1,0 +1,30 @@
+22:05:58 **** Incremental Build of configuration Debug for project Real_Time_Video_Filter ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/Real_Time_Video_Filter.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Real_Time_Video_Filter.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IS:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_wrapper/export/Real_Time_Video_Filter_wrapper/sw/Real_Time_Video_Filter_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/Real_Time_Video_Filter.d" -MT"src/Real_Time_Video_Filter.o" -o "src/Real_Time_Video_Filter.o" "../src/Real_Time_Video_Filter.c"
+'Finished building: ../src/Real_Time_Video_Filter.c'
+' '
+'Building file: ../src/ip_functions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ip_functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IS:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_wrapper/export/Real_Time_Video_Filter_wrapper/sw/Real_Time_Video_Filter_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/ip_functions.d" -MT"src/ip_functions.o" -o "src/ip_functions.o" "../src/ip_functions.c"
+'Finished building: ../src/ip_functions.c'
+' '
+'Building target: Real_Time_Video_Filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LS:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_wrapper/export/Real_Time_Video_Filter_wrapper/sw/Real_Time_Video_Filter_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "Real_Time_Video_Filter.elf"  ./src/Real_Time_Video_Filter.o ./src/ip_functions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Real_Time_Video_Filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Real_Time_Video_Filter.elf  |tee "Real_Time_Video_Filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27912	   1936	  22616	  52464	   ccf0	Real_Time_Video_Filter.elf
+'Finished building: Real_Time_Video_Filter.elf.size'
+' '
+
+22:06:00 Build Finished (took 1s.709ms)
+

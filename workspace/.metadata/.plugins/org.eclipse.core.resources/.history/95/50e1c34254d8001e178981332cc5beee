@@ -1,0 +1,100 @@
+/*
+ * Real_Time_Video_Filter.h
+ *
+ * Main header file.
+ */
+
+#ifndef REAL_TIME_VIDEO_FILTER_H_
+#define REAL_TIME_VIDEO_FILTER_H_
+
+/* ---------------------------------------------------------------------------- *
+ * 								Header Files									*
+ * ---------------------------------------------------------------------------- */
+#include <stdio.h>
+#include <xil_io.h>
+#include <sleep.h>
+#include "xiicps.h"
+#include <xil_printf.h>
+#include <xparameters.h>
+#include "xgpio.h"
+#include "xuartps.h"
+#include "stdlib.h"
+
+#include "xscugic.h"
+#include "xil_exception.h"
+
+#include "xtmrctr.h"
+
+
+/* ---------------------------------------------------------------------------- *
+ * 							Custom IP Header Files								*
+ * ---------------------------------------------------------------------------- */
+//#include "audio.h"
+
+/* ---------------------------------------------------------------------------- *
+ * 							Prototype Functions									*
+ * ---------------------------------------------------------------------------- */
+void menu();
+void audio_stream();
+void audio_record();
+void audio_playback();
+unsigned char gpio_init();
+void BTN_Intr_Handler(void *baseaddr_p);
+void TMR_Intr_Handler(void *baseaddr_p);
+int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
+int IntcInitFunction(u16 DeviceId, XTmrCtr *TmrInstancePtr, XGpio *GpioInstancePtr);
+
+
+/* ---------------------------------------------------------------------------- *
+ * 						Redefinitions from xparameters.h 						*
+ * ---------------------------------------------------------------------------- */
+
+#define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
+
+#define BUTTON_SWITCH_BASE XPAR_GPIO_1_BASEADDR
+#define BUTTON_SWITCH_ID XPAR_GPIO_1_DEVICE_ID
+
+/* ---------------------------------------------------------------------------- *
+ * 							Define GPIO Channels								*
+ * ---------------------------------------------------------------------------- */
+#define BUTTON_CHANNEL 1
+#define SWITCH_CHANNEL 2
+
+/* ---------------------------------------------------------------------------- *
+ * 							Audio Scaling Factor								*
+ * ---------------------------------------------------------------------------- */
+#define SCALE 6
+
+/* ---------------------------------------------------------------------------- *
+ * 							Global Variables									*
+ * ---------------------------------------------------------------------------- */
+XIicPs Iic;
+XGpio BTNInst;
+XScuGic INTCInst;
+XTmrCtr TMRInst;
+int btn_value;
+int tmr_count;
+int recording;
+int playback;
+u32* audioArray;
+u32* audioUpperBound;
+u32* audioEnd;
+int PLAYBACK_RATE;
+int ind;
+int slowed;
+int counter;
+
+
+//Parameter Definitions
+#define INTC_DEVICE_ID 		XPAR_PS7_SCUGIC_0_DEVICE_ID
+#define BTNS_DEVICE_ID		XPAR_AXI_GPIO_1_DEVICE_ID
+#define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
+#define INTC_TMR_INTERRUPT_ID XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
+#define TMR_DEVICE_ID		XPAR_TMRCTR_0_DEVICE_ID
+//#define INTC_GPIO_INTERRUPT_ID 61U
+#define BTN_INT 			XGPIO_IR_CH1_MASK
+//#define TMR_LOAD	0xFFFFF5D2
+#define TMR_LOAD			0xFFFFFDF6
+#define NUM_SECONDS 10
+
+#endif /* REAL_TIME_VIDEO_FILTER_H_ */

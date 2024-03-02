@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x0",
+      "boundary_crc": "0x2C4E292F9E4AE7E",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter",
       "name": "Real_Time_Video_Filter",
@@ -13,7 +13,9 @@
       "processing_system7_0": "",
       "axi_gpio_0": "",
       "ps7_0_axi_periph": {
-        "s00_couplers": {}
+        "s00_couplers": {
+          "auto_pc": ""
+        }
       },
       "rst_ps7_0_100M": "",
       "RGB_to_RGBX_0": ""
@@ -1092,11 +1094,55 @@
                 "direction": "I"
               }
             },
+            "components": {
+              "auto_pc": {
+                "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
+                "xci_name": "Real_Time_Video_Filter_auto_pc_0",
+                "xci_path": "ip\\Real_Time_Video_Filter_auto_pc_0\\Real_Time_Video_Filter_auto_pc_0.xci",
+                "inst_hier_path": "ps7_0_axi_periph/s00_couplers/auto_pc",
+                "parameters": {
+                  "MI_PROTOCOL": {
+                    "value": "AXI4LITE"
+                  },
+                  "SI_PROTOCOL": {
+                    "value": "AXI3"
+                  }
+                },
+                "interface_ports": {
+                  "S_AXI": {
+                    "mode": "Slave",
+                    "bridges": [
+                      "M_AXI"
+                    ]
+                  }
+                }
+              }
+            },
             "interface_nets": {
-              "s00_couplers_to_s00_couplers": {
+              "auto_pc_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
+                ]
+              },
+              "s00_couplers_to_auto_pc": {
                 "interface_ports": [
                   "S_AXI",
-                  "M_AXI"
+                  "auto_pc/S_AXI"
+                ]
+              }
+            },
+            "nets": {
+              "S_ACLK_1": {
+                "ports": [
+                  "S_ACLK",
+                  "auto_pc/aclk"
+                ]
+              },
+              "S_ARESETN_1": {
+                "ports": [
+                  "S_ARESETN",
+                  "auto_pc/aresetn"
                 ]
               }
             }
@@ -1151,8 +1197,8 @@
       },
       "RGB_to_RGBX_0": {
         "vlnv": "ShakeebZacky:user:RGB_to_RGBX:1.0",
-        "xci_name": "Real_Time_Video_Filter_RGB_to_RGBX_0_1",
-        "xci_path": "ip\\Real_Time_Video_Filter_RGB_to_RGBX_0_1\\Real_Time_Video_Filter_RGB_to_RGBX_0_1.xci",
+        "xci_name": "Real_Time_Video_Filter_RGB_to_RGBX_0_2",
+        "xci_path": "ip\\Real_Time_Video_Filter_RGB_to_RGBX_0_2\\Real_Time_Video_Filter_RGB_to_RGBX_0_2.xci",
         "inst_hier_path": "RGB_to_RGBX_0"
       }
     },

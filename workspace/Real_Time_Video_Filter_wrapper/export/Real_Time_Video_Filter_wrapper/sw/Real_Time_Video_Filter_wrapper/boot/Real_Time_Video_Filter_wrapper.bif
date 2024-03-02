@@ -1,0 +1,7 @@
+/*Real_Time_Video_Filter_wrapper*/
+the_ROM_image:
+{
+  [bootloader]<Real_Time_Video_Filter_wrapper/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

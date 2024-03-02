@@ -38,6 +38,7 @@ architecture Simulation of RGB_to_RGBX_tb is
 
 signal r, g, b, out_r, out_g, out_b, out_x : std_logic_vector(3 DOWNTO 0) := (others => '0');
 signal clock : std_logic := '0';
+signal v, w, v_out, w_out : std_logic := '0';
 constant clock_period : time := 2 ns;
 
 begin
@@ -67,11 +68,14 @@ DUT : entity work.RGB_to_RGBX(Behavioral)
     G_in => g,
     B_in => b,
     clk => clock,
+    writeEnable_in => w,
+    vsync_in => v,
     R_out => out_r,
     G_out => out_g,
     B_out => out_b,
-    X_out => out_x
+    X_out => out_x,
+    vsync_out => v_out,
+    writeEnable_out => w_out
     );
-
 
 end Simulation;
