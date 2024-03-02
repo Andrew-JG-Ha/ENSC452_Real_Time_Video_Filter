@@ -1,0 +1,136 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Mar  1 18:23:55 2024
+# Process ID: 21288
+# Current directory: S:/Documents/GitHub/Real_Time_Video_Filter
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13592 S:\Documents\GitHub\Real_Time_Video_Filter\Real_Time_Video_Filter.xpr
+# Log file: S:/Documents/GitHub/Real_Time_Video_Filter/vivado.log
+# Journal file: S:/Documents/GitHub/Real_Time_Video_Filter\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.xpr
+INFO: [Project 1-313] Project file moved from 'A:/Documents/School/ENSC452/Real_Time_Video_Filter' since last save.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1', nor could it be found using path 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1'.
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files', nor could it be found using path 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'S:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 982.605 ; gain = 0.000
+create_bd_design "Real_Time_Video_Filter"
+Wrote  : <S:\Documents\GitHub\Real_Time_Video_Filter\Real_Time_Video_Filter.srcs\sources_1\bd\Real_Time_Video_Filter\Real_Time_Video_Filter.bd> 
+create_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 982.605 ; gain = 0.000
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_gpio_0/S_AXI]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Slave segment '/axi_gpio_0/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4120_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {btns_5bits ( Push buttons ) } Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_0/GPIO]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /axi_gpio_0]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE btns_5bits [get_bd_cells /axi_gpio_0]
+INFO: [BoardRule 102-8] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 btns_5bits
+INFO: [BoardRule 102-9] connect_bd_intf_net /btns_5bits /axi_gpio_0/GPIO
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:11.0 microblaze_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {0} axi_periph {Enabled} cache {8KB} clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} cores {1} debug_module {Debug Only} ecc {None} local_mem {8KB} preset {None}}  [get_bd_cells microblaze_0]
+undo
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {0} axi_periph {Enabled} cache {8KB} clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} cores {1} debug_module {Debug Only} ecc {None} local_mem {8KB} preset {None}}  [get_bd_cells microblaze_0]'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:11.0 microblaze_0'
+INFO: [Common 17-17] undo 'startgroup'
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_1
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+delete_bd_objs [get_bd_cells processing_system7_1]
+startgroup
+set_property -dict [list CONFIG.C_INTERRUPT_PRESENT {1}] [get_bd_cells axi_gpio_0]
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_USE_FABRIC_INTERRUPT {1} CONFIG.PCW_IRQ_F2P_INTR {1}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_1
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_1]
+connect_bd_net [get_bd_pins axi_gpio_0/ip2intc_irpt] [get_bd_pins processing_system7_0/IRQ_F2P]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_1/M_AXI_GP0} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins processing_system7_1/M_AXI_GP0]
+Slave segment '/axi_gpio_0/S_AXI/Reg' is being assigned into address space '/processing_system7_1/Data' at <0x4120_0000 [ 64K ]>.
+regenerate_bd_layout
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+undo
+INFO: [Common 17-17] undo 'regenerate_bd_layout'
+undo
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_1/M_AXI_GP0} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins processing_system7_1/M_AXI_GP0]'
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins axi_gpio_0/ip2intc_irpt] [get_bd_pins processing_system7_0/IRQ_F2P]'
+undo
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_1]'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_1'
+INFO: [Common 17-17] undo 'startgroup'
+connect_bd_net [get_bd_pins axi_gpio_0/ip2intc_irpt] [get_bd_pins processing_system7_0/IRQ_F2P]
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+endgroup
+set_property  ip_repo_paths  S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 's:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files'.
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 's:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files'.
+update_ip_catalog -add_ip S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files/sfu.ca_user_RGB_to_RGBX_1.0.zip -repo_path s:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files
+INFO: [IP_Flow 19-949] Unzipped 'S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files/sfu.ca_user_RGB_to_RGBX_1.0.zip' into repository 's:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files'.
+INFO: [IP_Flow 19-725] Reloaded user IP repository 's:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files'
+startgroup
+create_bd_cell -type ip -vlnv ShakeebZacky:user:RGB_to_RGBX:1.0 RGB_to_RGBX_0
+endgroup
+set_property location {2 741 126} [get_bd_cells RGB_to_RGBX_0]
+regenerate_bd_layout
+delete_bd_objs [get_bd_cells RGB_to_RGBX_0]
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 's:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files'.
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: s:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files/sfu.ca_user_RGB_to_RGBX_1.0/component.xml. It will be created.
+set_property  ip_repo_paths  S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 's:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files'.
+update_ip_catalog -add_ip S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files/ShakeebZacky_user_RGB_to_RGBX_1.0.zip -repo_path s:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files
+INFO: [IP_Flow 19-949] Unzipped 'S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files/ShakeebZacky_user_RGB_to_RGBX_1.0.zip' into repository 's:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files'.
+INFO: [IP_Flow 19-725] Reloaded user IP repository 's:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files'
+startgroup
+create_bd_cell -type ip -vlnv ShakeebZacky:user:RGB_to_RGBX:1.0 RGB_to_RGBX_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins RGB_to_RGBX_0/clk]
+save_bd_design
+Wrote  : <S:\Documents\GitHub\Real_Time_Video_Filter\Real_Time_Video_Filter.srcs\sources_1\bd\Real_Time_Video_Filter\Real_Time_Video_Filter.bd> 
+Wrote  : <S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/sources_1/bd/Real_Time_Video_Filter/ui/bd_78f81c8d.ui> 
