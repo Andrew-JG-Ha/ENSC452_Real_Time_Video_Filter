@@ -1,2 +1,2 @@
-# ENSC452_Real_Time_Video_To_Cartoon
+# Real_Time_Video_To_Cartoon
 ENSC 452 Final Project 
