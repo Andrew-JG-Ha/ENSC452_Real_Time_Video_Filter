@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr  1 12:34:46 2024" VIVADOVERSION="2020.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr  1 16:26:37 2024" VIVADOVERSION="2020.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.4" DEVICE="7z020" NAME="Real_Time_Video_Filter" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -2428,7 +2428,7 @@
         <PARAMETER NAME="C_PRMRY_IS_ACLK_ASYNC" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_VIDPRMTR_READS" VALUE="1"/>
         <PARAMETER NAME="C_DYNAMIC_RESOLUTION" VALUE="1"/>
-        <PARAMETER NAME="C_NUM_FSTORES" VALUE="3"/>
+        <PARAMETER NAME="C_NUM_FSTORES" VALUE="2"/>
         <PARAMETER NAME="C_USE_FSYNC" VALUE="1"/>
         <PARAMETER NAME="C_USE_MM2S_FSYNC" VALUE="0"/>
         <PARAMETER NAME="C_USE_S2MM_FSYNC" VALUE="2"/>
@@ -2495,7 +2495,7 @@
         <PARAMETER NAME="c_include_s2mm_sf" VALUE="1"/>
         <PARAMETER NAME="c_include_mm2s_sf" VALUE="0"/>
         <PARAMETER NAME="c_enable_vidprmtr_reads" VALUE="1"/>
-        <PARAMETER NAME="c_num_fstores" VALUE="3"/>
+        <PARAMETER NAME="c_num_fstores" VALUE="2"/>
         <PARAMETER NAME="c_use_fsync" VALUE="1"/>
         <PARAMETER NAME="c_use_mm2s_fsync" VALUE="0"/>
         <PARAMETER NAME="c_use_s2mm_fsync" VALUE="2"/>
@@ -6258,12 +6258,12 @@
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="axi_resetn"/>
-            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ARESETN"/>
-            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ARESETN"/>
             <CONNECTION INSTANCE="vga_controller_0" PORT="rstn"/>
             <CONNECTION INSTANCE="vga_controller_0" PORT="pixel_rstn"/>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ARESETN"/>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ARESETN"/>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ARESETN"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

@@ -202,6 +202,7 @@ proc create_root_design { parentCell } {
    CONFIG.c_include_mm2s {0} \
    CONFIG.c_m_axi_s2mm_data_width {32} \
    CONFIG.c_mm2s_genlock_mode {0} \
+   CONFIG.c_num_fstores {2} \
    CONFIG.c_s2mm_linebuffer_depth {4096} \
    CONFIG.c_s2mm_max_burst_length {32} \
  ] $axi_vdma_0

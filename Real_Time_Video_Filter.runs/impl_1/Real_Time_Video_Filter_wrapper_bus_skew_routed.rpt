@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Mon Apr  1 12:37:28 2024
+| Date         : Mon Apr  1 16:28:56 2024
 | Host         : DESKTOP-QVBDF8G running 64-bit major release  (build 9200)
 | Command      : report_bus_skew -warn_on_violation -file Real_Time_Video_Filter_wrapper_bus_skew_routed.rpt -pb Real_Time_Video_Filter_wrapper_bus_skew_routed.pb -rpx Real_Time_Video_Filter_wrapper_bus_skew_routed.rpx
 | Design       : Real_Time_Video_Filter_wrapper
@@ -45,7 +45,7 @@ Id  Position  From                            To                              Co
           {Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
           {Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
           {Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
-                                                                              Slow             10.000       1.059      8.941
+                                                                              Slow             10.000       1.146      8.854
 2   19        [get_cells [list {Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]} \
           {Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[10]} \
           {Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[11]} \
@@ -70,7 +70,7 @@ Id  Position  From                            To                              Co
           {Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
           {Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
           {Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]}]]
-                                                                              Slow             10.000       1.087      8.913
+                                                                              Slow             10.000       1.137      8.863
 
 
 2. Bus Skew Report Per Constraint
@@ -107,27 +107,27 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_out100_Real_Time_Video_Filter_clk_wiz_0_0
                       clk_out25_Real_Time_Video_Filter_clk_wiz_0_0
-                                            Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
-                                                                            Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
-                                                                                                            Slow         1.059      8.941
+                                            Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                            Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]/D
+                                                                                                            Slow         1.146      8.854
 
 
-Slack (MET) :             8.941ns  (requirement - actual skew)
-  Endpoint Source:        Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]/C
+Slack (MET) :             8.854ns  (requirement - actual skew)
+  Endpoint Source:        Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by clk_out100_Real_Time_Video_Filter_clk_wiz_0_0)
-  Endpoint Destination:   Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
+  Endpoint Destination:   Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
                             (rising edge-triggered cell FDRE clocked by clk_out25_Real_Time_Video_Filter_clk_wiz_0_0)
-  Reference Source:       Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]/C
+  Reference Source:       Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[10]/C
                             (rising edge-triggered cell FDRE clocked by clk_out100_Real_Time_Video_Filter_clk_wiz_0_0)
-  Reference Destination:  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
+  Reference Destination:  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]/D
                             (rising edge-triggered cell FDRE clocked by clk_out25_Real_Time_Video_Filter_clk_wiz_0_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            10.000ns
-  Endpoint Relative Delay:    1.584ns
-  Reference Relative Delay:   0.163ns
-  Relative CRPR:              0.577ns
+  Endpoint Relative Delay:    1.785ns
+  Reference Relative Delay:   0.277ns
+  Relative CRPR:              0.576ns
   Uncertainty:                0.215ns
-  Actual Bus Skew:            1.059ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            1.146ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -140,12 +140,12 @@ Endpoint path:
                                                      -3.793    -1.987 r  Real_Time_Video_Filter_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.889    -0.098    Real_Time_Video_Filter_i/clk_wiz_0/inst/clk_out100_Real_Time_Video_Filter_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     0.003 r  Real_Time_Video_Filter_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2903, routed)        1.751     1.754    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X21Y41         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]/C
+                         net (fo=2832, routed)        1.655     1.658    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X32Y56         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X21Y41         FDRE (Prop_fdre_C_Q)         0.419     2.173 r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]/Q
-                         net (fo=1, routed)           0.598     2.771    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[5]
-    SLICE_X20Y41         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
+    SLICE_X32Y56         FDRE (Prop_fdre_C_Q)         0.478     2.136 r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.685     2.821    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[1]
+    SLICE_X33Y56         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out25_Real_Time_Video_Filter_clk_wiz_0_0 rise edge)
@@ -156,15 +156,15 @@ Endpoint path:
                                                      -3.425    -1.813 r  Real_Time_Video_Filter_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT2
                          net (fo=1, routed)           1.725    -0.088    Real_Time_Video_Filter_i/clk_wiz_0/inst/clk_out25_Real_Time_Video_Filter_clk_wiz_0_0
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.091     0.003 r  Real_Time_Video_Filter_i/clk_wiz_0/inst/clkout3_buf/O
-                         net (fo=178, routed)         1.575     1.578    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X20Y41         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/C
-                         clock pessimism             -0.174     1.404    
-    SLICE_X20Y41         FDRE (Setup_fdre_C_D)       -0.218     1.186    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]
+                         net (fo=178, routed)         1.482     1.485    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X33Y56         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism             -0.174     1.311    
+    SLICE_X33Y56         FDRE (Setup_fdre_C_D)       -0.274     1.037    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
   -------------------------------------------------------------------
-                         data arrival                           2.771    
-                         clock arrival                          1.186    
+                         data arrival                           2.821    
+                         clock arrival                          1.037    
   -------------------------------------------------------------------
-                         relative delay                         1.584    
+                         relative delay                         1.785    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -177,12 +177,12 @@ Reference path:
                                                      -3.425    -1.813 r  Real_Time_Video_Filter_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.725    -0.088    Real_Time_Video_Filter_i/clk_wiz_0/inst/clk_out100_Real_Time_Video_Filter_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     0.003 r  Real_Time_Video_Filter_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2903, routed)        1.577     1.580    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
-    SLICE_X15Y44         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]/C
+                         net (fo=2832, routed)        1.482     1.485    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_clk
+    SLICE_X34Y58         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[10]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X15Y44         FDRE (Prop_fdre_C_Q)         0.367     1.947 r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]/Q
-                         net (fo=1, routed)           0.378     2.325    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[8]
-    SLICE_X16Y44         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
+    SLICE_X34Y58         FDRE (Prop_fdre_C_Q)         0.418     1.903 r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[10]/Q
+                         net (fo=1, routed)           0.482     2.385    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/async_path[10]
+    SLICE_X30Y58         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out25_Real_Time_Video_Filter_clk_wiz_0_0 rise edge)
@@ -193,15 +193,15 @@ Reference path:
                                                      -3.793    -1.987 r  Real_Time_Video_Filter_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT2
                          net (fo=1, routed)           1.889    -0.098    Real_Time_Video_Filter_i/clk_wiz_0/inst/clk_out25_Real_Time_Video_Filter_clk_wiz_0_0
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.101     0.003 r  Real_Time_Video_Filter_i/clk_wiz_0/inst/clkout3_buf/O
-                         net (fo=178, routed)         1.753     1.756    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
-    SLICE_X16Y44         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/C
-                         clock pessimism              0.174     1.930    
-    SLICE_X16Y44         FDRE (Hold_fdre_C_D)         0.233     2.163    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]
+                         net (fo=178, routed)         1.701     1.704    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_clk
+    SLICE_X30Y58         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]/C
+                         clock pessimism              0.174     1.878    
+    SLICE_X30Y58         FDRE (Hold_fdre_C_D)         0.230     2.108    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]
   -------------------------------------------------------------------
-                         data arrival                           2.325    
-                         clock arrival                          2.163    
+                         data arrival                           2.385    
+                         clock arrival                          2.108    
   -------------------------------------------------------------------
-                         relative delay                         0.163    
+                         relative delay                         0.277    
 
 
 
@@ -236,27 +236,27 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_out25_Real_Time_Video_Filter_clk_wiz_0_0
                       clk_out100_Real_Time_Video_Filter_clk_wiz_0_0
-                                            Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][11]/D
-                                                                            Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
-                                                                                                            Slow         1.087      8.913
+                                            Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
+                                                                            Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
+                                                                                                            Slow         1.137      8.863
 
 
-Slack (MET) :             8.913ns  (requirement - actual skew)
-  Endpoint Source:        Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[11]/C
+Slack (MET) :             8.863ns  (requirement - actual skew)
+  Endpoint Source:        Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/C
                             (rising edge-triggered cell FDRE clocked by clk_out25_Real_Time_Video_Filter_clk_wiz_0_0)
-  Endpoint Destination:   Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][11]/D
+  Endpoint Destination:   Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
                             (rising edge-triggered cell FDRE clocked by clk_out100_Real_Time_Video_Filter_clk_wiz_0_0)
-  Reference Source:       Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+  Reference Source:       Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]/C
                             (rising edge-triggered cell FDRE clocked by clk_out25_Real_Time_Video_Filter_clk_wiz_0_0)
-  Reference Destination:  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+  Reference Destination:  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
                             (rising edge-triggered cell FDRE clocked by clk_out100_Real_Time_Video_Filter_clk_wiz_0_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            10.000ns
-  Endpoint Relative Delay:    1.655ns
-  Reference Relative Delay:   0.170ns
-  Relative CRPR:              0.613ns
+  Endpoint Relative Delay:    1.711ns
+  Reference Relative Delay:   0.212ns
+  Relative CRPR:              0.576ns
   Uncertainty:                0.215ns
-  Actual Bus Skew:            1.087ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            1.137ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -269,12 +269,12 @@ Endpoint path:
                                                      -3.793    -1.987 r  Real_Time_Video_Filter_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT2
                          net (fo=1, routed)           1.889    -0.098    Real_Time_Video_Filter_i/clk_wiz_0/inst/clk_out25_Real_Time_Video_Filter_clk_wiz_0_0
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.101     0.003 r  Real_Time_Video_Filter_i/clk_wiz_0/inst/clkout3_buf/O
-                         net (fo=178, routed)         1.752     1.755    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X21Y45         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[11]/C
+                         net (fo=178, routed)         1.654     1.657    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X34Y57         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X21Y45         FDRE (Prop_fdre_C_Q)         0.419     2.174 r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[11]/Q
-                         net (fo=1, routed)           0.619     2.793    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[11]
-    SLICE_X21Y47         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][11]/D
+    SLICE_X34Y57         FDRE (Prop_fdre_C_Q)         0.478     2.135 r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/Q
+                         net (fo=1, routed)           0.688     2.823    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[5]
+    SLICE_X31Y61         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out100_Real_Time_Video_Filter_clk_wiz_0_0 rise edge)
@@ -285,15 +285,15 @@ Endpoint path:
                                                      -3.425    -1.813 r  Real_Time_Video_Filter_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.725    -0.088    Real_Time_Video_Filter_i/clk_wiz_0/inst/clk_out100_Real_Time_Video_Filter_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     0.003 r  Real_Time_Video_Filter_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2903, routed)        1.577     1.580    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X21Y47         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][11]/C
-                         clock pessimism             -0.174     1.406    
-    SLICE_X21Y47         FDRE (Setup_fdre_C_D)       -0.268     1.138    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][11]
+                         net (fo=2832, routed)        1.525     1.528    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X31Y61         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/C
+                         clock pessimism             -0.174     1.354    
+    SLICE_X31Y61         FDRE (Setup_fdre_C_D)       -0.242     1.112    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]
   -------------------------------------------------------------------
-                         data arrival                           2.793    
-                         clock arrival                          1.138    
+                         data arrival                           2.823    
+                         clock arrival                          1.112    
   -------------------------------------------------------------------
-                         relative delay                         1.655    
+                         relative delay                         1.711    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -306,12 +306,12 @@ Reference path:
                                                      -3.425    -1.813 r  Real_Time_Video_Filter_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT2
                          net (fo=1, routed)           1.725    -0.088    Real_Time_Video_Filter_i/clk_wiz_0/inst/clk_out25_Real_Time_Video_Filter_clk_wiz_0_0
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.091     0.003 r  Real_Time_Video_Filter_i/clk_wiz_0/inst/clkout3_buf/O
-                         net (fo=178, routed)         1.576     1.579    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
-    SLICE_X21Y43         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+                         net (fo=178, routed)         1.478     1.481    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_clk
+    SLICE_X33Y62         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X21Y43         FDRE (Prop_fdre_C_Q)         0.367     1.946 r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/Q
-                         net (fo=1, routed)           0.380     2.326    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[1]
-    SLICE_X22Y43         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+    SLICE_X33Y62         FDRE (Prop_fdre_C_Q)         0.367     1.848 r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]/Q
+                         net (fo=1, routed)           0.422     2.270    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/async_path[8]
+    SLICE_X32Y62         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out100_Real_Time_Video_Filter_clk_wiz_0_0 rise edge)
@@ -322,15 +322,15 @@ Reference path:
                                                      -3.793    -1.987 r  Real_Time_Video_Filter_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.889    -0.098    Real_Time_Video_Filter_i/clk_wiz_0/inst/clk_out100_Real_Time_Video_Filter_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     0.003 r  Real_Time_Video_Filter_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2903, routed)        1.750     1.753    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
-    SLICE_X22Y43         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
-                         clock pessimism              0.174     1.927    
-    SLICE_X22Y43         FDRE (Hold_fdre_C_D)         0.230     2.157    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+                         net (fo=2832, routed)        1.651     1.654    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_clk
+    SLICE_X32Y62         FDRE                                         r  Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/C
+                         clock pessimism              0.174     1.828    
+    SLICE_X32Y62         FDRE (Hold_fdre_C_D)         0.230     2.058    Real_Time_Video_Filter_i/vga_controller_0/U0/fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]
   -------------------------------------------------------------------
-                         data arrival                           2.326    
-                         clock arrival                          2.157    
+                         data arrival                           2.270    
+                         clock arrival                          2.058    
   -------------------------------------------------------------------
-                         relative delay                         0.170    
+                         relative delay                         0.212    
 
 
 

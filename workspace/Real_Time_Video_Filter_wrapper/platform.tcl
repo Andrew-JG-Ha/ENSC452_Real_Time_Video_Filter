@@ -16,3 +16,9 @@ platform write
 platform generate -domains 
 platform active {Real_Time_Video_Filter_Wrapper}
 platform generate
+platform config -updatehw {A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter_wrapper.xsa}
+domain active {zynq_fsbl}
+bsp reload
+domain active {standalone_domain}
+bsp reload
+platform generate -domains 

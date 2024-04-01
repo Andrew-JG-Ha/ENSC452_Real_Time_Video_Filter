@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1712000094">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1712014001">
   <File Type="PA-TCL" Name="Real_Time_Video_Filter_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Real_Time_Video_Filter_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Real_Time_Video_Filter_wrapper_reports.tcl"/>
@@ -95,6 +95,4 @@
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_RGBX_AXI_Stream_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_vga_controller_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_rst_ps7_0_100M_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_auto_pc_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_auto_pc_0"/>
 </GenRun>

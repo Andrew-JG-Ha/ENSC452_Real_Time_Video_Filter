@@ -15,7 +15,7 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'a:/Documents/School/ENSC452/R
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.cache/ip 
-add_files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 999.199 ; gain = 0.000
+add_files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 999.246 ; gain = 0.000
 Command: synth_design -top Real_Time_Video_Filter_wrapper -part xc7z020clg484-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -23,60 +23,60 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 78572
+INFO: [Synth 8-7075] Helper process launched with PID 74072
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 999.199 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 999.246 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_wrapper' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/hdl/Real_Time_Video_Filter_wrapper.vhd:54]
 INFO: [Synth 8-3491] module 'Real_Time_Video_Filter' declared at 'a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:949' bound to instance 'Real_Time_Video_Filter_i' of component 'Real_Time_Video_Filter' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/hdl/Real_Time_Video_Filter_wrapper.vhd:95]
 INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:993]
-INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_RGBX_AXI_Stream_0_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_RGBX_AXI_Stream_0_0_stub.vhdl:5' bound to instance 'RGBX_AXI_Stream_0' of component 'Real_Time_Video_Filter_RGBX_AXI_Stream_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1601]
-INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_RGBX_AXI_Stream_0_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_RGBX_AXI_Stream_0_0_stub.vhdl:20]
-INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_RGB_to_RGBX_0_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_RGB_to_RGBX_0_0_stub.vhdl:5' bound to instance 'RGB_to_RGBX_0' of component 'Real_Time_Video_Filter_RGB_to_RGBX_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1613]
-INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_RGB_to_RGBX_0_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_RGB_to_RGBX_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_RGBX_AXI_Stream_0_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_RGBX_AXI_Stream_0_0_stub.vhdl:5' bound to instance 'RGBX_AXI_Stream_0' of component 'Real_Time_Video_Filter_RGBX_AXI_Stream_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1601]
+INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_RGBX_AXI_Stream_0_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_RGBX_AXI_Stream_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_RGB_to_RGBX_0_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_RGB_to_RGBX_0_0_stub.vhdl:5' bound to instance 'RGB_to_RGBX_0' of component 'Real_Time_Video_Filter_RGB_to_RGBX_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1613]
+INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_RGB_to_RGBX_0_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_RGB_to_RGBX_0_0_stub.vhdl:18]
 INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_axi_mem_intercon_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:576]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_FQG4EG' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:367]
-INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_auto_pc_1' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'Real_Time_Video_Filter_auto_pc_1' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:484]
-INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_auto_pc_1' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_auto_pc_1_stub.vhdl:50]
+INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_auto_pc_1' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'Real_Time_Video_Filter_auto_pc_1' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:484]
+INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_auto_pc_1' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_auto_pc_1_stub.vhdl:50]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_FQG4EG' (1#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:367]
 INFO: [Synth 8-256] done synthesizing module 'Real_Time_Video_Filter_axi_mem_intercon_0' (2#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:576]
-INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_axi_vdma_0_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_axi_vdma_0_0_stub.vhdl:5' bound to instance 'axi_vdma_0' of component 'Real_Time_Video_Filter_axi_vdma_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1666]
-INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_axi_vdma_0_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_axi_vdma_0_0_stub.vhdl:56]
-INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_clk_wiz_0_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'Real_Time_Video_Filter_clk_wiz_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1714]
-INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_clk_wiz_0_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_clk_wiz_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_ov7670_capture_0_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_ov7670_capture_0_0_stub.vhdl:5' bound to instance 'ov7670_capture_0' of component 'Real_Time_Video_Filter_ov7670_capture_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1721]
-INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_ov7670_capture_0_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_ov7670_capture_0_0_stub.vhdl:19]
-INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_ov7670_controller_0_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_ov7670_controller_0_0_stub.vhdl:5' bound to instance 'ov7670_controller_0' of component 'Real_Time_Video_Filter_ov7670_controller_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1732]
-INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_ov7670_controller_0_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_ov7670_controller_0_0_stub.vhdl:19]
-INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_processing_system7_0_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'Real_Time_Video_Filter_processing_system7_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1743]
-INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_processing_system7_0_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_processing_system7_0_0_stub.vhdl:169]
+INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_axi_vdma_0_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_axi_vdma_0_0_stub.vhdl:5' bound to instance 'axi_vdma_0' of component 'Real_Time_Video_Filter_axi_vdma_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1666]
+INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_axi_vdma_0_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_axi_vdma_0_0_stub.vhdl:56]
+INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_clk_wiz_0_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'Real_Time_Video_Filter_clk_wiz_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1714]
+INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_clk_wiz_0_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_clk_wiz_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_ov7670_capture_0_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_ov7670_capture_0_0_stub.vhdl:5' bound to instance 'ov7670_capture_0' of component 'Real_Time_Video_Filter_ov7670_capture_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1721]
+INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_ov7670_capture_0_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_ov7670_capture_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_ov7670_controller_0_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_ov7670_controller_0_0_stub.vhdl:5' bound to instance 'ov7670_controller_0' of component 'Real_Time_Video_Filter_ov7670_controller_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1732]
+INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_ov7670_controller_0_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_ov7670_controller_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_processing_system7_0_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'Real_Time_Video_Filter_processing_system7_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1743]
+INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_processing_system7_0_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_processing_system7_0_0_stub.vhdl:169]
 INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_ps7_0_axi_periph_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:765]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_19AEKTQ' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:77]
-INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_auto_pc_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'Real_Time_Video_Filter_auto_pc_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:257]
-INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_auto_pc_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_auto_pc_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'Real_Time_Video_Filter_auto_pc_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:257]
+INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_auto_pc_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_auto_pc_0_stub.vhdl:70]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_19AEKTQ' (3#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:77]
 INFO: [Synth 8-256] done synthesizing module 'Real_Time_Video_Filter_ps7_0_axi_periph_0' (4#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:765]
-INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_rst_ps7_0_100M_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_rst_ps7_0_100M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'Real_Time_Video_Filter_rst_ps7_0_100M_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1969]
-INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_rst_ps7_0_100M_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_rst_ps7_0_100M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_rst_ps7_0_100M_1_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_rst_ps7_0_100M_1_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M_1' of component 'Real_Time_Video_Filter_rst_ps7_0_100M_1_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1982]
-INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_rst_ps7_0_100M_1_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_rst_ps7_0_100M_1_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_vga_controller_0_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_vga_controller_0_0_stub.vhdl:5' bound to instance 'vga_controller_0' of component 'Real_Time_Video_Filter_vga_controller_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1995]
-INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_vga_controller_0_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-46484-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_vga_controller_0_0_stub.vhdl:64]
+INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_rst_ps7_0_100M_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_rst_ps7_0_100M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'Real_Time_Video_Filter_rst_ps7_0_100M_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1969]
+INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_rst_ps7_0_100M_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_rst_ps7_0_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_rst_ps7_0_100M_1_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_rst_ps7_0_100M_1_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M_1' of component 'Real_Time_Video_Filter_rst_ps7_0_100M_1_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1982]
+INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_rst_ps7_0_100M_1_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_rst_ps7_0_100M_1_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'Real_Time_Video_Filter_vga_controller_0_0' declared at 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_vga_controller_0_0_stub.vhdl:5' bound to instance 'vga_controller_0' of component 'Real_Time_Video_Filter_vga_controller_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:1995]
+INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_vga_controller_0_0' [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/.Xil/Vivado-98452-DESKTOP-QVBDF8G/realtime/Real_Time_Video_Filter_vga_controller_0_0_stub.vhdl:64]
 INFO: [Synth 8-256] done synthesizing module 'Real_Time_Video_Filter' (5#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/synth/Real_Time_Video_Filter.vhd:993]
 INFO: [Synth 8-256] done synthesizing module 'Real_Time_Video_Filter_wrapper' (6#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/hdl/Real_Time_Video_Filter_wrapper.vhd:54]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 999.199 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 999.246 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 999.199 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 999.246 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 999.199 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 999.246 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 999.199 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 999.246 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -119,20 +119,20 @@ Parsing XDC File [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_V
 Finished Parsing XDC File [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 999.199 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 999.246 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 999.199 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 999.246 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 999.199 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 999.246 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 999.199 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 999.246 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -413,10 +413,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for Real_Time_Video_Filter_i/axi_mem_
 Applied set_property KEEP_HIERARCHY = SOFT for Real_Time_Video_Filter_i/axi_mem_intercon. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Real_Time_Video_Filter_i/rst_ps7_0_100M_1. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 999.199 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 999.246 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 999.199 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 999.246 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -438,25 +438,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 999.199 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 999.246 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1000.461 ; gain = 1.262
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 999.246 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1000.824 ; gain = 1.625
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 999.246 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1019.910 ; gain = 20.711
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1013.375 ; gain = 14.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -474,37 +474,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1026.094 ; gain = 26.895
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1019.113 ; gain = 19.867
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1026.094 ; gain = 26.895
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1019.113 ; gain = 19.867
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1026.094 ; gain = 26.895
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1019.113 ; gain = 19.867
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1026.094 ; gain = 26.895
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1019.113 ; gain = 19.867
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1026.094 ; gain = 26.895
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1019.113 ; gain = 19.867
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1026.094 ; gain = 26.895
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1019.113 ; gain = 19.867
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -548,23 +548,23 @@ Report Cell Usage:
 |14    |OBUF                                               |    18|
 +------+---------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1026.094 ; gain = 26.895
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1019.113 ; gain = 19.867
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1026.094 ; gain = 26.895
-Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1026.094 ; gain = 26.895
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1019.113 ; gain = 19.867
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1019.113 ; gain = 19.867
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1026.094 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1031.211 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1038.242 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1035.594 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 53 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1038.242 ; gain = 39.043
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1035.594 ; gain = 36.348
 INFO: [Common 17-1381] The checkpoint 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/Real_Time_Video_Filter_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Real_Time_Video_Filter_wrapper_utilization_synth.rpt -pb Real_Time_Video_Filter_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr  1 12:36:26 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  1 16:27:54 2024...

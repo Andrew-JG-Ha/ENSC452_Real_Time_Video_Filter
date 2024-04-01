@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Mon Apr  1 12:34:58 2024
-# Process ID: 65224
+# Start of session at: Mon Apr  1 16:26:45 2024
+# Process ID: 65964
 # Current directory: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_axi_vdma_0_0_synth_1
 # Command line: vivado.exe -log Real_Time_Video_Filter_axi_vdma_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Real_Time_Video_Filter_axi_vdma_0_0.tcl
 # Log file: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_axi_vdma_0_0_synth_1/Real_Time_Video_Filter_axi_vdma_0_0.vds
@@ -22,9 +22,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 72180
+INFO: [Synth 8-7075] Helper process launched with PID 79300
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 1020.324 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1021.055 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_axi_vdma_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_axi_vdma_0_0/synth/Real_Time_Video_Filter_axi_vdma_0_0.vhd:109]
 	Parameter C_S_AXI_LITE_ADDR_WIDTH bound to: 9 - type: integer 
@@ -33,7 +33,7 @@ INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_axi_vdma_0_0' [a
 	Parameter C_PRMRY_IS_ACLK_ASYNC bound to: 1 - type: integer 
 	Parameter C_ENABLE_VIDPRMTR_READS bound to: 1 - type: integer 
 	Parameter C_DYNAMIC_RESOLUTION bound to: 1 - type: integer 
-	Parameter C_NUM_FSTORES bound to: 3 - type: integer 
+	Parameter C_NUM_FSTORES bound to: 2 - type: integer 
 	Parameter C_USE_FSYNC bound to: 1 - type: integer 
 	Parameter C_USE_MM2S_FSYNC bound to: 0 - type: integer 
 	Parameter C_USE_S2MM_FSYNC bound to: 2 - type: integer 
@@ -99,7 +99,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_vdma' [a:/Documents/School/ENSC452/
 	Parameter C_PRMRY_IS_ACLK_ASYNC bound to: 1 - type: integer 
 	Parameter C_ENABLE_VIDPRMTR_READS bound to: 1 - type: integer 
 	Parameter C_DYNAMIC_RESOLUTION bound to: 1 - type: integer 
-	Parameter C_NUM_FSTORES bound to: 3 - type: integer 
+	Parameter C_NUM_FSTORES bound to: 2 - type: integer 
 	Parameter C_USE_FSYNC bound to: 1 - type: integer 
 	Parameter C_USE_MM2S_FSYNC bound to: 0 - type: integer 
 	Parameter C_USE_S2MM_FSYNC bound to: 2 - type: integer 
@@ -405,8 +405,8 @@ INFO: [Synth 8-638] synthesizing module 'axi_vdma_reg_module' [a:/Documents/Scho
 	Parameter C_ENABLE_DEBUG_INFO_14 bound to: 1 - type: integer 
 	Parameter C_ENABLE_DEBUG_INFO_15 bound to: 1 - type: integer 
 	Parameter C_ENABLE_VERT_FLIP bound to: 0 - type: integer 
-	Parameter C_NUM_FSTORES bound to: 3 - type: integer 
-	Parameter C_NUM_FSTORES_64 bound to: 3 - type: integer 
+	Parameter C_NUM_FSTORES bound to: 2 - type: integer 
+	Parameter C_NUM_FSTORES_64 bound to: 2 - type: integer 
 	Parameter C_LINEBUFFER_THRESH bound to: 4 - type: integer 
 	Parameter C_GENLOCK_MODE bound to: 2 - type: integer 
 	Parameter C_S_AXI_LITE_ADDR_WIDTH bound to: 9 - type: integer 
@@ -415,8 +415,8 @@ INFO: [Synth 8-638] synthesizing module 'axi_vdma_reg_module' [a:/Documents/Scho
 	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'axi_vdma_register' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/7860/hdl/axi_vdma_v6_3_rfs.vhd:18717]
 	Parameter C_NUM_REGISTERS bound to: 8 - type: integer 
-	Parameter C_NUM_FSTORES bound to: 3 - type: integer 
-	Parameter C_NUM_FSTORES_64 bound to: 3 - type: integer 
+	Parameter C_NUM_FSTORES bound to: 2 - type: integer 
+	Parameter C_NUM_FSTORES_64 bound to: 2 - type: integer 
 	Parameter C_CHANNEL_IS_MM2S bound to: 0 - type: integer 
 	Parameter C_LINEBUFFER_THRESH bound to: 4 - type: integer 
 	Parameter C_ENABLE_DEBUG_ALL bound to: 0 - type: integer 
@@ -445,8 +445,8 @@ INFO: [Synth 8-638] synthesizing module 'axi_vdma_register' [a:/Documents/School
 INFO: [Synth 8-256] done synthesizing module 'axi_vdma_register' (8#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/7860/hdl/axi_vdma_v6_3_rfs.vhd:18717]
 INFO: [Synth 8-638] synthesizing module 'axi_vdma_regdirect' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/7860/hdl/axi_vdma_v6_3_rfs.vhd:20533]
 	Parameter C_NUM_REGISTERS bound to: 19 - type: integer 
-	Parameter C_NUM_FSTORES bound to: 3 - type: integer 
-	Parameter C_NUM_FSTORES_64 bound to: 3 - type: integer 
+	Parameter C_NUM_FSTORES bound to: 2 - type: integer 
+	Parameter C_NUM_FSTORES_64 bound to: 2 - type: integer 
 	Parameter C_GENLOCK_MODE bound to: 2 - type: integer 
 	Parameter C_DYNAMIC_RESOLUTION bound to: 1 - type: integer 
 	Parameter C_S_AXI_LITE_DATA_WIDTH bound to: 32 - type: integer 
@@ -456,8 +456,8 @@ INFO: [Synth 8-638] synthesizing module 'axi_vdma_reg_mux' [a:/Documents/School/
 	Parameter C_TOTAL_NUM_REGISTER bound to: 62 - type: integer 
 	Parameter C_INCLUDE_SG bound to: 0 - type: integer 
 	Parameter C_CHANNEL_IS_MM2S bound to: 0 - type: integer 
-	Parameter C_NUM_FSTORES bound to: 3 - type: integer 
-	Parameter C_NUM_FSTORES_64 bound to: 3 - type: integer 
+	Parameter C_NUM_FSTORES bound to: 2 - type: integer 
+	Parameter C_NUM_FSTORES_64 bound to: 2 - type: integer 
 	Parameter C_ENABLE_VIDPRMTR_READS bound to: 1 - type: integer 
 	Parameter C_S_AXI_LITE_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_LITE_DATA_WIDTH bound to: 32 - type: integer 
@@ -489,7 +489,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_vdma_mngr' [a:/Documents/School/ENS
 	Parameter C_ENABLE_DEBUG_INFO_15 bound to: 1 - type: integer 
 	Parameter C_ENABLE_VERT_FLIP bound to: 0 - type: integer 
 	Parameter C_ENABLE_FLUSH_ON_FSYNC bound to: 1 - type: integer 
-	Parameter C_NUM_FSTORES bound to: 3 - type: integer 
+	Parameter C_NUM_FSTORES bound to: 2 - type: integer 
 	Parameter C_GENLOCK_MODE bound to: 2 - type: integer 
 	Parameter C_GENLOCK_NUM_MASTERS bound to: 1 - type: integer 
 	Parameter C_DYNAMIC_RESOLUTION bound to: 1 - type: integer 
@@ -548,17 +548,17 @@ INFO: [Synth 8-638] synthesizing module 'axi_vdma_sts_mngr' [a:/Documents/School
 INFO: [Synth 8-256] done synthesizing module 'axi_vdma_sts_mngr' (14#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/7860/hdl/axi_vdma_v6_3_rfs.vhd:63632]
 INFO: [Synth 8-638] synthesizing module 'axi_vdma_vidreg_module' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/7860/hdl/axi_vdma_v6_3_rfs.vhd:56087]
 	Parameter C_INCLUDE_SG bound to: 0 - type: integer 
-	Parameter C_NUM_FSTORES bound to: 3 - type: integer 
+	Parameter C_NUM_FSTORES bound to: 2 - type: integer 
 	Parameter C_DYNAMIC_RESOLUTION bound to: 1 - type: integer 
 	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_SELECT_XPM bound to: 0 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
 INFO: [Synth 8-638] synthesizing module 'axi_vdma_vregister' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/7860/hdl/axi_vdma_v6_3_rfs.vhd:53973]
-	Parameter C_NUM_FSTORES bound to: 3 - type: integer 
+	Parameter C_NUM_FSTORES bound to: 2 - type: integer 
 	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'axi_vdma_vregister' (15#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/7860/hdl/axi_vdma_v6_3_rfs.vhd:53973]
 INFO: [Synth 8-638] synthesizing module 'axi_vdma_vaddrreg_mux' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/7860/hdl/axi_vdma_v6_3_rfs.vhd:55564]
-	Parameter C_NUM_FSTORES bound to: 3 - type: integer 
+	Parameter C_NUM_FSTORES bound to: 2 - type: integer 
 	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'axi_vdma_vaddrreg_mux' (16#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/7860/hdl/axi_vdma_v6_3_rfs.vhd:55564]
 INFO: [Synth 8-256] done synthesizing module 'axi_vdma_vidreg_module' (17#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/7860/hdl/axi_vdma_v6_3_rfs.vhd:56087]
@@ -566,13 +566,13 @@ INFO: [Synth 8-638] synthesizing module 'axi_vdma_genlock_mngr' [a:/Documents/Sc
 	Parameter C_GENLOCK_MODE bound to: 2 - type: integer 
 	Parameter C_GENLOCK_NUM_MASTERS bound to: 1 - type: integer 
 	Parameter C_INTERNAL_GENLOCK_ENABLE bound to: 0 - type: integer 
-	Parameter C_NUM_FSTORES bound to: 3 - type: integer 
+	Parameter C_NUM_FSTORES bound to: 2 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'axi_vdma_genlock_mux' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/7860/hdl/axi_vdma_v6_3_rfs.vhd:57368]
 	Parameter C_GENLOCK_NUM_MASTERS bound to: 1 - type: integer 
 	Parameter C_INTERNAL_GENLOCK_ENABLE bound to: 0 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'axi_vdma_genlock_mux' (18#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/7860/hdl/axi_vdma_v6_3_rfs.vhd:57368]
 INFO: [Synth 8-638] synthesizing module 'axi_vdma_greycoder' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/7860/hdl/axi_vdma_v6_3_rfs.vhd:58343]
-	Parameter C_DWIDTH bound to: 2 - type: integer 
+	Parameter C_DWIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'axi_vdma_greycoder' (19#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/7860/hdl/axi_vdma_v6_3_rfs.vhd:58343]
 INFO: [Synth 8-638] synthesizing module 'axi_vdma_greycoder__parameterized0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/7860/hdl/axi_vdma_v6_3_rfs.vhd:58343]
 	Parameter C_DWIDTH bound to: 5 - type: integer 
@@ -1478,18 +1478,18 @@ INFO: [Synth 8-256] done synthesizing module 'axi_datamover' (69#1) [a:/Document
 INFO: [Synth 8-256] done synthesizing module 'axi_vdma' (70#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/7860/hdl/axi_vdma_v6_3_rfs.vhd:69927]
 INFO: [Synth 8-256] done synthesizing module 'Real_Time_Video_Filter_axi_vdma_0_0' (71#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_axi_vdma_0_0/synth/Real_Time_Video_Filter_axi_vdma_0_0.vhd:109]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 1100.164 ; gain = 79.840
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1100.621 ; gain = 79.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1100.164 ; gain = 79.840
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1100.621 ; gain = 79.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1100.164 ; gain = 79.840
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1100.621 ; gain = 79.566
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.131 . Memory (MB): peak = 1100.164 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.127 . Memory (MB): peak = 1100.621 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 328 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1511,21 +1511,21 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/Real_Time_Vi
 INFO: [Project 1-1715] 1 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1100.164 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1127.055 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 324 instances were transformed.
   FDR => FDRE: 324 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1100.164 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1128.016 ; gain = 0.961
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1100.164 ; gain = 79.840
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1128.016 ; gain = 106.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1100.164 ; gain = 79.840
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1128.016 ; gain = 106.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1534,7 +1534,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  A:/Document
 Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT /I_XD_FIFO/\NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO /\xpm_fifo_instance.xpm_fifo_sync_inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT /I_DATA_FIFO/\BLK_MEM.I_SYNC_FIFOGEN_FIFO /\xpm_fifo_instance.xpm_fifo_sync_inst . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1100.164 ; gain = 79.840
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1128.016 ; gain = 106.961
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'dmacntrl_cs_reg' in module 'axi_vdma_sm'
 INFO: [Synth 8-802] inferred FSM for state register 'sig_psm_state_reg' in module 'axi_datamover_ibttcc'
@@ -1607,7 +1607,7 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized0'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 1100.164 ; gain = 79.840
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1128.016 ; gain = 106.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1624,7 +1624,7 @@ Detailed RTL Component Info :
 	   3 Input    8 Bit       Adders := 1     
 	   2 Input    7 Bit       Adders := 1     
 	   3 Input    5 Bit       Adders := 3     
-	   2 Input    5 Bit       Adders := 7     
+	   2 Input    5 Bit       Adders := 4     
 	   4 Input    5 Bit       Adders := 4     
 	   2 Input    4 Bit       Adders := 5     
 	   3 Input    4 Bit       Adders := 3     
@@ -1634,12 +1634,12 @@ Detailed RTL Component Info :
 	   2 Input    2 Bit       Adders := 2     
 	   4 Input    2 Bit       Adders := 2     
 +---XORs : 
-	   2 Input      1 Bit         XORs := 40    
+	   2 Input      1 Bit         XORs := 38    
 +---Registers : 
 	               72 Bit    Registers := 2     
 	               40 Bit    Registers := 2     
 	               34 Bit    Registers := 2     
-	               32 Bit    Registers := 23    
+	               32 Bit    Registers := 21    
 	               16 Bit    Registers := 14    
 	               13 Bit    Registers := 8     
 	               12 Bit    Registers := 2     
@@ -1659,9 +1659,8 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input   72 Bit        Muxes := 2     
 	   2 Input   40 Bit        Muxes := 1     
-	   2 Input   32 Bit        Muxes := 8     
-	  13 Input   32 Bit        Muxes := 1     
-	   3 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 9     
+	  12 Input   32 Bit        Muxes := 1     
 	   2 Input   16 Bit        Muxes := 7     
 	   4 Input   16 Bit        Muxes := 2     
 	   3 Input   16 Bit        Muxes := 1     
@@ -1677,17 +1676,15 @@ Detailed RTL Component Info :
 	   5 Input    5 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 9     
 	   2 Input    4 Bit        Muxes := 11    
-	  13 Input    4 Bit        Muxes := 1     
 	   4 Input    4 Bit        Muxes := 4     
 	   6 Input    3 Bit        Muxes := 3     
 	   2 Input    3 Bit        Muxes := 23    
 	   5 Input    3 Bit        Muxes := 3     
 	   3 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 68    
-	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 67    
 	   4 Input    2 Bit        Muxes := 14    
 	   2 Input    1 Bit        Muxes := 200   
-	  13 Input    1 Bit        Muxes := 1     
+	  12 Input    1 Bit        Muxes := 1     
 	   6 Input    1 Bit        Muxes := 12    
 	   8 Input    1 Bit        Muxes := 1     
 	   7 Input    1 Bit        Muxes := 3     
@@ -1715,7 +1712,7 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1100.164 ; gain = 79.840
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1128.016 ; gain = 106.961
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
@@ -1746,14 +1743,14 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:37 . Memory (MB): peak = 1100.164 ; gain = 79.840
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1128.016 ; gain = 106.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 1129.336 ; gain = 109.012
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1128.016 ; gain = 106.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1781,7 +1778,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1139.391 ; gain = 119.066
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1131.699 ; gain = 110.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1799,37 +1796,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1139.391 ; gain = 119.066
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1131.699 ; gain = 110.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1139.391 ; gain = 119.066
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1131.699 ; gain = 110.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1139.391 ; gain = 119.066
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1131.699 ; gain = 110.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1139.391 ; gain = 119.066
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1131.699 ; gain = 110.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1139.391 ; gain = 119.066
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1131.699 ; gain = 110.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1139.391 ; gain = 119.066
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1131.699 ; gain = 110.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1877,33 +1874,33 @@ Report Cell Usage:
 +------+---------+------+
 |1     |CARRY4   |    50|
 |2     |FIFO36E1 |     4|
-|3     |LUT1     |   232|
-|4     |LUT2     |   192|
-|5     |LUT3     |   312|
-|6     |LUT4     |   277|
-|7     |LUT5     |   232|
-|8     |LUT6     |   314|
+|3     |LUT1     |   233|
+|4     |LUT2     |   187|
+|5     |LUT3     |   298|
+|6     |LUT4     |   260|
+|7     |LUT5     |   213|
+|8     |LUT6     |   319|
 |9     |RAM32M   |     2|
 |10    |RAMB18E1 |     1|
 |11    |SRL16E   |   164|
 |12    |FDPE     |     5|
 |13    |FDR      |   191|
-|14    |FDRE     |  1842|
+|14    |FDRE     |  1770|
 |15    |FDSE     |    66|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1139.391 ; gain = 119.066
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1131.699 ; gain = 110.645
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 1139.391 ; gain = 119.066
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1139.391 ; gain = 119.066
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 1131.699 ; gain = 83.250
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1131.699 ; gain = 110.645
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 1139.391 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 1131.699 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 248 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1139.391 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1134.309 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 193 instances were transformed.
   FDR => FDRE: 191 instances
@@ -1912,11 +1909,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 316 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:50 . Memory (MB): peak = 1139.391 ; gain = 119.066
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 1134.309 ; gain = 113.254
 INFO: [Common 17-1381] The checkpoint 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_axi_vdma_0_0_synth_1/Real_Time_Video_Filter_axi_vdma_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP Real_Time_Video_Filter_axi_vdma_0_0, cache-ID = 2c0d23dae9a1eb68
-INFO: [Coretcl 2-1174] Renamed 140 cell refs.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP Real_Time_Video_Filter_axi_vdma_0_0, cache-ID = 06d55cf87f087ca7
+INFO: [Coretcl 2-1174] Renamed 139 cell refs.
 INFO: [Common 17-1381] The checkpoint 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_axi_vdma_0_0_synth_1/Real_Time_Video_Filter_axi_vdma_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Real_Time_Video_Filter_axi_vdma_0_0_utilization_synth.rpt -pb Real_Time_Video_Filter_axi_vdma_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr  1 12:35:57 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  1 16:27:27 2024...
