@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Feb 25 12:22:41 2024
+# Process ID: 54812
+# Current directory: A:/Documents/School/ENSC452/VgaTutorial/vga_tutorial_students/vga_controller_ip
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent58400 A:\Documents\School\ENSC452\VgaTutorial\vga_tutorial_students\vga_controller_ip\vga_controller_ip.xpr
+# Log file: A:/Documents/School/ENSC452/VgaTutorial/vga_tutorial_students/vga_controller_ip/vivado.log
+# Journal file: A:/Documents/School/ENSC452/VgaTutorial/vga_tutorial_students/vga_controller_ip\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project A:/Documents/School/ENSC452/VgaTutorial/vga_tutorial_students/vga_controller_ip/vga_controller_ip.xpr
+update_compile_order -fileset sources_1
+open_bd_design {A:/Documents/School/ENSC452/VgaTutorial/vga_tutorial_students/vga_controller_ip/vga_controller_ip.srcs/sources_1/bd/design_1/design_1.bd}
+ipx::open_ipxact_file {A:\Documents\School\ENSC452\VgaTutorial\vga_tutorial_students\vga_controller_ip\vga_controller_ip.srcs\sources_1\imports\new\component.xml}
+open_bd_design {A:/Documents/School/ENSC452/VgaTutorial/vga_tutorial_students/vga_controller_ip/vga_controller_ip.srcs/sources_1/bd/design_1/design_1.bd}

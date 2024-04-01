@@ -37,6 +37,13 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 # To test this script, run the following commands from Vivado Tcl console:
 # source Real_Time_Video_Filter_script.tcl
 
+
+# The design that will be created by this Tcl script contains the following 
+# module references:
+# ov7670_capture, ov7670_controller
+
+# Please add the sources of those modules before sourcing this Tcl script.
+
 # If there is no project opened, this script will create a
 # project, but make sure you do not have an existing project
 # <./myproj/project_1.xpr> in the current working folder.
@@ -160,26 +167,96 @@ proc create_root_design { parentCell } {
 
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
-  set btns_5bits [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 btns_5bits ]
-
 
   # Create ports
+  set OV7670_D [ create_bd_port -dir I -from 7 -to 0 OV7670_D ]
+  set OV7670_HREF [ create_bd_port -dir I OV7670_HREF ]
+  set OV7670_PCLK [ create_bd_port -dir I OV7670_PCLK ]
+  set OV7670_PWDN [ create_bd_port -dir O OV7670_PWDN ]
+  set OV7670_RESET [ create_bd_port -dir O -type rst OV7670_RESET ]
+  set OV7670_SIOC [ create_bd_port -dir O OV7670_SIOC ]
+  set OV7670_SIOD [ create_bd_port -dir IO OV7670_SIOD ]
+  set OV7670_VSYNC [ create_bd_port -dir I OV7670_VSYNC ]
+  set OV7670_XCLK [ create_bd_port -dir O OV7670_XCLK ]
+  set VGA_B [ create_bd_port -dir O -from 3 -to 0 VGA_B ]
+  set VGA_G [ create_bd_port -dir O -from 3 -to 0 VGA_G ]
+  set VGA_HS [ create_bd_port -dir O VGA_HS ]
+  set VGA_R [ create_bd_port -dir O -from 3 -to 0 VGA_R ]
+  set VGA_VS [ create_bd_port -dir O VGA_VS ]
+
+  # Create instance: RGBX_AXI_Stream_0, and set properties
+  set RGBX_AXI_Stream_0 [ create_bd_cell -type ip -vlnv Andrew_Ha:user:RGBX_AXI_Stream:1.0 RGBX_AXI_Stream_0 ]
 
   # Create instance: RGB_to_RGBX_0, and set properties
   set RGB_to_RGBX_0 [ create_bd_cell -type ip -vlnv ShakeebZacky:user:RGB_to_RGBX:1.0 RGB_to_RGBX_0 ]
 
-  # Create instance: axi_gpio_0, and set properties
-  set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
+  # Create instance: axi_mem_intercon, and set properties
+  set axi_mem_intercon [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_mem_intercon ]
   set_property -dict [ list \
-   CONFIG.C_INTERRUPT_PRESENT {1} \
-   CONFIG.GPIO_BOARD_INTERFACE {btns_5bits} \
-   CONFIG.USE_BOARD_FLOW {true} \
- ] $axi_gpio_0
+   CONFIG.NUM_MI {1} \
+ ] $axi_mem_intercon
 
+  # Create instance: axi_vdma_0, and set properties
+  set axi_vdma_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vdma:6.3 axi_vdma_0 ]
+  set_property -dict [ list \
+   CONFIG.c_include_mm2s {0} \
+   CONFIG.c_m_axi_s2mm_data_width {32} \
+   CONFIG.c_mm2s_genlock_mode {0} \
+   CONFIG.c_s2mm_linebuffer_depth {4096} \
+   CONFIG.c_s2mm_max_burst_length {32} \
+ ] $axi_vdma_0
+
+  # Create instance: clk_wiz_0, and set properties
+  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
+  set_property -dict [ list \
+   CONFIG.CLKOUT2_JITTER {151.636} \
+   CONFIG.CLKOUT2_PHASE_ERROR {98.575} \
+   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {50} \
+   CONFIG.CLKOUT2_USED {true} \
+   CONFIG.CLKOUT3_JITTER {175.402} \
+   CONFIG.CLKOUT3_PHASE_ERROR {98.575} \
+   CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {25} \
+   CONFIG.CLKOUT3_USED {true} \
+   CONFIG.CLK_OUT1_PORT {clk_out100} \
+   CONFIG.CLK_OUT2_PORT {clk_out50} \
+   CONFIG.CLK_OUT3_PORT {clk_out25} \
+   CONFIG.MMCM_CLKOUT1_DIVIDE {20} \
+   CONFIG.MMCM_CLKOUT2_DIVIDE {40} \
+   CONFIG.NUM_OUT_CLKS {3} \
+   CONFIG.USE_LOCKED {false} \
+   CONFIG.USE_RESET {false} \
+ ] $clk_wiz_0
+
+  # Create instance: ov7670_capture_0, and set properties
+  set block_name ov7670_capture
+  set block_cell_name ov7670_capture_0
+  if { [catch {set ov7670_capture_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $ov7670_capture_0 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  set_property -dict [ list \
+   CONFIG.FREQ_HZ {25000000} \
+ ] [get_bd_pins /ov7670_capture_0/aclk]
+
+  # Create instance: ov7670_controller_0, and set properties
+  set block_name ov7670_controller
+  set block_cell_name ov7670_controller_0
+  if { [catch {set ov7670_controller_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $ov7670_controller_0 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
   set_property -dict [ list \
-   CONFIG.PCW_ACT_APU_PERIPHERAL_FREQMHZ {666.666687} \
+   CONFIG.PCW_ACT_APU_PERIPHERAL_FREQMHZ {200.000000} \
    CONFIG.PCW_ACT_CAN_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_DCI_PERIPHERAL_FREQMHZ {10.158730} \
    CONFIG.PCW_ACT_ENET0_PERIPHERAL_FREQMHZ {125.000000} \
@@ -194,16 +271,16 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_ACT_SMC_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_SPI_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_TPIU_PERIPHERAL_FREQMHZ {200.000000} \
-   CONFIG.PCW_ACT_TTC0_CLK0_PERIPHERAL_FREQMHZ {111.111115} \
-   CONFIG.PCW_ACT_TTC0_CLK1_PERIPHERAL_FREQMHZ {111.111115} \
-   CONFIG.PCW_ACT_TTC0_CLK2_PERIPHERAL_FREQMHZ {111.111115} \
-   CONFIG.PCW_ACT_TTC1_CLK0_PERIPHERAL_FREQMHZ {111.111115} \
-   CONFIG.PCW_ACT_TTC1_CLK1_PERIPHERAL_FREQMHZ {111.111115} \
-   CONFIG.PCW_ACT_TTC1_CLK2_PERIPHERAL_FREQMHZ {111.111115} \
+   CONFIG.PCW_ACT_TTC0_CLK0_PERIPHERAL_FREQMHZ {33.333336} \
+   CONFIG.PCW_ACT_TTC0_CLK1_PERIPHERAL_FREQMHZ {33.333336} \
+   CONFIG.PCW_ACT_TTC0_CLK2_PERIPHERAL_FREQMHZ {33.333336} \
+   CONFIG.PCW_ACT_TTC1_CLK0_PERIPHERAL_FREQMHZ {33.333336} \
+   CONFIG.PCW_ACT_TTC1_CLK1_PERIPHERAL_FREQMHZ {33.333336} \
+   CONFIG.PCW_ACT_TTC1_CLK2_PERIPHERAL_FREQMHZ {33.333336} \
    CONFIG.PCW_ACT_UART_PERIPHERAL_FREQMHZ {50.000000} \
-   CONFIG.PCW_ACT_WDT_PERIPHERAL_FREQMHZ {111.111115} \
-   CONFIG.PCW_APU_PERIPHERAL_FREQMHZ {666.666667} \
-   CONFIG.PCW_ARMPLL_CTRL_FBDIV {40} \
+   CONFIG.PCW_ACT_WDT_PERIPHERAL_FREQMHZ {33.333336} \
+   CONFIG.PCW_APU_PERIPHERAL_FREQMHZ {200} \
+   CONFIG.PCW_ARMPLL_CTRL_FBDIV {48} \
    CONFIG.PCW_CAN_PERIPHERAL_DIVISOR0 {1} \
    CONFIG.PCW_CAN_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_CAN_PERIPHERAL_FREQMHZ {100} \
@@ -211,8 +288,8 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_CLK1_FREQ {10000000} \
    CONFIG.PCW_CLK2_FREQ {10000000} \
    CONFIG.PCW_CLK3_FREQ {10000000} \
-   CONFIG.PCW_CPU_CPU_PLL_FREQMHZ {1333.333} \
-   CONFIG.PCW_CPU_PERIPHERAL_DIVISOR0 {2} \
+   CONFIG.PCW_CPU_CPU_PLL_FREQMHZ {1600.000} \
+   CONFIG.PCW_CPU_PERIPHERAL_DIVISOR0 {8} \
    CONFIG.PCW_DCI_PERIPHERAL_DIVISOR0 {15} \
    CONFIG.PCW_DCI_PERIPHERAL_DIVISOR1 {7} \
    CONFIG.PCW_DDRPLL_CTRL_FBDIV {32} \
@@ -265,7 +342,6 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_I2C_RESET_ENABLE {1} \
    CONFIG.PCW_IOPLL_CTRL_FBDIV {30} \
    CONFIG.PCW_IO_IO_PLL_FREQMHZ {1000.000} \
-   CONFIG.PCW_IRQ_F2P_INTR {1} \
    CONFIG.PCW_MIO_0_DIRECTION {inout} \
    CONFIG.PCW_MIO_0_IOTYPE {LVCMOS 3.3V} \
    CONFIG.PCW_MIO_0_PULLUP {disabled} \
@@ -519,6 +595,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_SINGLE_QSPI_DATA_MODE {x4} \
    CONFIG.PCW_SMC_PERIPHERAL_DIVISOR0 {1} \
    CONFIG.PCW_SPI_PERIPHERAL_DIVISOR0 {1} \
+   CONFIG.PCW_S_AXI_HP0_DATA_WIDTH {32} \
    CONFIG.PCW_TPIU_PERIPHERAL_DIVISOR0 {1} \
    CONFIG.PCW_TTC0_CLK0_PERIPHERAL_FREQMHZ {133.333333} \
    CONFIG.PCW_TTC0_CLK1_PERIPHERAL_FREQMHZ {133.333333} \
@@ -569,7 +646,8 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_USB1_RESET_ENABLE {0} \
    CONFIG.PCW_USB_RESET_ENABLE {1} \
    CONFIG.PCW_USB_RESET_SELECT {Share reset pin} \
-   CONFIG.PCW_USE_FABRIC_INTERRUPT {1} \
+   CONFIG.PCW_USE_S_AXI_HP0 {1} \
+   CONFIG.PCW_USE_S_AXI_HP2 {1} \
    CONFIG.preset {ZedBoard} \
  ] $processing_system7_0
 
@@ -582,21 +660,68 @@ proc create_root_design { parentCell } {
   # Create instance: rst_ps7_0_100M, and set properties
   set rst_ps7_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_100M ]
 
+  # Create instance: rst_ps7_0_100M_1, and set properties
+  set rst_ps7_0_100M_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_100M_1 ]
+
+  # Create instance: vga_controller_0, and set properties
+  set vga_controller_0 [ create_bd_cell -type ip -vlnv user.org:user:vga_controller:1.0 vga_controller_0 ]
+  set_property -dict [ list \
+   CONFIG.h_back_porch {48} \
+   CONFIG.h_front_porch {16} \
+   CONFIG.h_sync_pulse {96} \
+   CONFIG.horizontal_length {640} \
+   CONFIG.image_buffer1_baseaddr {0x02000000} \
+   CONFIG.v_back_porch {33} \
+   CONFIG.v_front_porch {10} \
+   CONFIG.v_sync_pulse {2} \
+   CONFIG.vertical_length {480} \
+ ] $vga_controller_0
+
   # Create interface connections
-  connect_bd_intf_net -intf_net axi_gpio_0_GPIO [get_bd_intf_ports btns_5bits] [get_bd_intf_pins axi_gpio_0/GPIO]
+  connect_bd_intf_net -intf_net RGBX_AXI_Stream_0_m_axis [get_bd_intf_pins RGBX_AXI_Stream_0/m_axis] [get_bd_intf_pins axi_vdma_0/S_AXIS_S2MM]
+  connect_bd_intf_net -intf_net axi_mem_intercon_M00_AXI [get_bd_intf_pins axi_mem_intercon/M00_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+  connect_bd_intf_net -intf_net axi_vdma_0_M_AXI_S2MM [get_bd_intf_pins axi_mem_intercon/S00_AXI] [get_bd_intf_pins axi_vdma_0/M_AXI_S2MM]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_vdma_0/S_AXI_LITE] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+  connect_bd_intf_net -intf_net vga_controller_0_M_AXI [get_bd_intf_pins processing_system7_0/S_AXI_HP2] [get_bd_intf_pins vga_controller_0/M_AXI]
 
   # Create port connections
-  connect_bd_net -net axi_gpio_0_ip2intc_irpt [get_bd_pins axi_gpio_0/ip2intc_irpt] [get_bd_pins processing_system7_0/IRQ_F2P]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins RGB_to_RGBX_0/clk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
-  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
-  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+  connect_bd_net -net Net [get_bd_ports OV7670_SIOD] [get_bd_pins ov7670_controller_0/siod]
+  connect_bd_net -net RGB_to_RGBX_0_RGBX_out [get_bd_pins RGBX_AXI_Stream_0/RGBX] [get_bd_pins RGB_to_RGBX_0/RGBX_out]
+  connect_bd_net -net RGB_to_RGBX_0_address_out [get_bd_pins RGBX_AXI_Stream_0/address] [get_bd_pins RGB_to_RGBX_0/address_out]
+  connect_bd_net -net RGB_to_RGBX_0_writeEnable_out [get_bd_pins RGBX_AXI_Stream_0/writeEnable] [get_bd_pins RGB_to_RGBX_0/writeEnable_out]
+  connect_bd_net -net clk_wiz_0_clk_out25 [get_bd_pins clk_wiz_0/clk_out25] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins vga_controller_0/pixel_clk]
+  connect_bd_net -net clk_wiz_0_clk_out50 [get_bd_pins clk_wiz_0/clk_out50] [get_bd_pins ov7670_controller_0/clk]
+  connect_bd_net -net clk_wiz_0_clk_out100 [get_bd_pins axi_mem_intercon/ACLK] [get_bd_pins axi_mem_intercon/M00_ACLK] [get_bd_pins axi_mem_intercon/S00_ACLK] [get_bd_pins axi_vdma_0/m_axi_s2mm_aclk] [get_bd_pins axi_vdma_0/s_axi_lite_aclk] [get_bd_pins clk_wiz_0/clk_out100] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP2_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M_1/slowest_sync_clk] [get_bd_pins vga_controller_0/clk]
+  connect_bd_net -net d_0_1 [get_bd_ports OV7670_D] [get_bd_pins ov7670_capture_0/d]
+  connect_bd_net -net href_0_1 [get_bd_ports OV7670_HREF] [get_bd_pins ov7670_capture_0/href]
+  connect_bd_net -net ov7670_capture_0_aclk [get_bd_pins RGBX_AXI_Stream_0/clk] [get_bd_pins RGB_to_RGBX_0/clk] [get_bd_pins axi_vdma_0/s_axis_s2mm_aclk] [get_bd_pins ov7670_capture_0/aclk]
+  connect_bd_net -net ov7670_capture_0_addr [get_bd_pins RGB_to_RGBX_0/address_in] [get_bd_pins ov7670_capture_0/addr]
+  connect_bd_net -net ov7670_capture_0_dout [get_bd_pins RGB_to_RGBX_0/RGB_in] [get_bd_pins ov7670_capture_0/dout]
+  connect_bd_net -net ov7670_capture_0_we [get_bd_pins RGB_to_RGBX_0/writeEnable_in] [get_bd_pins ov7670_capture_0/we]
+  connect_bd_net -net ov7670_controller_0_pwdn [get_bd_ports OV7670_PWDN] [get_bd_pins ov7670_controller_0/pwdn]
+  connect_bd_net -net ov7670_controller_0_reset [get_bd_ports OV7670_RESET] [get_bd_pins ov7670_controller_0/reset]
+  connect_bd_net -net ov7670_controller_0_sioc [get_bd_ports OV7670_SIOC] [get_bd_pins ov7670_controller_0/sioc]
+  connect_bd_net -net ov7670_controller_0_xclk [get_bd_ports OV7670_XCLK] [get_bd_pins ov7670_controller_0/xclk]
+  connect_bd_net -net pclk_0_1 [get_bd_ports OV7670_PCLK] [get_bd_pins ov7670_capture_0/pclk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins processing_system7_0/FCLK_CLK0]
+  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in] [get_bd_pins rst_ps7_0_100M_1/ext_reset_in]
+  connect_bd_net -net processing_system7_0_S_AXI_HP2_RCOUNT [get_bd_pins processing_system7_0/S_AXI_HP2_RCOUNT] [get_bd_pins vga_controller_0/rfifo_count]
+  connect_bd_net -net rst_ps7_0_100M_1_peripheral_aresetn [get_bd_pins axi_mem_intercon/ARESETN] [get_bd_pins axi_mem_intercon/M00_ARESETN] [get_bd_pins axi_mem_intercon/S00_ARESETN] [get_bd_pins rst_ps7_0_100M_1/peripheral_aresetn]
+  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_vdma_0/axi_resetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins vga_controller_0/pixel_rstn] [get_bd_pins vga_controller_0/rstn]
+  connect_bd_net -net vga_controller_0_VGA_B [get_bd_ports VGA_B] [get_bd_pins vga_controller_0/VGA_B]
+  connect_bd_net -net vga_controller_0_VGA_G [get_bd_ports VGA_G] [get_bd_pins vga_controller_0/VGA_G]
+  connect_bd_net -net vga_controller_0_VGA_HS [get_bd_ports VGA_HS] [get_bd_pins vga_controller_0/VGA_HS]
+  connect_bd_net -net vga_controller_0_VGA_R [get_bd_ports VGA_R] [get_bd_pins vga_controller_0/VGA_R]
+  connect_bd_net -net vga_controller_0_VGA_VS [get_bd_ports VGA_VS] [get_bd_pins vga_controller_0/VGA_VS]
+  connect_bd_net -net vsync_0_1 [get_bd_ports OV7670_VSYNC] [get_bd_pins ov7670_capture_0/vsync]
 
   # Create address segments
-  assign_bd_address -offset 0x41200000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] -force
+  assign_bd_address -offset 0x01000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces axi_vdma_0/Data_S2MM] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] -force
+  assign_bd_address -offset 0x43000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_vdma_0/S_AXI_LITE/Reg] -force
+  assign_bd_address -offset 0x02000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces vga_controller_0/M_AXI] [get_bd_addr_segs processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM] -force
 
 
   # Restore current instance

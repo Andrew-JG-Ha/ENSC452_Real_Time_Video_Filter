@@ -83,7 +83,7 @@ Real_Time_Video_Filter_processing_system7_0_0_sc::Real_Time_Video_Filter_process
     model_param_props.addLong("C_S_AXI_GP1_ID_WIDTH", "6");
     model_param_props.addLong("C_S_AXI_ACP_ID_WIDTH", "3");
     model_param_props.addLong("C_S_AXI_HP0_ID_WIDTH", "6");
-    model_param_props.addLong("C_S_AXI_HP0_DATA_WIDTH", "64");
+    model_param_props.addLong("C_S_AXI_HP0_DATA_WIDTH", "32");
     model_param_props.addLong("C_S_AXI_HP1_ID_WIDTH", "6");
     model_param_props.addLong("C_S_AXI_HP1_DATA_WIDTH", "64");
     model_param_props.addLong("C_S_AXI_HP2_ID_WIDTH", "6");
@@ -103,9 +103,9 @@ Real_Time_Video_Filter_processing_system7_0_0_sc::Real_Time_Video_Filter_process
     model_param_props.addLong("C_USE_M_AXI_GP1", "0");
     model_param_props.addLong("C_USE_S_AXI_GP0", "0");
     model_param_props.addLong("C_USE_S_AXI_GP1", "0");
-    model_param_props.addLong("C_USE_S_AXI_HP0", "0");
+    model_param_props.addLong("C_USE_S_AXI_HP0", "1");
     model_param_props.addLong("C_USE_S_AXI_HP1", "0");
-    model_param_props.addLong("C_USE_S_AXI_HP2", "0");
+    model_param_props.addLong("C_USE_S_AXI_HP2", "1");
     model_param_props.addLong("C_USE_S_AXI_HP3", "0");
     model_param_props.addLong("C_USE_S_AXI_ACP", "0");
     model_param_props.addLong("C_GP0_EN_MODIFIABLE_TXN", "1");
@@ -123,6 +123,10 @@ Real_Time_Video_Filter_processing_system7_0_0_sc::Real_Time_Video_Filter_process
   // initialize AXI sockets
   M_AXI_GP0_rd_socket = mp_impl->M_AXI_GP0_rd_socket;
   M_AXI_GP0_wr_socket = mp_impl->M_AXI_GP0_wr_socket;
+  S_AXI_HP0_rd_socket = mp_impl->S_AXI_HP0_rd_socket;
+  S_AXI_HP0_wr_socket = mp_impl->S_AXI_HP0_wr_socket;
+  S_AXI_HP2_rd_socket = mp_impl->S_AXI_HP2_rd_socket;
+  S_AXI_HP2_wr_socket = mp_impl->S_AXI_HP2_wr_socket;
 }
 
 Real_Time_Video_Filter_processing_system7_0_0_sc::~Real_Time_Video_Filter_processing_system7_0_0_sc()

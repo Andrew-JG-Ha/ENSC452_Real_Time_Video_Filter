@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Feb  4 14:14:59 2024
+# Process ID: 13600
+# Current directory: A:/Documents/School/ENSC452/VgaTutorial/vga_tutorial_students/vga_controller_ip
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8240 A:\Documents\School\ENSC452\VgaTutorial\vga_tutorial_students\vga_controller_ip\vga_controller_ip.xpr
+# Log file: A:/Documents/School/ENSC452/VgaTutorial/vga_tutorial_students/vga_controller_ip/vivado.log
+# Journal file: A:/Documents/School/ENSC452/VgaTutorial/vga_tutorial_students/vga_controller_ip\vivado.jou
+#-----------------------------------------------------------
+start_gui

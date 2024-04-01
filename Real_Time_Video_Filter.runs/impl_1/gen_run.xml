@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1709354470">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1712000096">
   <File Type="BITSTR-BMM" Name="Real_Time_Video_Filter_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Real_Time_Video_Filter_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Real_Time_Video_Filter_wrapper_timing_summary_init.rpt"/>
@@ -77,6 +77,38 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/Real_Time_Video_Filter.ip_user_files/i2c_sender.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PIPUSERFILESDIR/i2c_sender.vhd"/>
+        <Attr Name="ImportTime" Val="1711646968"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Real_Time_Video_Filter.ip_user_files/ov7670_registers.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PIPUSERFILESDIR/ov7670_registers.vhd"/>
+        <Attr Name="ImportTime" Val="1711646965"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Real_Time_Video_Filter.ip_user_files/ov7670_controller.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PIPUSERFILESDIR/ov7670_controller.vhd"/>
+        <Attr Name="ImportTime" Val="1711646968"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Real_Time_Video_Filter.ip_user_files/ov7670_capture.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PIPUSERFILESDIR/ov7670_capture.vhd"/>
+        <Attr Name="ImportTime" Val="1711907476"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/Real_Time_Video_Filter/Real_Time_Video_Filter.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -93,11 +125,16 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="Real_Time_Video_Filter_wrapper"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/zedboard.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
@@ -122,9 +159,16 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_axi_vdma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_ov7670_controller_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_rst_ps7_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_RGB_to_RGBX_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_RGB_to_RGBX_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_ov7670_capture_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_RGBX_AXI_Stream_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_vga_controller_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_rst_ps7_0_100M_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_auto_pc_1"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_auto_pc_0"/>
 </GenRun>

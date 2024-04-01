@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/impl_1/Real_Time_Video_Filter_wrapper.tcl"
+  variable script "A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/impl_1/Real_Time_Video_Filter_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -122,7 +122,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 3
+  set_param chipscope.maxJobs 5
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg484-1
   set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
@@ -130,21 +130,22 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.cache/wt [current_project]
-  set_property parent.project_path S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.xpr [current_project]
-  set_property ip_repo_paths S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files [current_project]
+  set_property webtalk.parent_dir A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.cache/wt [current_project]
+  set_property parent.project_path A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.xpr [current_project]
+  set_property ip_repo_paths A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files [current_project]
   update_ip_catalog
-  set_property ip_output_repo S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.cache/ip [current_project]
+  set_property ip_output_repo A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/Real_Time_Video_Filter_wrapper.dcp
+  add_files -quiet A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/Real_Time_Video_Filter_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/sources_1/bd/Real_Time_Video_Filter/Real_Time_Video_Filter.bd
+  add_files A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/sources_1/bd/Real_Time_Video_Filter/Real_Time_Video_Filter.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
+  read_xdc A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
@@ -312,7 +313,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   catch { write_mem_info -force -no_partial_mmi Real_Time_Video_Filter_wrapper.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }

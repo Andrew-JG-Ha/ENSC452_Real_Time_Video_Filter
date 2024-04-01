@@ -3,7 +3,7 @@
 	<name>Real_Time_Video_Filter</name>
 	<comment>Created by Vitis v2020.2</comment>
 	<projects>
-		<project>Real_Time_Video_Filter_wrapper</project>
+		<project>Real_Time_Video_Filter_Wrapper</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

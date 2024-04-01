@@ -1,2 +1,42 @@
-Nothing to build in platform 'Real_Time_Video_Filter_wrapper'
+Nothing to build in platform 'Real_Time_Video_Filter_Wrapper'
 
+12:52:59 **** Incremental Build of configuration Debug for project Real_Time_Video_Filter ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IA:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/sw/Real_Time_Video_Filter_Wrapper/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:23: warning: assignment to 'UINTPTR' {aka 'unsigned int'} from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+   63 |  frame_buffer_addr[0] = &(writeBuffer1[0]);
+      |                       ^
+../src/helloworld.c:88:45: warning: passing argument 2 of 'Xil_Out32' makes integer from pointer without a cast [-Wint-conversion]
+   88 |  Xil_Out32(XPAR_AXI_VDMA_0_BASEADDR + 0xAC, &(writeBuffer1[0]));
+      |                                             ^~~~~~~~~~~~~~~~~~
+      |                                             |
+      |                                             int *
+In file included from A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/sw/Real_Time_Video_Filter_Wrapper/standalone_domain/bspinclude/include/xaxivdma_hw.h:57,
+                 from A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/sw/Real_Time_Video_Filter_Wrapper/standalone_domain/bspinclude/include/xaxivdma.h:293,
+                 from ../src/helloworld.c:2:
+A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/sw/Real_Time_Video_Filter_Wrapper/standalone_domain/bspinclude/include/xil_io.h:203:48: note: expected 'u32' {aka 'long unsigned int'} but argument is of type 'int *'
+  203 | static INLINE void Xil_Out32(UINTPTR Addr, u32 Value)
+      |                                            ~~~~^~~~~
+../src/helloworld.c:33:9: warning: unused variable 'data' [-Wunused-variable]
+   33 |     int data;
+      |         ^~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Real_Time_Video_Filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LA:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/sw/Real_Time_Video_Filter_Wrapper/standalone_domain/bsplib/lib -o "Real_Time_Video_Filter.elf"  ./src/camera.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Real_Time_Video_Filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Real_Time_Video_Filter.elf  |tee "Real_Time_Video_Filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41225	   2344	1251448	1295017	 13c2a9	Real_Time_Video_Filter.elf
+'Finished building: Real_Time_Video_Filter.elf.size'
+' '
