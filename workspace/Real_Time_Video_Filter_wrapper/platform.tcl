@@ -42,3 +42,31 @@ platform generate
 platform active {Real_Time_Video_Filter_Wrapper}
 platform config -updatehw {S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter_wrapper.xsa}
 platform generate -domains 
+platform active {Real_Time_Video_Filter_Wrapper}
+bsp reload
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -DUSE_AMP=1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains standalone_ps7_cortexa9_1 
+bsp write
+domain active {standalone_domain}
+bsp reload
+bsp reload
+platform generate -domains 
+domain active {standalone_ps7_cortexa9_1}
+bsp reload
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {standalone_domain}
+bsp reload
+bsp config extra_compiler_flags "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra  -DUSE_AMP=1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains standalone_domain,standalone_ps7_cortexa9_1 
+domain active {standalone_ps7_cortexa9_1}
+bsp write
+platform active {Real_Time_Video_Filter_Wrapper}

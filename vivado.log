@@ -185,3 +185,5 @@ INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any furt
 INFO: [Vivado 12-8231] Launching Vitis
 INFO: [Vivado 12-417] Running vitis
 INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  2 00:31:42 2024...

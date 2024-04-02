@@ -1,0 +1,13 @@
+/* C:/Users/Shakeeb/AppData/Local/Temp/bootgen_Real_Time_Video_Filter_system4391123268619090736/sd_card_temp/boot.bif */
+/* Command to create bitstream .bin file:       */
+/*   bootgen -image <bif_file> -split bin -w    */
+/* Command to create BOOT.BIN file:             */
+/*   bootgen  -image <bif_file> -w -o i BOOT.BIN */
+/*Real_Time_Video_Filter_Wrapper*/
+the_ROM_image:
+{
+ [bootloader] S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/sw/Real_Time_Video_Filter_Wrapper/boot/fsbl.elf
+ S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit
+ S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/Debug/Real_Time_Video_Filter.elf
+ S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Data_Processor/Debug/Data_Processor.elf
+}

@@ -2151,3 +2151,204 @@ con
 ----------------End of Script----------------
 
 21:40:47 INFO  : Launch script is exported to file 'S:\Documents\GitHub\Real_Time_Video_Filter\workspace\Real_Time_Video_Filter_system\_ide\scripts\systemdebugger_real_time_video_filter_system_standalone.tcl'
+21:57:52 INFO  : Result from executing command 'getProjects': Real_Time_Video_Filter_Wrapper
+21:57:52 INFO  : Result from executing command 'getPlatforms': Real_Time_Video_Filter_Wrapper|S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/Real_Time_Video_Filter_Wrapper.xpfm
+21:57:52 INFO  : Checking for BSP changes to sync application flags for project 'Real_Time_Video_Filter'...
+21:57:53 INFO  : Checking for BSP changes to sync application flags for project 'Data_Processor'...
+21:57:53 INFO  : Updating application flags with new BSP settings...
+21:57:53 INFO  : Successfully updated application flags for project Data_Processor.
+21:58:05 INFO  : Disconnected from the channel tcfchan#8.
+21:58:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:58:05 INFO  : Jtag cable 'Digilent Zed 210248469541' is selected.
+21:58:05 INFO  : 'jtag frequency' command is executed.
+21:58:05 INFO  : Context for 'APU' is selected.
+21:58:05 INFO  : System reset is completed.
+21:58:08 INFO  : 'after 3000' command is executed.
+21:58:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469541" && level==0 && jtag_device_ctx=="jsn-Zed-210248469541-03727093-0"}' command is executed.
+21:58:11 INFO  : Device configured successfully with "S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit"
+21:58:11 INFO  : Context for 'APU' is selected.
+21:58:13 INFO  : Hardware design and registers information is loaded from 'S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/hw/Real_Time_Video_Filter_wrapper.xsa'.
+21:58:13 INFO  : 'configparams force-mem-access 1' command is executed.
+21:58:13 INFO  : Context for 'APU' is selected.
+21:58:13 INFO  : Sourcing of 'S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/psinit/ps7_init.tcl' is done.
+21:58:14 INFO  : 'ps7_init' command is executed.
+21:58:14 INFO  : 'ps7_post_config' command is executed.
+21:58:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:58:14 INFO  : The application 'S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/Debug/Real_Time_Video_Filter.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:58:14 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+21:58:14 INFO  : The application 'S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Data_Processor/Debug/Data_Processor.elf' is downloaded to processor 'ps7_cortexa9_1'.
+21:58:14 INFO  : 'configparams force-mem-access 0' command is executed.
+21:58:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469541" && level==0 && jtag_device_ctx=="jsn-Zed-210248469541-03727093-0"}
+fpga -file S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/hw/Real_Time_Video_Filter_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/Debug/Real_Time_Video_Filter.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Data_Processor/Debug/Data_Processor.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:58:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:58:14 INFO  : 'con' command is executed.
+21:58:14 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+21:58:14 INFO  : 'con' command is executed.
+21:58:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+21:58:14 INFO  : Launch script is exported to file 'S:\Documents\GitHub\Real_Time_Video_Filter\workspace\Real_Time_Video_Filter_system\_ide\scripts\systemdebugger_real_time_video_filter_system_standalone.tcl'
+22:01:36 INFO  : No changes in MSS file content so sources will not be generated.
+22:09:05 INFO  : No changes in MSS file content so sources will not be generated.
+22:09:52 INFO  : Result from executing command 'getProjects': Real_Time_Video_Filter_Wrapper
+22:09:52 INFO  : Result from executing command 'getPlatforms': Real_Time_Video_Filter_Wrapper|S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/Real_Time_Video_Filter_Wrapper.xpfm
+22:09:53 INFO  : Checking for BSP changes to sync application flags for project 'Real_Time_Video_Filter'...
+22:09:54 INFO  : Checking for BSP changes to sync application flags for project 'Data_Processor'...
+22:11:07 INFO  : Disconnected from the channel tcfchan#11.
+22:11:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:11:07 INFO  : Jtag cable 'Digilent Zed 210248469541' is selected.
+22:11:08 INFO  : 'jtag frequency' command is executed.
+22:11:08 INFO  : Context for 'APU' is selected.
+22:11:08 INFO  : System reset is completed.
+22:11:11 INFO  : 'after 3000' command is executed.
+22:11:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469541" && level==0 && jtag_device_ctx=="jsn-Zed-210248469541-03727093-0"}' command is executed.
+22:11:13 INFO  : Device configured successfully with "S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit"
+22:11:13 INFO  : Context for 'APU' is selected.
+22:11:13 INFO  : Hardware design and registers information is loaded from 'S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/hw/Real_Time_Video_Filter_wrapper.xsa'.
+22:11:13 INFO  : 'configparams force-mem-access 1' command is executed.
+22:11:13 INFO  : Context for 'APU' is selected.
+22:11:13 INFO  : Sourcing of 'S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/psinit/ps7_init.tcl' is done.
+22:11:13 INFO  : 'ps7_init' command is executed.
+22:11:13 INFO  : 'ps7_post_config' command is executed.
+22:11:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:11:14 INFO  : The application 'S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/Debug/Real_Time_Video_Filter.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:11:14 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+22:11:14 INFO  : The application 'S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Data_Processor/Debug/Data_Processor.elf' is downloaded to processor 'ps7_cortexa9_1'.
+22:11:14 INFO  : 'configparams force-mem-access 0' command is executed.
+22:11:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469541" && level==0 && jtag_device_ctx=="jsn-Zed-210248469541-03727093-0"}
+fpga -file S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/hw/Real_Time_Video_Filter_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/Debug/Real_Time_Video_Filter.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Data_Processor/Debug/Data_Processor.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:11:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:11:14 INFO  : 'con' command is executed.
+22:11:14 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+22:11:14 INFO  : 'con' command is executed.
+22:11:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+22:11:14 INFO  : Launch script is exported to file 'S:\Documents\GitHub\Real_Time_Video_Filter\workspace\Real_Time_Video_Filter_system\_ide\scripts\systemdebugger_real_time_video_filter_system_standalone.tcl'
+22:25:58 INFO  : Generated template bif file for Real_Time_Video_Filter_system
+22:26:51 INFO  : Invoking Bootgen: bootgen -image Real_Time_Video_Filter_system.bif -arch zynq -o S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/_ide/bootimage/BOOT.bin
+22:26:53 INFO  : Bootgen command execution is done.
+22:28:43 INFO  : Disconnected from the channel tcfchan#14.
+22:28:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:28:44 INFO  : Jtag cable 'Digilent Zed 210248469541' is selected.
+22:28:44 INFO  : 'jtag frequency' command is executed.
+22:28:44 INFO  : Context for 'APU' is selected.
+22:28:44 INFO  : System reset is completed.
+22:28:47 INFO  : 'after 3000' command is executed.
+22:28:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469541" && level==0 && jtag_device_ctx=="jsn-Zed-210248469541-03727093-0"}' command is executed.
+22:28:49 INFO  : Device configured successfully with "S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit"
+22:28:49 INFO  : Context for 'APU' is selected.
+22:28:49 INFO  : Hardware design and registers information is loaded from 'S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/hw/Real_Time_Video_Filter_wrapper.xsa'.
+22:28:49 INFO  : 'configparams force-mem-access 1' command is executed.
+22:28:49 INFO  : Context for 'APU' is selected.
+22:28:49 INFO  : Sourcing of 'S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/psinit/ps7_init.tcl' is done.
+22:28:50 INFO  : 'ps7_init' command is executed.
+22:28:50 INFO  : 'ps7_post_config' command is executed.
+22:28:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:28:50 INFO  : The application 'S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/Debug/Real_Time_Video_Filter.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:28:50 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+22:28:50 INFO  : The application 'S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Data_Processor/Debug/Data_Processor.elf' is downloaded to processor 'ps7_cortexa9_1'.
+22:28:50 INFO  : 'configparams force-mem-access 0' command is executed.
+22:28:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469541" && level==0 && jtag_device_ctx=="jsn-Zed-210248469541-03727093-0"}
+fpga -file S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/hw/Real_Time_Video_Filter_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/Debug/Real_Time_Video_Filter.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Data_Processor/Debug/Data_Processor.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:28:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:28:50 INFO  : 'con' command is executed.
+22:28:50 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+22:28:50 INFO  : 'con' command is executed.
+22:28:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+22:28:50 INFO  : Launch script is exported to file 'S:\Documents\GitHub\Real_Time_Video_Filter\workspace\Real_Time_Video_Filter_system\_ide\scripts\systemdebugger_real_time_video_filter_system_standalone.tcl'
+22:34:50 INFO  : Result from executing command 'getProjects': Real_Time_Video_Filter_Wrapper
+22:34:50 INFO  : Result from executing command 'getPlatforms': Real_Time_Video_Filter_Wrapper|S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/Real_Time_Video_Filter_Wrapper.xpfm
+22:34:51 INFO  : Checking for BSP changes to sync application flags for project 'Real_Time_Video_Filter'...
+22:34:51 INFO  : Updating application flags with new BSP settings...
+22:34:51 INFO  : Successfully updated application flags for project Real_Time_Video_Filter.
+22:34:53 INFO  : Checking for BSP changes to sync application flags for project 'Data_Processor'...
+22:34:53 INFO  : Updating application flags with new BSP settings...
+22:34:53 INFO  : Successfully updated application flags for project Data_Processor.
+22:35:04 INFO  : Checking for BSP changes to sync application flags for project 'Real_Time_Video_Filter'...
+22:35:04 INFO  : Checking for BSP changes to sync application flags for project 'Data_Processor'...
+22:35:19 INFO  : Checking for BSP changes to sync application flags for project 'Real_Time_Video_Filter'...
+22:35:20 INFO  : Checking for BSP changes to sync application flags for project 'Data_Processor'...
+22:36:02 INFO  : Checking for BSP changes to sync application flags for project 'Data_Processor'...
+22:36:28 INFO  : No changes in MSS file content so sources will not be generated.
+22:37:56 INFO  : Disconnected from the channel tcfchan#15.
+00:32:42 INFO  : Launching XSCT server: xsct.bat -n  -interactive S:\Documents\GitHub\Real_Time_Video_Filter\workspace\temp_xsdb_launch_script.tcl
+00:32:46 INFO  : XSCT server has started successfully.
+00:32:46 INFO  : Successfully done setting XSCT server connection channel  
+00:32:46 INFO  : plnx-install-location is set to ''
+00:32:46 INFO  : Successfully done setting workspace for the tool. 
+00:32:50 INFO  : Platform repository initialization has completed.
+00:32:50 INFO  : Registering command handlers for Vitis TCF services
+00:32:54 INFO  : Successfully done query RDI_DATADIR 
+00:33:18 INFO  : Projects exported to 'S:\Documents\GitHub\Real_Time_Video_Filter\vitis_export_archive.ide.zip'
