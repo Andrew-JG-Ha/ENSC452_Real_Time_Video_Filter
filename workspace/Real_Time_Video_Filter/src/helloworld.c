@@ -128,7 +128,7 @@ int main() {
 //    	unpackRGB(writeBuffer1, vgaBuffer);
     	unpackGray(writeBuffer1, vgaBuffer);
 
-//    	printf("Data at mem location: 0x%08x is 0x%08x\n", &(writeBuffer1[200]), writeBuffer1[400]);
+    	xil_printf("Data at mem location: 0x%08x is 0x%08x\r\n", &(writeBuffer1[400]), writeBuffer1[400]);
 //    	memcpy(vgaBuffer, writeBuffer1, 640*480*4);
 //    	printf("unpacked and printed!\n");
     }

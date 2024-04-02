@@ -191,6 +191,7 @@ S_AXI_HP2_AWID,
 S_AXI_HP2_WID, 
 S_AXI_HP2_WDATA, 
 S_AXI_HP2_WSTRB, 
+IRQ_F2P, 
 FCLK_CLK0, 
 FCLK_RESET0_N, 
 MIO, 
@@ -350,6 +351,7 @@ input [5 : 0] S_AXI_HP2_AWID;
 input [5 : 0] S_AXI_HP2_WID;
 input [63 : 0] S_AXI_HP2_WDATA;
 input [7 : 0] S_AXI_HP2_WSTRB;
+input [0 : 0] IRQ_F2P;
 output FCLK_CLK0;
 output FCLK_RESET0_N;
 input [53 : 0] MIO;
@@ -762,7 +764,7 @@ input PS_PORB;
     .FCLK_RESET1_N(),
     .FCLK_RESET2_N(),
     .FCLK_RESET3_N(),
-    .IRQ_F2P(16'B0),
+    .IRQ_F2P(IRQ_F2P),
     .PS_SRSTB(PS_SRSTB),
     .PS_CLK(PS_CLK),
     .PS_PORB(PS_PORB)

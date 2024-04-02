@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Mon Apr  1 16:26:35 2024
---Host        : DESKTOP-QVBDF8G running 64-bit major release  (build 9200)
+--Date        : Mon Apr  1 17:32:03 2024
+--Host        : Shonk running 64-bit major release  (build 9200)
 --Command     : generate_target Real_Time_Video_Filter_wrapper.bd
 --Design      : Real_Time_Video_Filter_wrapper
 --Purpose     : IP block netlist
@@ -47,13 +47,28 @@ entity Real_Time_Video_Filter_wrapper is
     VGA_G : out STD_LOGIC_VECTOR ( 3 downto 0 );
     VGA_HS : out STD_LOGIC;
     VGA_R : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    VGA_VS : out STD_LOGIC
+    VGA_VS : out STD_LOGIC;
+    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
 end Real_Time_Video_Filter_wrapper;
 
 architecture STRUCTURE of Real_Time_Video_Filter_wrapper is
   component Real_Time_Video_Filter is
   port (
+    OV7670_PCLK : in STD_LOGIC;
+    OV7670_VSYNC : in STD_LOGIC;
+    OV7670_HREF : in STD_LOGIC;
+    OV7670_D : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    VGA_HS : out STD_LOGIC;
+    VGA_G : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    VGA_B : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    VGA_R : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    VGA_VS : out STD_LOGIC;
+    OV7670_SIOC : out STD_LOGIC;
+    OV7670_RESET : out STD_LOGIC;
+    OV7670_SIOD : inout STD_LOGIC;
+    OV7670_PWDN : out STD_LOGIC;
+    OV7670_XCLK : out STD_LOGIC;
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -75,20 +90,7 @@ architecture STRUCTURE of Real_Time_Video_Filter_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    OV7670_PCLK : in STD_LOGIC;
-    OV7670_VSYNC : in STD_LOGIC;
-    OV7670_HREF : in STD_LOGIC;
-    OV7670_D : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    VGA_HS : out STD_LOGIC;
-    VGA_G : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    VGA_B : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    VGA_R : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    VGA_VS : out STD_LOGIC;
-    OV7670_SIOC : out STD_LOGIC;
-    OV7670_RESET : out STD_LOGIC;
-    OV7670_SIOD : inout STD_LOGIC;
-    OV7670_PWDN : out STD_LOGIC;
-    OV7670_XCLK : out STD_LOGIC
+    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
   end component Real_Time_Video_Filter;
 begin
@@ -128,6 +130,7 @@ Real_Time_Video_Filter_i: component Real_Time_Video_Filter
       VGA_G(3 downto 0) => VGA_G(3 downto 0),
       VGA_HS => VGA_HS,
       VGA_R(3 downto 0) => VGA_R(3 downto 0),
-      VGA_VS => VGA_VS
+      VGA_VS => VGA_VS,
+      btns_5bits_tri_i(4 downto 0) => btns_5bits_tri_i(4 downto 0)
     );
 end STRUCTURE;

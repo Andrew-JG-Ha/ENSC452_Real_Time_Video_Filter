@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1712014003">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1712017961">
   <File Type="BITSTR-BMM" Name="Real_Time_Video_Filter_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Real_Time_Video_Filter_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Real_Time_Video_Filter_wrapper_timing_summary_init.rpt"/>
@@ -146,9 +146,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -161,12 +159,14 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_axi_vdma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_ov7670_controller_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_RGB_to_RGBX_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_ov7670_capture_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_RGBX_AXI_Stream_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_vga_controller_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_rst_ps7_0_100M_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_vga_controller_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_ov7670_controller_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_xbar_0"/>
 </GenRun>

@@ -38,7 +38,7 @@
 #define XPAR_AXI_VDMA_0_DEVICE_ID 0U
 #define XPAR_AXI_VDMA_0_BASEADDR 0x43000000U
 #define XPAR_AXI_VDMA_0_HIGHADDR 0x4300FFFFU
-#define XPAR_AXI_VDMA_0_NUM_FSTORES 3U
+#define XPAR_AXI_VDMA_0_NUM_FSTORES 2U
 #define XPAR_AXI_VDMA_0_INCLUDE_MM2S 0U
 #define XPAR_AXI_VDMA_0_INCLUDE_MM2S_DRE 0U
 #define XPAR_AXI_VDMA_0_M_AXI_MM2S_DATA_WIDTH 64U
@@ -80,7 +80,7 @@
 #define XPAR_AXIVDMA_0_DEVICE_ID XPAR_AXI_VDMA_0_DEVICE_ID
 #define XPAR_AXIVDMA_0_BASEADDR 0x43000000U
 #define XPAR_AXIVDMA_0_HIGHADDR 0x4300FFFFU
-#define XPAR_AXIVDMA_0_NUM_FSTORES 3U
+#define XPAR_AXIVDMA_0_NUM_FSTORES 2U
 #define XPAR_AXIVDMA_0_INCLUDE_MM2S 0U
 #define XPAR_AXIVDMA_0_INCLUDE_MM2S_DRE 0U
 #define XPAR_AXIVDMA_0_M_AXI_MM2S_DATA_WIDTH 64U
@@ -307,6 +307,29 @@
 
 /******************************************************************/
 
+/* Definitions for driver GPIO */
+#define XPAR_XGPIO_NUM_INSTANCES 1
+
+/* Definitions for peripheral AXI_GPIO_0 */
+#define XPAR_AXI_GPIO_0_BASEADDR 0x41200000
+#define XPAR_AXI_GPIO_0_HIGHADDR 0x4120FFFF
+#define XPAR_AXI_GPIO_0_DEVICE_ID 0
+#define XPAR_AXI_GPIO_0_INTERRUPT_PRESENT 1
+#define XPAR_AXI_GPIO_0_IS_DUAL 0
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral AXI_GPIO_0 */
+#define XPAR_GPIO_0_BASEADDR 0x41200000
+#define XPAR_GPIO_0_HIGHADDR 0x4120FFFF
+#define XPAR_GPIO_0_DEVICE_ID XPAR_AXI_GPIO_0_DEVICE_ID
+#define XPAR_GPIO_0_INTERRUPT_PRESENT 1
+#define XPAR_GPIO_0_IS_DUAL 0
+
+
+/******************************************************************/
+
 /* Definitions for driver GPIOPS */
 #define XPAR_XGPIOPS_NUM_INSTANCES 1
 
@@ -348,6 +371,16 @@
 #define XPAR_XQSPIPS_0_QSPI_MODE 0
 #define XPAR_XQSPIPS_0_QSPI_BUS_WIDTH 2
 
+
+/******************************************************************/
+
+/* Definitions for Fabric interrupts connected to ps7_scugic_0 */
+#define XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR 61U
+
+/******************************************************************/
+
+/* Canonical definitions for Fabric interrupts connected to ps7_scugic_0 */
+#define XPAR_FABRIC_GPIO_0_VEC_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
 
 /******************************************************************/
 

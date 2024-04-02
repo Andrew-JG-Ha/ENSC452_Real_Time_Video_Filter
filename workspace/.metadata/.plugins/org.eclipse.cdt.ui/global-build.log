@@ -1,9 +1,90 @@
 Nothing to build in platform 'Real_Time_Video_Filter_Wrapper'
 
-16:31:41 **** Incremental Build of configuration Debug for project Real_Time_Video_Filter ****
+21:40:04 **** Incremental Build of configuration Debug for project Real_Time_Video_Filter ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
 make[1]: Nothing to be done for 'main-build'.
+21:40:05 **** Incremental Build of configuration Debug for project Data_Processor ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/image_data.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/image_data.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IS:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/sw/Real_Time_Video_Filter_Wrapper/standalone_ps7_cortexa9_1/bspinclude/include -MMD -MP -MF"src/image_data.d" -MT"src/image_data.o" -o "src/image_data.o" "../src/image_data.c"
+'Finished building: ../src/image_data.c'
+' '
+'Building file: ../src/ip_functions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ip_functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IS:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/sw/Real_Time_Video_Filter_Wrapper/standalone_ps7_cortexa9_1/bspinclude/include -MMD -MP -MF"src/ip_functions.d" -MT"src/ip_functions.o" -o "src/ip_functions.o" "../src/ip_functions.c"
+../src/ip_functions.c: In function 'BTN_Intr_Handler':
+../src/ip_functions.c:54:3: warning: implicit declaration of function 'storeImageInDDR' [-Wimplicit-function-declaration]
+   54 |   storeImageInDDR();
+      |   ^~~~~~~~~~~~~~~
+In file included from ../src/ip_functions.c:8:
+At top level:
+../src/image_data.h:59:12: warning: 'BMP_DATA_SIZE' defined but not used [-Wunused-variable]
+   59 | static int BMP_DATA_SIZE;
+      |            ^~~~~~~~~~~~~
+../src/image_data.h:58:12: warning: 'BMP_HEADER_SIZE' defined but not used [-Wunused-variable]
+   58 | static int BMP_HEADER_SIZE;
+      |            ^~~~~~~~~~~~~~~
+../src/image_data.h:38:14: warning: 'SD_File' defined but not used [-Wunused-variable]
+   38 | static char* SD_File;
+      |              ^~~~~~~
+../src/image_data.h:37:13: warning: 'FileName' defined but not used [-Wunused-variable]
+   37 | static char FileName[32] = "Test2.bmp";
+      |             ^~~~~~~~
+../src/image_data.h:35:14: warning: 'Fatfs' defined but not used [-Wunused-variable]
+   35 | static FATFS Fatfs;
+      |              ^~~~~
+../src/image_data.h:34:12: warning: 'File' defined but not used [-Wunused-variable]
+   34 | static FIL File;
+      |            ^~~~
+'Finished building: ../src/ip_functions.c'
+' '
+'Building target: Data_Processor.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LS:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/sw/Real_Time_Video_Filter_Wrapper/standalone_ps7_cortexa9_1/bsplib/lib -o "Data_Processor.elf"  ./src/Real_Time_Video_Filter.o ./src/image_data.o ./src/ip_functions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Data_Processor.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Data_Processor.elf  |tee "Data_Processor.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61708	   2040	  37664	 101412	  18c24	Data_Processor.elf
+'Finished building: Data_Processor.elf.size'
+' '
+21:40:06 **** Incremental Build of configuration Debug for project Real_Time_Video_Filter_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 56387 S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/Real_Time_Video_Filter_Wrapper.xpfm standalone_domain,standalone_ps7_cortexa9_1 S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif
+sdcard_gen --xpfm S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/Real_Time_Video_Filter_Wrapper.xpfm --sys_config Real_Time_Video_Filter_Wrapper --bif S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif --bitstream S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit --elf S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/Debug/Real_Time_Video_Filter.elf,ps7_cortexa9_0 --elf S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Data_Processor/Debug/Data_Processor.elf,ps7_cortexa9_1
+creating BOOT.BIN using S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit
+Running S:/Xilinx/Vitis/2020.2/bin/bootgen  -image S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+Nothing to build in platform 'Real_Time_Video_Filter_Wrapper'
+
+21:40:23 **** Incremental Build of configuration Debug for project Real_Time_Video_Filter ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+make[1]: Nothing to be done for 'main-build'.
+21:40:23 **** Incremental Build of configuration Debug for project Data_Processor ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+make[1]: Nothing to be done for 'main-build'.
+21:40:24 **** Incremental Build of configuration Debug for project Real_Time_Video_Filter_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 56387 S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/Real_Time_Video_Filter_Wrapper.xpfm standalone_domain,standalone_ps7_cortexa9_1 S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif
+sdcard_gen --xpfm S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/Real_Time_Video_Filter_Wrapper.xpfm --sys_config Real_Time_Video_Filter_Wrapper --bif S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif --bitstream S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit --elf S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/Debug/Real_Time_Video_Filter.elf,ps7_cortexa9_0 --elf S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Data_Processor/Debug/Data_Processor.elf,ps7_cortexa9_1
+creating BOOT.BIN using S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit
+Running S:/Xilinx/Vitis/2020.2/bin/bootgen  -image S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

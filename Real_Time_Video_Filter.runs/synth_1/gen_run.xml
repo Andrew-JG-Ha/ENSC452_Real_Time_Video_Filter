@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1712014001">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1712017957">
   <File Type="PA-TCL" Name="Real_Time_Video_Filter_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Real_Time_Video_Filter_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Real_Time_Video_Filter_wrapper_reports.tcl"/>
@@ -80,19 +80,19 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_axi_vdma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_ov7670_controller_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_RGB_to_RGBX_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_ov7670_capture_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_RGBX_AXI_Stream_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_vga_controller_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_rst_ps7_0_100M_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_vga_controller_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_ov7670_controller_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Real_Time_Video_Filter_xbar_0"/>
 </GenRun>

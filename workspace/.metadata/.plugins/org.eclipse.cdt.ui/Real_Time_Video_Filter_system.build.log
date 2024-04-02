@@ -1,0 +1,10 @@
+21:40:24 **** Incremental Build of configuration Debug for project Real_Time_Video_Filter_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 56387 S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/Real_Time_Video_Filter_Wrapper.xpfm standalone_domain,standalone_ps7_cortexa9_1 S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif
+sdcard_gen --xpfm S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/Real_Time_Video_Filter_Wrapper.xpfm --sys_config Real_Time_Video_Filter_Wrapper --bif S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif --bitstream S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit --elf S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/Debug/Real_Time_Video_Filter.elf,ps7_cortexa9_0 --elf S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Data_Processor/Debug/Data_Processor.elf,ps7_cortexa9_1
+creating BOOT.BIN using S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit
+Running S:/Xilinx/Vitis/2020.2/bin/bootgen  -image S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+21:40:30 Build Finished (took 6s.97ms)
+

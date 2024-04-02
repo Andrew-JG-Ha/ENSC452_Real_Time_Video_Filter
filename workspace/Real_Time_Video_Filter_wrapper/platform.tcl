@@ -22,3 +22,23 @@ bsp reload
 domain active {standalone_domain}
 bsp reload
 platform generate -domains 
+platform generate
+domain create -name {standalone_ps7_cortexa9_1} -display-name {standalone_ps7_cortexa9_1} -os {standalone} -proc {ps7_cortexa9_1} -runtime {cpp} -arch {32-bit} -support-app {empty_application}
+platform generate -domains 
+platform active {Real_Time_Video_Filter_Wrapper}
+domain active {zynq_fsbl}
+domain active {standalone_domain}
+domain active {standalone_ps7_cortexa9_1}
+platform generate -quick
+platform generate -domains standalone_ps7_cortexa9_1 
+bsp reload
+bsp setlib -name xilffs -ver 4.4
+bsp write
+bsp reload
+catch {bsp regenerate}
+bsp reload
+platform generate -domains standalone_ps7_cortexa9_1 
+platform generate
+platform active {Real_Time_Video_Filter_Wrapper}
+platform config -updatehw {S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter_wrapper.xsa}
+platform generate -domains 

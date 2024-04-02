@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Mon Apr  1 16:28:55 2024
-| Host         : DESKTOP-QVBDF8G running 64-bit major release  (build 9200)
+| Date         : Mon Apr  1 17:36:15 2024
+| Host         : Shonk running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Real_Time_Video_Filter_wrapper_methodology_drc_routed.rpt -pb Real_Time_Video_Filter_wrapper_methodology_drc_routed.pb -rpx Real_Time_Video_Filter_wrapper_methodology_drc_routed.rpx
 | Design       : Real_Time_Video_Filter_wrapper
 | Device       : xc7z020clg484-1
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 352
+             Violations found: 362
 +-----------+------------------+----------------------------------------------------+------------+
 | Rule      | Severity         | Description                                        | Violations |
 +-----------+------------------+----------------------------------------------------+------------+
@@ -33,6 +33,8 @@ Table of Contents
 | HPDR-1    | Warning          | Port pin direction inconsistency                   | 1          |
 | HPDR-2    | Warning          | Port pin INOUT inconsistency                       | 2          |
 | LUTAR-1   | Warning          | LUT drives async reset alert                       | 3          |
+| TIMING-18 | Warning          | Missing input or output delay                      | 5          |
+| XDCC-2    | Warning          | Scoped Non-Timing constraint/property overwritten  | 5          |
 | XDCC-5    | Warning          | User Non-Timing constraint/property overwritten    | 16         |
 +-----------+------------------+----------------------------------------------------+------------+
 
@@ -1751,116 +1753,176 @@ Real_Time_Video_Filter_i/axi_vdma_0/U0/GEN_SPRT_FOR_S2MM.S2MM_LINEBUFFER_I/GEN_S
 Real_Time_Video_Filter_i/axi_vdma_0/U0/GEN_SPRT_FOR_S2MM.S2MM_LINEBUFFER_I/GEN_S2MM_FLUSH_SOF_LOGIC.GEN_LINEBUFFER_FLUSH_SOF.GEN_ASYNC_FIFO_FLUSH_SOF.LB_BUILT_IN.I_LINEBUFFER_FIFO/fg_builtin_fifo_inst/inst_fifo_gen/gconvfifo.rf/gbi.bi/v7_bi_fifo.fblk/gextw[4].gnll_fifo.inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1/RST. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on btns_5bits_tri_i[0] relative to clock(s) Real_Time_Video_Filter_i/clk_wiz_0/inst/clk_in1
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on btns_5bits_tri_i[1] relative to clock(s) Real_Time_Video_Filter_i/clk_wiz_0/inst/clk_in1
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on btns_5bits_tri_i[2] relative to clock(s) Real_Time_Video_Filter_i/clk_wiz_0/inst/clk_in1
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on btns_5bits_tri_i[3] relative to clock(s) Real_Time_Video_Filter_i/clk_wiz_0/inst/clk_in1
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on btns_5bits_tri_i[4] relative to clock(s) Real_Time_Video_Filter_i/clk_wiz_0/inst/clk_in1
+Related violations: <none>
+
+XDCC-2#1 Warning
+Scoped Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on btns_5bits_tri_i[0] overrides a previous scoped property. It is not recommended to override a scoped (typically an IP) property and could result in unexpected behaviours.
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 369)
+Previous Source: s:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_axi_gpio_0_0/Real_Time_Video_Filter_axi_gpio_0_0_board.xdc (Line: 3)
+Related violations: <none>
+
+XDCC-2#2 Warning
+Scoped Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on btns_5bits_tri_i[1] overrides a previous scoped property. It is not recommended to override a scoped (typically an IP) property and could result in unexpected behaviours.
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 369)
+Previous Source: s:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_axi_gpio_0_0/Real_Time_Video_Filter_axi_gpio_0_0_board.xdc (Line: 5)
+Related violations: <none>
+
+XDCC-2#3 Warning
+Scoped Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on btns_5bits_tri_i[2] overrides a previous scoped property. It is not recommended to override a scoped (typically an IP) property and could result in unexpected behaviours.
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 369)
+Previous Source: s:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_axi_gpio_0_0/Real_Time_Video_Filter_axi_gpio_0_0_board.xdc (Line: 7)
+Related violations: <none>
+
+XDCC-2#4 Warning
+Scoped Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on btns_5bits_tri_i[3] overrides a previous scoped property. It is not recommended to override a scoped (typically an IP) property and could result in unexpected behaviours.
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 369)
+Previous Source: s:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_axi_gpio_0_0/Real_Time_Video_Filter_axi_gpio_0_0_board.xdc (Line: 9)
+Related violations: <none>
+
+XDCC-2#5 Warning
+Scoped Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on btns_5bits_tri_i[4] overrides a previous scoped property. It is not recommended to override a scoped (typically an IP) property and could result in unexpected behaviours.
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 369)
+Previous Source: s:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_axi_gpio_0_0/Real_Time_Video_Filter_axi_gpio_0_0_board.xdc (Line: 11)
+Related violations: <none>
+
 XDCC-5#1 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on OV7670_D[0] overrides a previous user property.
-New Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 387)
-Previous Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 387)
+Previous Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
 Related violations: <none>
 
 XDCC-5#2 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on OV7670_D[1] overrides a previous user property.
-New Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 387)
-Previous Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 387)
+Previous Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
 Related violations: <none>
 
 XDCC-5#3 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on OV7670_D[2] overrides a previous user property.
-New Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 387)
-Previous Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 387)
+Previous Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
 Related violations: <none>
 
 XDCC-5#4 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on OV7670_D[3] overrides a previous user property.
-New Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 387)
-Previous Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 387)
+Previous Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
 Related violations: <none>
 
 XDCC-5#5 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on OV7670_D[4] overrides a previous user property.
-New Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 387)
-Previous Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 387)
+Previous Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
 Related violations: <none>
 
 XDCC-5#6 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on OV7670_D[5] overrides a previous user property.
-New Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 387)
-Previous Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 387)
+Previous Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
 Related violations: <none>
 
 XDCC-5#7 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on OV7670_D[6] overrides a previous user property.
-New Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 387)
-Previous Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 387)
+Previous Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
 Related violations: <none>
 
 XDCC-5#8 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on OV7670_D[7] overrides a previous user property.
-New Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 387)
-Previous Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 387)
+Previous Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
 Related violations: <none>
 
 XDCC-5#9 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on OV7670_HREF overrides a previous user property.
-New Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 384)
-Previous Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 384)
+Previous Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
 Related violations: <none>
 
 XDCC-5#10 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on OV7670_PCLK overrides a previous user property.
-New Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 379)
-Previous Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 379)
+Previous Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
 Related violations: <none>
 
 XDCC-5#11 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on OV7670_PWDN overrides a previous user property.
-New Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 383)
-Previous Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 383)
+Previous Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
 Related violations: <none>
 
 XDCC-5#12 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on OV7670_RESET overrides a previous user property.
-New Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 382)
-Previous Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 382)
+Previous Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
 Related violations: <none>
 
 XDCC-5#13 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on OV7670_SIOC overrides a previous user property.
-New Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 380)
-Previous Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 380)
+Previous Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
 Related violations: <none>
 
 XDCC-5#14 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on OV7670_SIOD overrides a previous user property.
-New Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 386)
-Previous Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 386)
+Previous Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
 Related violations: <none>
 
 XDCC-5#15 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on OV7670_VSYNC overrides a previous user property.
-New Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 381)
-Previous Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 381)
+Previous Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
 Related violations: <none>
 
 XDCC-5#16 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on OV7670_XCLK overrides a previous user property.
-New Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 385)
-Previous Source: A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
+New Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 385)
+Previous Source: S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc (Line: 377)
 Related violations: <none>
 
 

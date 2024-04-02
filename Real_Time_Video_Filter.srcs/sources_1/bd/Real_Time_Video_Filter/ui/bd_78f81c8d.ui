@@ -1,45 +1,47 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.714525",
-   "Default View_TopLeft":"627,-350",
+   "Default View_TopLeft":"777,-490",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 8 -x 2540 -y -180 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 8 -x 2540 -y -160 -defaultsOSRD
-preplace port OV7670_PCLK -pg 1 -lvl 0 -x -80 -y -70 -defaultsOSRD
-preplace port OV7670_VSYNC -pg 1 -lvl 0 -x -80 -y -50 -defaultsOSRD
-preplace port OV7670_HREF -pg 1 -lvl 0 -x -80 -y -30 -defaultsOSRD
-preplace port VGA_HS -pg 1 -lvl 8 -x 2540 -y 280 -defaultsOSRD
-preplace port VGA_VS -pg 1 -lvl 8 -x 2540 -y 300 -defaultsOSRD
-preplace port OV7670_SIOC -pg 1 -lvl 8 -x 2540 -y 470 -defaultsOSRD
-preplace port OV7670_RESET -pg 1 -lvl 8 -x 2540 -y 510 -defaultsOSRD
-preplace port OV7670_SIOD -pg 1 -lvl 8 -x 2540 -y 490 -defaultsOSRD
-preplace port OV7670_PWDN -pg 1 -lvl 8 -x 2540 -y 530 -defaultsOSRD
-preplace port OV7670_XCLK -pg 1 -lvl 8 -x 2540 -y 550 -defaultsOSRD
-preplace portBus OV7670_D -pg 1 -lvl 0 -x -80 -y -10 -defaultsOSRD
-preplace portBus VGA_G -pg 1 -lvl 8 -x 2540 -y 240 -defaultsOSRD
-preplace portBus VGA_B -pg 1 -lvl 8 -x 2540 -y 260 -defaultsOSRD
-preplace portBus VGA_R -pg 1 -lvl 8 -x 2540 -y 220 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 8 -x 2560 -y -180 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 8 -x 2560 -y -160 -defaultsOSRD
+preplace port btns_5bits -pg 1 -lvl 8 -x 2560 -y -470 -defaultsOSRD
+preplace port OV7670_PCLK -pg 1 -lvl 0 -x -90 -y -70 -defaultsOSRD
+preplace port OV7670_VSYNC -pg 1 -lvl 0 -x -90 -y -50 -defaultsOSRD
+preplace port OV7670_HREF -pg 1 -lvl 0 -x -90 -y -30 -defaultsOSRD
+preplace port VGA_HS -pg 1 -lvl 8 -x 2560 -y 280 -defaultsOSRD
+preplace port VGA_VS -pg 1 -lvl 8 -x 2560 -y 300 -defaultsOSRD
+preplace port OV7670_SIOC -pg 1 -lvl 8 -x 2560 -y 470 -defaultsOSRD
+preplace port OV7670_RESET -pg 1 -lvl 8 -x 2560 -y 510 -defaultsOSRD
+preplace port OV7670_SIOD -pg 1 -lvl 8 -x 2560 -y 490 -defaultsOSRD
+preplace port OV7670_PWDN -pg 1 -lvl 8 -x 2560 -y 530 -defaultsOSRD
+preplace port OV7670_XCLK -pg 1 -lvl 8 -x 2560 -y 550 -defaultsOSRD
+preplace portBus OV7670_D -pg 1 -lvl 0 -x -90 -y -10 -defaultsOSRD
+preplace portBus VGA_G -pg 1 -lvl 8 -x 2560 -y 240 -defaultsOSRD
+preplace portBus VGA_B -pg 1 -lvl 8 -x 2560 -y 260 -defaultsOSRD
+preplace portBus VGA_R -pg 1 -lvl 8 -x 2560 -y 220 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 5 -x 1490 -y -60 -defaultsOSRD
-preplace inst RGB_to_RGBX_0 -pg 1 -lvl 2 -x 320 -y -30 -defaultsOSRD
-preplace inst RGBX_AXI_Stream_0 -pg 1 -lvl 3 -x 590 -y -30 -defaultsOSRD
-preplace inst ov7670_controller_0 -pg 1 -lvl 4 -x 930 -y 500 -defaultsOSRD
+preplace inst RGB_to_RGBX_0 -pg 1 -lvl 2 -x 340 -y -30 -defaultsOSRD
+preplace inst RGBX_AXI_Stream_0 -pg 1 -lvl 3 -x 630 -y -30 -defaultsOSRD
 preplace inst ov7670_capture_0 -pg 1 -lvl 1 -x 50 -y -40 -defaultsOSRD
-preplace inst axi_vdma_0 -pg 1 -lvl 4 -x 930 -y -30 -defaultsOSRD
-preplace inst vga_controller_0 -pg 1 -lvl 4 -x 930 -y 260 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 3 -x 590 -y 230 -defaultsOSRD
+preplace inst axi_vdma_0 -pg 1 -lvl 4 -x 980 -y -30 -defaultsOSRD
+preplace inst vga_controller_0 -pg 1 -lvl 4 -x 980 -y 260 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 3 -x 630 -y 230 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 7 -x 2360 -y -310 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 6 -x 1950 -y 40 -defaultsOSRD
 preplace inst axi_mem_intercon -pg 1 -lvl 7 -x 2360 -y 0 -defaultsOSRD
 preplace inst rst_ps7_0_100M_1 -pg 1 -lvl 6 -x 1950 -y -320 -defaultsOSRD
-preplace netloc ov7670_capture_0_aclk 1 1 3 180 60 470 60 720
+preplace inst ov7670_controller_0 -pg 1 -lvl 4 -x 980 -y 500 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 5 -x 1490 -y -280 -defaultsOSRD
+preplace netloc ov7670_capture_0_aclk 1 1 3 180 60 490 60 760
 preplace netloc ov7670_capture_0_we 1 1 1 160 -30n
 preplace netloc ov7670_capture_0_dout 1 1 1 160 -60n
 preplace netloc ov7670_capture_0_addr 1 1 1 170 -70n
-preplace netloc RGB_to_RGBX_0_address_out 1 2 1 480 -50n
-preplace netloc RGB_to_RGBX_0_RGBX_out 1 2 1 460 -30n
-preplace netloc RGB_to_RGBX_0_writeEnable_out 1 2 1 460 -10n
+preplace netloc RGB_to_RGBX_0_address_out 1 2 1 500 -50n
+preplace netloc RGB_to_RGBX_0_RGBX_out 1 2 1 480 -30n
+preplace netloc RGB_to_RGBX_0_writeEnable_out 1 2 1 480 -10n
 preplace netloc pclk_0_1 1 0 1 NJ -70
 preplace netloc vsync_0_1 1 0 1 NJ -50
 preplace netloc href_0_1 1 0 1 NJ -30
@@ -54,28 +56,32 @@ preplace netloc ov7670_controller_0_reset 1 4 4 NJ 510 NJ 510 N 510 N
 preplace netloc Net 1 4 4 NJ 490 NJ 490 N 490 N
 preplace netloc ov7670_controller_0_pwdn 1 4 4 NJ 530 NJ 530 N 530 N
 preplace netloc ov7670_controller_0_xclk 1 4 4 NJ 550 NJ 550 N 550 N
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 5 1 1750 -340n
-preplace netloc processing_system7_0_FCLK_CLK0 1 2 4 470 100 NJ 100 NJ 100 1730
-preplace netloc clk_wiz_0_clk_out50 1 3 1 700 230n
-preplace netloc clk_wiz_0_clk_out100 1 3 4 710 90 1110 -360 1750 -430 2150
-preplace netloc clk_wiz_0_clk_out25 1 3 3 720 140 1110 150 1740
-preplace netloc rst_ps7_0_100M_1_peripheral_aresetn 1 6 1 2120 -280n
-preplace netloc processing_system7_0_S_AXI_HP2_RCOUNT 1 3 2 730 -150 1140J
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 3 4 740 130 NJ 130 1750J 150 2140
-preplace netloc processing_system7_0_DDR 1 5 3 N -140 N -140 2510
-preplace netloc processing_system7_0_FIXED_IO 1 5 3 N -120 N -120 2520
-preplace netloc RGBX_AXI_Stream_0_m_axis 1 3 1 700 -70n
-preplace netloc processing_system7_0_M_AXI_GP0 1 5 2 1730J -420 2160
-preplace netloc ps7_0_axi_periph_M00_AXI 1 3 5 740 -440 NJ -440 NJ -440 NJ -440 2510
-preplace netloc vga_controller_0_M_AXI 1 4 1 1130 -50n
-preplace netloc axi_vdma_0_M_AXI_S2MM 1 4 3 1120J -200 NJ -200 2130
-preplace netloc axi_mem_intercon_M00_AXI 1 4 4 1140 140 NJ 140 NJ 140 2520
-levelinfo -pg 1 -80 50 320 590 930 1490 1950 2360 2540
-pagesize -pg 1 -db -bbox -sgen -240 -480 2700 1220
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 5 1 1760 -340n
+preplace netloc processing_system7_0_FCLK_CLK0 1 2 4 490 110 NJ 110 NJ 110 1730
+preplace netloc clk_wiz_0_clk_out50 1 3 1 740 230n
+preplace netloc clk_wiz_0_clk_out100 1 3 4 750 90 1170 -360 1760 -430 2130
+preplace netloc clk_wiz_0_clk_out25 1 3 3 760 100 N 100 1770
+preplace netloc rst_ps7_0_100M_1_peripheral_aresetn 1 4 3 1210 -440 N -440 2140
+preplace netloc processing_system7_0_S_AXI_HP2_RCOUNT 1 3 2 770 -150 1180J
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 3 4 780 140 NJ 140 NJ 140 2150
+preplace netloc axi_gpio_0_ip2intc_irpt 1 4 2 1210 -200 1730
+preplace netloc RGBX_AXI_Stream_0_m_axis 1 3 1 740 -70n
+preplace netloc processing_system7_0_M_AXI_GP0 1 5 2 1740J -420 2120
+preplace netloc ps7_0_axi_periph_M00_AXI 1 3 5 780 -460 NJ -460 NJ -460 NJ -460 2520
+preplace netloc processing_system7_0_DDR 1 5 3 N -140 N -140 2540
+preplace netloc processing_system7_0_FIXED_IO 1 5 3 1750 -160 N -160 N
+preplace netloc axi_mem_intercon_M00_AXI 1 4 4 1190 -470 NJ -470 NJ -470 2530
+preplace netloc vga_controller_0_M_AXI 1 4 1 1190 -60n
+preplace netloc axi_vdma_0_M_AXI_S2MM 1 4 3 1160J 80 1750J -60 N
+preplace netloc axi_gpio_0_GPIO 1 5 3 1730J -480 NJ -480 2540J
+preplace netloc ps7_0_axi_periph_M01_AXI 1 4 4 1200 -450 NJ -450 NJ -450 2510
+levelinfo -pg 1 -90 50 340 630 980 1490 1950 2360 2560
+pagesize -pg 1 -db -bbox -sgen -250 -490 2720 1220
 "
 }
 {
-   "da_axi4_cnt":"2",
+   "da_axi4_cnt":"3",
+   "da_board_cnt":"1",
    "da_clkrst_cnt":"6",
    "da_ps7_cnt":"1"
 }
