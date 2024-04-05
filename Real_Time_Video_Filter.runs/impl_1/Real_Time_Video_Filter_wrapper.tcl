@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/impl_1/Real_Time_Video_Filter_wrapper.tcl"
+  variable script "S:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/impl_1/Real_Time_Video_Filter_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -130,22 +130,22 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.cache/wt [current_project]
-  set_property parent.project_path S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.xpr [current_project]
-  set_property ip_repo_paths S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files [current_project]
+  set_property webtalk.parent_dir S:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.cache/wt [current_project]
+  set_property parent.project_path S:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.xpr [current_project]
+  set_property ip_repo_paths S:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files [current_project]
   update_ip_catalog
-  set_property ip_output_repo S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.cache/ip [current_project]
+  set_property ip_output_repo S:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/Real_Time_Video_Filter_wrapper.dcp
+  add_files -quiet S:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/synth_1/Real_Time_Video_Filter_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/sources_1/bd/Real_Time_Video_Filter/Real_Time_Video_Filter.bd
+  add_files S:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/sources_1/bd/Real_Time_Video_Filter/Real_Time_Video_Filter.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc
+  read_xdc S:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

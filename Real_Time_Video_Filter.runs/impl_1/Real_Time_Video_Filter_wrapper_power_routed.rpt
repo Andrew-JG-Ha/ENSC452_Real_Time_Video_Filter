@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Mon Apr  1 17:36:17 2024
+| Date             : Thu Apr  4 23:38:30 2024
 | Host             : Shonk running 64-bit major release  (build 9200)
 | Command          : report_power -file Real_Time_Video_Filter_wrapper_power_routed.rpt -pb Real_Time_Video_Filter_wrapper_power_summary_routed.pb -rpx Real_Time_Video_Filter_wrapper_power_routed.rpx
 | Design           : Real_Time_Video_Filter_wrapper
@@ -53,7 +53,7 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.014 |        8 |       --- |             --- |
-| Slice Logic              |     0.003 |     7066 |       --- |             --- |
+| Slice Logic              |     0.003 |     7067 |       --- |             --- |
 |   LUT as Logic           |     0.003 |     2183 |     53200 |            4.10 |
 |   CARRY4                 |    <0.001 |      127 |     13300 |            0.95 |
 |   Register               |    <0.001 |     3481 |    106400 |            3.27 |
@@ -61,7 +61,7 @@ Table of Contents
 |   LUT as Distributed RAM |    <0.001 |       16 |     17400 |            0.09 |
 |   LUT as Shift Register  |    <0.001 |      159 |     17400 |            0.91 |
 |   Others                 |     0.000 |      495 |       --- |             --- |
-| Signals                  |     0.004 |     5129 |       --- |             --- |
+| Signals                  |     0.004 |     5128 |       --- |             --- |
 | Block RAM                |     0.001 |       10 |       140 |            7.14 |
 | MMCM                     |     0.106 |        1 |         4 |           25.00 |
 | I/O                      |     0.003 |       35 |       200 |           17.50 |
@@ -159,7 +159,7 @@ Table of Contents
 | Name                           | Power (W) |
 +--------------------------------+-----------+
 | Real_Time_Video_Filter_wrapper |     1.512 |
-|   Real_Time_Video_Filter_i     |     1.509 |
+|   Real_Time_Video_Filter_i     |     1.508 |
 |     axi_mem_intercon           |     0.001 |
 |       s00_couplers             |     0.001 |
 |     axi_vdma_0                 |     0.010 |

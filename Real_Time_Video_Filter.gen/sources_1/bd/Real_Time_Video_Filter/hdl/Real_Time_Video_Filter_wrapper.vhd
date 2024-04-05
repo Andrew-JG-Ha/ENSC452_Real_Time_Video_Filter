@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Mon Apr  1 17:32:03 2024
+--Date        : Thu Apr  4 23:33:52 2024
 --Host        : Shonk running 64-bit major release  (build 9200)
 --Command     : generate_target Real_Time_Video_Filter_wrapper.bd
 --Design      : Real_Time_Video_Filter_wrapper
@@ -69,6 +69,7 @@ architecture STRUCTURE of Real_Time_Video_Filter_wrapper is
     OV7670_SIOD : inout STD_LOGIC;
     OV7670_PWDN : out STD_LOGIC;
     OV7670_XCLK : out STD_LOGIC;
+    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -89,8 +90,7 @@ architecture STRUCTURE of Real_Time_Video_Filter_wrapper is
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC;
-    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 )
+    FIXED_IO_ps_porb : inout STD_LOGIC
   );
   end component Real_Time_Video_Filter;
 begin

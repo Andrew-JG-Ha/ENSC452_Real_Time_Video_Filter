@@ -52,7 +52,7 @@
 # #########################################################
 
 
-create_clock -period 40 -name s_axis_s2mm_aclk [get_ports s_axis_s2mm_aclk]
+create_clock -period 10 -name s_axis_s2mm_aclk [get_ports s_axis_s2mm_aclk]
 
 create_clock -period 10 -name s_axi_lite_aclk [get_ports s_axi_lite_aclk]
 

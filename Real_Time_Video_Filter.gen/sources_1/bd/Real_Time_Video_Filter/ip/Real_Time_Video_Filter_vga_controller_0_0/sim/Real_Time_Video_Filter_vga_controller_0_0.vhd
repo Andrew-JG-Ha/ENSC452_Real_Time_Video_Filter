@@ -244,7 +244,7 @@ ARCHITECTURE Real_Time_Video_Filter_vga_controller_0_0_arch OF Real_Time_Video_F
 BEGIN
   U0 : vga_controller
     GENERIC MAP (
-      image_buffer1_baseaddr => X"02000000",
+      image_buffer1_baseaddr => X"12000000",
       horizontal_length => 640,
       vertical_length => 480,
       h_front_porch => 16,
@@ -255,7 +255,7 @@ BEGIN
       v_back_porch => 33,
       h_sync_polarity => '0',
       v_sync_polarity => '0',
-      image_buffer2_baseaddr => X"010E9001"
+      image_buffer2_baseaddr => X"110E9001"
     )
     PORT MAP (
       VGA_R => VGA_R,

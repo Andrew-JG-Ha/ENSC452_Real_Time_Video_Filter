@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;Real_Time_Video_Filter&apos;" deleteContents="true" description="Delete resource &apos;Real_Time_Video_Filter&apos;" element1="/Real_Time_Video_Filter" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1712000511343"/>&#x0A;<refactoring comment="Delete resource &apos;Data_Processing&apos;" deleteContents="true" description="Delete resource &apos;Data_Processing&apos;" element1="/Data_Processing" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1712030965582"/>
-</session>

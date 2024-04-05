@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=C:/Xilinx/Vitis/2020.2/bin;C:/Xilinx/Vivado/2020.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2020.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2020.2/bin
+  PATH=S:/Xilinx/Vitis/2020.2/bin;S:/Xilinx/Vivado/2020.2/ids_lite/ISE/bin/nt64;S:/Xilinx/Vivado/2020.2/ids_lite/ISE/lib/nt64:S:/Xilinx/Vivado/2020.2/bin
 else
-  PATH=C:/Xilinx/Vitis/2020.2/bin;C:/Xilinx/Vivado/2020.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2020.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2020.2/bin:$PATH
+  PATH=S:/Xilinx/Vitis/2020.2/bin;S:/Xilinx/Vivado/2020.2/ids_lite/ISE/bin/nt64;S:/Xilinx/Vivado/2020.2/ids_lite/ISE/lib/nt64:S:/Xilinx/Vivado/2020.2/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_vga_controller_0_0_synth_1'
+HD_PWD='S:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_vga_controller_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

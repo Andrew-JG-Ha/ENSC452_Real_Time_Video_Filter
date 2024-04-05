@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc rfile:../../../Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:S:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc rfile:../../../Real_Time_Video_Filter.srcs/constrs_1/new/zedboard.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:87 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN Y11  [get_ports {OV7670_PWDN}];  # "JA1"
 set_property src_info {type:XDC file:1 line:88 export:INPUT save:INPUT read:READ} [current_design]

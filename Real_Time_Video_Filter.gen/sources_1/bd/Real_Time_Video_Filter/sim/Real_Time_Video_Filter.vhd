@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Mon Apr  1 17:32:03 2024
+--Date        : Thu Apr  4 23:33:52 2024
 --Host        : Shonk running 64-bit major release  (build 9200)
 --Command     : generate_target Real_Time_Video_Filter.bd
 --Design      : Real_Time_Video_Filter
@@ -1685,18 +1685,6 @@ architecture STRUCTURE of Real_Time_Video_Filter is
     m_axis_tuser : out STD_LOGIC
   );
   end component Real_Time_Video_Filter_RGBX_AXI_Stream_0_0;
-  component Real_Time_Video_Filter_ov7670_capture_0_0 is
-  port (
-    pclk : in STD_LOGIC;
-    vsync : in STD_LOGIC;
-    href : in STD_LOGIC;
-    d : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    addr : out STD_LOGIC_VECTOR ( 18 downto 0 );
-    dout : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    we : out STD_LOGIC;
-    aclk : out STD_LOGIC
-  );
-  end component Real_Time_Video_Filter_ov7670_capture_0_0;
   component Real_Time_Video_Filter_axi_vdma_0_0 is
   port (
     s_axi_lite_aclk : in STD_LOGIC;
@@ -1876,6 +1864,18 @@ architecture STRUCTURE of Real_Time_Video_Filter is
     gpio_io_i : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
   end component Real_Time_Video_Filter_axi_gpio_0_0;
+  component Real_Time_Video_Filter_ov7670_capture_0_0 is
+  port (
+    pclk : in STD_LOGIC;
+    vsync : in STD_LOGIC;
+    href : in STD_LOGIC;
+    d : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    addr : out STD_LOGIC_VECTOR ( 18 downto 0 );
+    dout : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    we : out STD_LOGIC;
+    aclk : out STD_LOGIC
+  );
+  end component Real_Time_Video_Filter_ov7670_capture_0_0;
   signal Net : STD_LOGIC;
   signal RGBX_AXI_Stream_0_m_axis_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal RGBX_AXI_Stream_0_m_axis_TLAST : STD_LOGIC;

@@ -2,8 +2,10 @@
 
 void storeImageInDDR() {
 //	imageStorage = (u8*) 0x01FFFF86;
-	imageStorage = (u8*) 0x05000000;
-	rawDataStorage = (u8*) 0x02000000;
+//	rawDataStorage = (u8*) VGA_BUFFER;
+	rawDataStorage = (u8*)*VGA_BUFFER;
+	imageStorage = (u8*) 0x06000000;
+//	rawDataStorage = (u8*) 0x02000000;
 
 	u8 BMP_IMAGE_HEADER[] = {
 		    // Bitmap File Header (14 bytes)
@@ -73,15 +75,31 @@ void storeImageInDDR() {
 	u8 blue, red, green;
 	u8 alpha = 0xF0;
 
-	for (int j = 0; j < BMP_DATA_SIZE; j += 2) {
-		blue = rawDataStorage[j*4 + 1] >> 4;
-		green = rawDataStorage[j*4 + 2];
-		red = rawDataStorage[j*4 + 2] >> 4;
-		imageStorage[BMP_HEADER_SIZE + j] = alpha || blue;//0xF0;//BMP_IMAGE_DATA[j];
-		imageStorage[BMP_HEADER_SIZE + j + 1] = green || red;//0x0F;//BMP_IMAGE_DATA[j];
-	}
+	for (int j = 0; j < BMP_DATA_SIZE/2; j++) {
+//		printf("rawDataStorage: %p", (void*) rawDataStorage);
+		blue = rawDataStorage[j*4 + 2] >> 4;
+		green = rawDataStorage[j*4 + 1];
+		red = rawDataStorage[j*4] >> 4;
+		imageStorage[BMP_HEADER_SIZE + j*2] = (alpha | blue);//0xF0;//BMP_IMAGE_DATA[j];
+		imageStorage[BMP_HEADER_SIZE + j*2 + 1] = (green | red);//0x0F;//BMP_IMAGE_DATA[j];
+//		imageStorage[BMP_HEADER_SIZE + j] = 0xFF;//0xF0;//BMP_IMAGE_DATA[j];
+//		imageStorage[BMP_HEADER_SIZE + j + 1] = 0xFF;//0x0F;//BMP_IMAGE_DATA[j];
 
-	xil_printf("Image stored to DDR.\r\n");
+		if (j == 0) {
+			printf("rawDataStorage: %p\r\n", (void*) rawDataStorage);
+			printf("Blue at rawDataStorage[0 + 1] >> 4: %u\r\n", blue);
+			printf("Red at rawDataStorage[0 + 2] >> 4: %u\r\n", red);
+			printf("Green at rawDataStorage[0 + 3] >> 4: %u\r\n", green);
+			printf("Alpha: %u\r\n", alpha);
+		}
+		if (j == 100) {
+			printf("rawDataStorage: %p\r\n", (void*) rawDataStorage);
+			printf("Blue at rawDataStorage[0 + 1] >> 4: %u\r\n", blue);
+			printf("Red at rawDataStorage[0 + 2] >> 4: %u\r\n", red);
+			printf("Green at rawDataStorage[0 + 3]: %u\r\n", green);
+			printf("Alpha: %u\r\n", alpha);
+		}
+	}
 
 //	for (int j = 0; j < BMP_DATA_SIZE/4; j += 2) {
 //		imageStorage[BMP_HEADER_SIZE + j] = 0xFA;//BMP_IMAGE_DATA[j];
@@ -102,23 +120,18 @@ void storeImageInDDR() {
 //			imageStorage[BMP_HEADER_SIZE + j] = 0xF4;//BMP_IMAGE_DATA[j];
 //			imageStorage[BMP_HEADER_SIZE + j + 1] = 0x44;
 //		}
+
+	xil_printf("Image stored to DDR.\r\n");
 }
 
 void write_BMP_to_SDCard() {
 	xil_printf("write_BMP_to_SDCARD started running.\r\n");
 
-
 	FRESULT Result;
 	UINT NumBytesWritten;
-//	UINT NumBytesRead;
-//	u32 BuffCnt;
 	BYTE work[FF_MAX_SS];
 	u32 FileSize = BMP_HEADER_SIZE + BMP_DATA_SIZE;
 	TCHAR *path = "0:/";
-
-//	for (BuffCnt = 0; BuffCnt < FileSize; BuffCnt++) {
-//		SourceAddress[BuffCnt] = TEST + BuffCnt;
-//	}
 
 	// Force mount the default drive on the SD Card and check if it is ready to work
 	Result = f_mount(&Fatfs, path, 0);
@@ -162,53 +175,21 @@ void write_BMP_to_SDCard() {
 			return;
 	}
 
-//	//Set the file read/write pointer to the beginning of file
-//	Result = f_lseek(&File, 0);
-//	if (Result != FR_OK) {
-//		xil_printf("Error setting file pointer for reading to beginning of file on SD Card.\r\n");
-//		xil_printf("Result holds %d for debugging purposes.\r\n", Result);
-//		return;
-//	}
-//
-//	Result = f_read(&File, (void*)DestinationAddress, FileSize,
-//			&NumBytesRead);
-//	if (Result != FR_OK) {
-//		xil_printf("Error reading file on SD Card.\r\n");
-//		xil_printf("Result holds %d for debugging purposes.\r\n", Result);
-//		return;
-//	}
-//
-//	/*
-//	 * Data verification
-//	 */
-//	for(BuffCnt = 0; BuffCnt < FileSize; BuffCnt++){
-//		if(imageStorage[BuffCnt] != DestinationAddress[BuffCnt]){
-//			xil_printf("Data written does not match data read.\r\n");
-//			return;
-//		}
-//	}
-
-//	//Write bmp image data to file
-//	result = f_write(&file, (const void*) bmp_image, size, &num_bytes_written);
-//	if (result != FR_OK) {
-//			xil_printf("Error writing to file on SD Card.\r\n");
-//			xil_printf("Result holds %d for debugging purposes.\r\n", result);
-//			f_close(&file);
-//	}
-
 	//Close the file
     Result = f_close(&File);
     if (Result != FR_OK) {
         xil_printf("Error closing file on SD Card.\r\n");
         xil_printf("Result holds %d for debugging purposes.\r\n", Result);
+        return;
     }
-
-//	xil_printf("BMP image writing completed.\r\n");
 
 	// Force unmount the default drive on the SD Card and check if it is ready to work
 	Result = f_mount(0, path, 0);
 	if (Result != FR_OK) {
 		xil_printf("Error unmounting SD Card.\r\n");
 		xil_printf("Result holds %d for debugging purposes.\r\n", Result);
+		return;
 	}
+
+	xil_printf("Image stored to SD Card!\r\n");
 }

@@ -1,8 +1,8 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Mon Apr  1 12:35:31 2024
-// Host        : DESKTOP-QVBDF8G running 64-bit major release  (build 9200)
+// Date        : Thu Apr  4 23:34:58 2024
+// Host        : Shonk running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ Real_Time_Video_Filter_ov7670_capture_0_0_sim_netlist.v
 // Design      : Real_Time_Video_Filter_ov7670_capture_0_0
@@ -31,7 +31,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   output [18:0]addr;
   output [11:0]dout;
   output we;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 aclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME aclk, FREQ_HZ 25000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN Real_Time_Video_Filter_ov7670_capture_0_0_aclk, INSERT_VIP 0" *) output aclk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 aclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN Real_Time_Video_Filter_ov7670_capture_0_0_aclk, INSERT_VIP 0" *) output aclk;
 
   wire aclk;
   wire [18:0]addr;

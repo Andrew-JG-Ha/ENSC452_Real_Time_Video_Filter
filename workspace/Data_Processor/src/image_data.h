@@ -19,10 +19,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define VGA_BUFFER (*(volatile int **)(0xFFFF00FF))
+
 /* ---------------------------------------------------------------------------- *
  * 							Prototype Functions									*
  * ---------------------------------------------------------------------------- */
-//void storeImageInDDR();
+void storeImageInDDR();
 void write_BMP_to_SDCard();
 
 /* ---------------------------------------------------------------------------- *

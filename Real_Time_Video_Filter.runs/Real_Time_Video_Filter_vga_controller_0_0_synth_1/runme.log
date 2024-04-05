@@ -11,10 +11,8 @@
 
 source Real_Time_Video_Filter_vga_controller_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
-WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
-Current IP cache path is a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.cache/ip 
+INFO: [IP_Flow 19-1700] Loaded user IP repository 's:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'S:/Xilinx/Vivado/2020.2/data/ip'.
 Command: synth_design -top Real_Time_Video_Filter_vga_controller_0_0 -part xc7z020clg484-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -22,12 +20,12 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 71972
+INFO: [Synth 8-7075] Helper process launched with PID 31204
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 1019.949 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 1001.121 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_vga_controller_0_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_vga_controller_0_0/synth/Real_Time_Video_Filter_vga_controller_0_0.vhd:114]
-	Parameter image_buffer1_baseaddr bound to: 32'b00000010000000000000000000000000 
+INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_vga_controller_0_0' [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_vga_controller_0_0/synth/Real_Time_Video_Filter_vga_controller_0_0.vhd:114]
+	Parameter image_buffer1_baseaddr bound to: 32'b00010010000000000000000000000000 
 	Parameter horizontal_length bound to: 640 - type: integer 
 	Parameter vertical_length bound to: 480 - type: integer 
 	Parameter h_front_porch bound to: 16 - type: integer 
@@ -38,11 +36,11 @@ INFO: [Synth 8-638] synthesizing module 'Real_Time_Video_Filter_vga_controller_0
 	Parameter v_back_porch bound to: 33 - type: integer 
 	Parameter h_sync_polarity bound to: 1'b0 
 	Parameter v_sync_polarity bound to: 1'b0 
-	Parameter image_buffer2_baseaddr bound to: 32'b00000001000011101001000000000001 
-INFO: [Synth 8-3491] module 'vga_controller' declared at 'a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:17' bound to instance 'U0' of component 'vga_controller' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_vga_controller_0_0/synth/Real_Time_Video_Filter_vga_controller_0_0.vhd:249]
-INFO: [Synth 8-638] synthesizing module 'vga_controller' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:97]
-	Parameter image_buffer1_baseaddr bound to: 33554432 - type: integer 
-	Parameter image_buffer2_baseaddr bound to: 17731585 - type: integer 
+	Parameter image_buffer2_baseaddr bound to: 32'b00010001000011101001000000000001 
+INFO: [Synth 8-3491] module 'vga_controller' declared at 's:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:17' bound to instance 'U0' of component 'vga_controller' [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_vga_controller_0_0/synth/Real_Time_Video_Filter_vga_controller_0_0.vhd:249]
+INFO: [Synth 8-638] synthesizing module 'vga_controller' [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:97]
+	Parameter image_buffer1_baseaddr bound to: 301989888 - type: integer 
+	Parameter image_buffer2_baseaddr bound to: 286167041 - type: integer 
 	Parameter horizontal_length bound to: 640 - type: integer 
 	Parameter vertical_length bound to: 480 - type: integer 
 	Parameter h_front_porch bound to: 16 - type: integer 
@@ -53,19 +51,19 @@ INFO: [Synth 8-638] synthesizing module 'vga_controller' [a:/Documents/School/EN
 	Parameter v_back_porch bound to: 33 - type: integer 
 	Parameter h_sync_polarity bound to: 1'b0 
 	Parameter v_sync_polarity bound to: 1'b0 
-WARNING: [Synth 8-614] signal 'rfifo_count' is read in the process but is not in the sensitivity list [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:197]
-WARNING: [Synth 8-614] signal 'M_AXI_ARREADY' is read in the process but is not in the sensitivity list [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:233]
-WARNING: [Synth 8-614] signal 'rfifo_count' is read in the process but is not in the sensitivity list [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:233]
-WARNING: [Synth 8-614] signal 'M_AXI_RVALID' is read in the process but is not in the sensitivity list [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:233]
-WARNING: [Synth 8-614] signal 'ARVALID_reg' is read in the process but is not in the sensitivity list [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:336]
-WARNING: [Synth 8-614] signal 'rready' is read in the process but is not in the sensitivity list [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:336]
-WARNING: [Synth 8-614] signal 'flush_arvalid' is read in the process but is not in the sensitivity list [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:336]
-WARNING: [Synth 8-614] signal 'flush_rready' is read in the process but is not in the sensitivity list [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:336]
-WARNING: [Synth 8-5640] Port 'overflow' is missing in component declaration [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:156]
-WARNING: [Synth 8-5640] Port 'almost_empty' is missing in component declaration [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:156]
-WARNING: [Synth 8-5640] Port 'underflow' is missing in component declaration [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:156]
-INFO: [Synth 8-3491] module 'fifo_generator_0' declared at 'a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/synth/fifo_generator_0.vhd:59' bound to instance 'fifo' of component 'fifo_generator_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:369]
-INFO: [Synth 8-638] synthesizing module 'fifo_generator_0' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/synth/fifo_generator_0.vhd:78]
+WARNING: [Synth 8-614] signal 'rfifo_count' is read in the process but is not in the sensitivity list [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:197]
+WARNING: [Synth 8-614] signal 'M_AXI_ARREADY' is read in the process but is not in the sensitivity list [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:233]
+WARNING: [Synth 8-614] signal 'rfifo_count' is read in the process but is not in the sensitivity list [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:233]
+WARNING: [Synth 8-614] signal 'M_AXI_RVALID' is read in the process but is not in the sensitivity list [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:233]
+WARNING: [Synth 8-614] signal 'ARVALID_reg' is read in the process but is not in the sensitivity list [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:336]
+WARNING: [Synth 8-614] signal 'rready' is read in the process but is not in the sensitivity list [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:336]
+WARNING: [Synth 8-614] signal 'flush_arvalid' is read in the process but is not in the sensitivity list [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:336]
+WARNING: [Synth 8-614] signal 'flush_rready' is read in the process but is not in the sensitivity list [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:336]
+WARNING: [Synth 8-5640] Port 'overflow' is missing in component declaration [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:156]
+WARNING: [Synth 8-5640] Port 'almost_empty' is missing in component declaration [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:156]
+WARNING: [Synth 8-5640] Port 'underflow' is missing in component declaration [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:156]
+INFO: [Synth 8-3491] module 'fifo_generator_0' declared at 's:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/synth/fifo_generator_0.vhd:59' bound to instance 'fifo' of component 'fifo_generator_0' [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:369]
+INFO: [Synth 8-638] synthesizing module 'fifo_generator_0' [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/synth/fifo_generator_0.vhd:78]
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_SELECT_XPM bound to: 0 - type: integer 
 	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
@@ -268,74 +266,74 @@ INFO: [Synth 8-638] synthesizing module 'fifo_generator_0' [a:/Documents/School/
 	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
 	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
 	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_generator_v13_2_5' declared at 'a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:38604' bound to instance 'U0' of component 'fifo_generator_v13_2_5' [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/synth/fifo_generator_0.vhd:550]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (1#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (2#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (16#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (16#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
-INFO: [Synth 8-256] done synthesizing module 'fifo_generator_0' (34#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/synth/fifo_generator_0.vhd:78]
-WARNING: [Synth 8-614] signal 'd_out' is read in the process but is not in the sensitivity list [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:411]
-WARNING: [Synth 8-614] signal 'fifo_empty' is read in the process but is not in the sensitivity list [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:475]
-WARNING: [Synth 8-614] signal 'pixel_rstn' is read in the process but is not in the sensitivity list [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:475]
-INFO: [Synth 8-256] done synthesizing module 'vga_controller' (35#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:97]
-INFO: [Synth 8-256] done synthesizing module 'Real_Time_Video_Filter_vga_controller_0_0' (36#1) [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_vga_controller_0_0/synth/Real_Time_Video_Filter_vga_controller_0_0.vhd:114]
+INFO: [Synth 8-3491] module 'fifo_generator_v13_2_5' declared at 's:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:38604' bound to instance 'U0' of component 'fifo_generator_v13_2_5' [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/synth/fifo_generator_0.vhd:550]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [S:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (1#1) [S:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [S:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (2#1) [S:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [S:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (16#1) [S:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [S:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (16#1) [S:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-256] done synthesizing module 'fifo_generator_0' (34#1) [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/synth/fifo_generator_0.vhd:78]
+WARNING: [Synth 8-614] signal 'd_out' is read in the process but is not in the sensitivity list [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:411]
+WARNING: [Synth 8-614] signal 'fifo_empty' is read in the process but is not in the sensitivity list [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:475]
+WARNING: [Synth 8-614] signal 'pixel_rstn' is read in the process but is not in the sensitivity list [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:475]
+INFO: [Synth 8-256] done synthesizing module 'vga_controller' (35#1) [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ipshared/d21c/vga_controller.vhd:97]
+INFO: [Synth 8-256] done synthesizing module 'Real_Time_Video_Filter_vga_controller_0_0' (36#1) [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_vga_controller_0_0/synth/Real_Time_Video_Filter_vga_controller_0_0.vhd:114]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished RTL Elaboration : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:28 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:28 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1174.922 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.085 . Memory (MB): peak = 1176.109 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/fifo_generator_0.xdc] for cell 'U0/fifo/U0'
-Finished Parsing XDC File [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/fifo_generator_0.xdc] for cell 'U0/fifo/U0'
-Parsing XDC File [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_vga_controller_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_vga_controller_0_0_synth_1/dont_touch.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_vga_controller_0_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Real_Time_Video_Filter_vga_controller_0_0_propImpl.xdc].
+Parsing XDC File [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/fifo_generator_0.xdc] for cell 'U0/fifo/U0'
+Finished Parsing XDC File [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/fifo_generator_0.xdc] for cell 'U0/fifo/U0'
+Parsing XDC File [S:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_vga_controller_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [S:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_vga_controller_0_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [S:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_vga_controller_0_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Real_Time_Video_Filter_vga_controller_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Real_Time_Video_Filter_vga_controller_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/fifo_generator_0_clocks.xdc] for cell 'U0/fifo/U0'
-Finished Parsing XDC File [a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/fifo_generator_0_clocks.xdc] for cell 'U0/fifo/U0'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Real_Time_Video_Filter_vga_controller_0_0_propImpl.xdc].
+Parsing XDC File [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/fifo_generator_0_clocks.xdc] for cell 'U0/fifo/U0'
+Finished Parsing XDC File [s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/fifo_generator_0/fifo_generator_0_clocks.xdc] for cell 'U0/fifo/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [S:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Real_Time_Video_Filter_vga_controller_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Real_Time_Video_Filter_vga_controller_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Real_Time_Video_Filter_vga_controller_0_0_propImpl.xdc].
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [S:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Real_Time_Video_Filter_vga_controller_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Real_Time_Video_Filter_vga_controller_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Project 1-1715] 3 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1174.922 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1176.109 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1174.922 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 1176.109 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:31 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:31 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for U0/fifo/U0. (constraint file  A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_vga_controller_0_0_synth_1/dont_touch.xdc, line 11).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/fifo/U0. (constraint file  S:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_vga_controller_0_0_synth_1/dont_touch.xdc, line 11).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/fifo. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/fifo/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/fifo/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
@@ -344,7 +342,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for U0/fifo/U0/inst_fifo_gen/\gconvfi
 Applied set_property KEEP_HIERARCHY = SOFT for U0/fifo/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/fifo/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:31 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'vga_controller'
@@ -368,7 +366,7 @@ INFO: [Synth 8-6159] Found Keep on FSM register 'gpregsm1.curr_fwft_state_reg' i
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'vga_controller'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -422,25 +420,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:33 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:55 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:55 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -458,37 +456,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:38 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:38 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:38 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:38 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:38 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:38 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -506,7 +504,7 @@ Report Cell Usage:
 +------+---------+------+
 |1     |CARRY4   |    21|
 |2     |LUT1     |    18|
-|3     |LUT2     |    91|
+|3     |LUT2     |    92|
 |4     |LUT3     |    34|
 |5     |LUT4     |    70|
 |6     |LUT5     |    26|
@@ -515,34 +513,34 @@ Report Cell Usage:
 |9     |RAMB36E1 |     5|
 |11    |FDCE     |   101|
 |12    |FDPE     |    27|
-|13    |FDRE     |   229|
-|14    |FDSE     |    34|
+|13    |FDRE     |   228|
+|14    |FDSE     |    35|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:38 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 1176.109 ; gain = 174.988
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:37 . Memory (MB): peak = 1174.922 ; gain = 154.973
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:38 . Memory (MB): peak = 1174.922 ; gain = 154.973
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:54 . Memory (MB): peak = 1176.109 ; gain = 174.988
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 1176.109 ; gain = 174.988
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1174.922 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1176.109 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1174.922 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1176.109 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 8 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-44 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+44 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:44 . Memory (MB): peak = 1174.922 ; gain = 154.973
-INFO: [Common 17-1381] The checkpoint 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_vga_controller_0_0_synth_1/Real_Time_Video_Filter_vga_controller_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:01:07 . Memory (MB): peak = 1176.109 ; gain = 174.988
+INFO: [Common 17-1381] The checkpoint 'S:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_vga_controller_0_0_synth_1/Real_Time_Video_Filter_vga_controller_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP Real_Time_Video_Filter_vga_controller_0_0, cache-ID = 0c2811743db94be9
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP Real_Time_Video_Filter_vga_controller_0_0, cache-ID = dfa8a68732210fc3
 INFO: [Coretcl 2-1174] Renamed 43 cell refs.
-INFO: [Common 17-1381] The checkpoint 'A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_vga_controller_0_0_synth_1/Real_Time_Video_Filter_vga_controller_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'S:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/Real_Time_Video_Filter_vga_controller_0_0_synth_1/Real_Time_Video_Filter_vga_controller_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Real_Time_Video_Filter_vga_controller_0_0_utilization_synth.rpt -pb Real_Time_Video_Filter_vga_controller_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr  1 12:35:50 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  4 23:35:23 2024...

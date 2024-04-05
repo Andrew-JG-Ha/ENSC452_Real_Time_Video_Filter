@@ -249,10 +249,6 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  set_property -dict [ list \
-   CONFIG.FREQ_HZ {25000000} \
- ] [get_bd_pins /ov7670_capture_0/aclk]
-
   # Create instance: ov7670_controller_0, and set properties
   set block_name ov7670_controller
   set block_cell_name ov7670_controller_0
@@ -683,7 +679,8 @@ proc create_root_design { parentCell } {
    CONFIG.h_front_porch {16} \
    CONFIG.h_sync_pulse {96} \
    CONFIG.horizontal_length {640} \
-   CONFIG.image_buffer1_baseaddr {0x02000000} \
+   CONFIG.image_buffer1_baseaddr {0x12000000} \
+   CONFIG.image_buffer2_baseaddr {0x110E9001} \
    CONFIG.v_back_porch {33} \
    CONFIG.v_front_porch {10} \
    CONFIG.v_sync_pulse {2} \
@@ -735,10 +732,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net vsync_0_1 [get_bd_ports OV7670_VSYNC] [get_bd_pins ov7670_capture_0/vsync]
 
   # Create address segments
-  assign_bd_address -offset 0x01000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces axi_vdma_0/Data_S2MM] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] -force
+  assign_bd_address -offset 0x11000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces axi_vdma_0/Data_S2MM] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] -force
   assign_bd_address -offset 0x41200000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] -force
   assign_bd_address -offset 0x43000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_vdma_0/S_AXI_LITE/Reg] -force
-  assign_bd_address -offset 0x02000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces vga_controller_0/M_AXI] [get_bd_addr_segs processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM] -force
+  assign_bd_address -offset 0x12000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces vga_controller_0/M_AXI] [get_bd_addr_segs processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM] -force
 
 
   # Restore current instance

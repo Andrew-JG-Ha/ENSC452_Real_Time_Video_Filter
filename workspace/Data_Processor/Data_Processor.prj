@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ASCII"?>
-<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="Data_Processor" location="S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Data_Processor" platform="S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_Wrapper/export/Real_Time_Video_Filter_Wrapper/Real_Time_Video_Filter_Wrapper.xpfm" platformUID="xilinx:zed::0.0(custom)" systemProject="Real_Time_Video_Filter_system" sysConfig="Real_Time_Video_Filter_Wrapper" runtime="C/C++" cpu="standalone_ps7_cortexa9_1" cpuInstance="ps7_cortexa9_1" os="standalone" mssSignature="1e12e6b570cbe811500087a34e1f59c4">
-  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.97661050">
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="Data_Processor" location="S:/Downloads/Testing/Real_Time_Video_Filter/workspace/Data_Processor" platform="S:/Downloads/Testing/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/Real_Time_Video_Filter.xpfm" platformUID="xilinx:zed::0.0(custom)" systemProject="Real_Time_Video_Filter_system" sysConfig="Real_Time_Video_Filter" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="cca3b71f60861cbaa25cfa675b7f2856">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.305391284">
     <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
     <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
   </configuration>
-  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.2130976649" dirty="true">
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1411021483" dirty="true">
     <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
   </configuration>
   <template appTemplateName="empty_application"/>

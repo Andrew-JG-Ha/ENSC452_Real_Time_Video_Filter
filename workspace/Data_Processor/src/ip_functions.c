@@ -53,8 +53,6 @@ void BTN_Intr_Handler(void *InstancePtr)
 
 		storeImageInDDR();
 		write_BMP_to_SDCard();
-
-		xil_printf("Image stored to SD Card!\r\n");
 	}
 	else if (btn_value == 2) {
 		//BTND

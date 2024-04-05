@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Mon Apr  1 12:35:49 2024
-| Host         : DESKTOP-QVBDF8G running 64-bit major release  (build 9200)
+| Date         : Thu Apr  4 23:35:23 2024
+| Host         : Shonk running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Real_Time_Video_Filter_vga_controller_0_0_utilization_synth.rpt -pb Real_Time_Video_Filter_vga_controller_0_0_utilization_synth.pb
 | Design       : Real_Time_Video_Filter_vga_controller_0_0
 | Device       : 7z020clg484-1
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 27    |          Yes |           - |          Set |
 | 101   |          Yes |           - |        Reset |
-| 34    |          Yes |         Set |            - |
-| 229   |          Yes |       Reset |            - |
+| 35    |          Yes |         Set |            - |
+| 228   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -147,12 +147,12 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  229 |        Flop & Latch |
+| FDRE     |  228 |        Flop & Latch |
 | FDCE     |  101 |        Flop & Latch |
-| LUT2     |   91 |                 LUT |
+| LUT2     |   92 |                 LUT |
 | LUT4     |   70 |                 LUT |
+| FDSE     |   35 |        Flop & Latch |
 | LUT3     |   34 |                 LUT |
-| FDSE     |   34 |        Flop & Latch |
 | LUT6     |   30 |                 LUT |
 | CARRY4   |   29 |          CarryLogic |
 | FDPE     |   27 |        Flop & Latch |

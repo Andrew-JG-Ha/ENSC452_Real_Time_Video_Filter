@@ -3,8 +3,8 @@
 	<name>Real_Time_Video_Filter_system</name>
 	<comment></comment>
 	<projects>
-		<project>Real_Time_Video_Filter</project>
 		<project>Data_Processor</project>
+		<project>Video_Feed</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

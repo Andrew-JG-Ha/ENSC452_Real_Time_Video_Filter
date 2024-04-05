@@ -887,11 +887,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 01 19:34:44 UTC 2024</spirit:value>
+            <spirit:value>Fri Apr 05 06:06:05 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:76ea1fb3</spirit:value>
+            <spirit:value>9:422222cd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -902,7 +902,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:76ea1fb3</spirit:value>
+            <spirit:value>9:422222cd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -918,11 +918,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 01 19:34:44 UTC 2024</spirit:value>
+            <spirit:value>Fri Apr 05 06:33:52 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:76ea1fb3</spirit:value>
+            <spirit:value>9:422222cd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -937,11 +937,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 01 19:34:44 UTC 2024</spirit:value>
+            <spirit:value>Fri Apr 05 06:06:05 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bbc6322e</spirit:value>
+            <spirit:value>9:c860362a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -957,11 +957,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 01 19:34:44 UTC 2024</spirit:value>
+            <spirit:value>Fri Apr 05 06:33:52 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bbc6322e</spirit:value>
+            <spirit:value>9:c860362a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -975,11 +975,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 01 19:35:50 UTC 2024</spirit:value>
+            <spirit:value>Fri Apr 05 06:35:23 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:76ea1fb3</spirit:value>
+            <spirit:value>9:422222cd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1840,7 +1840,7 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="std_logic_vector(31 downto 0)">
         <spirit:name>image_buffer1_baseaddr</spirit:name>
         <spirit:displayName>Image Buffer1 Baseaddr</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.image_buffer1_baseaddr" spirit:bitStringLength="32">0x02000000</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.image_buffer1_baseaddr" spirit:bitStringLength="32">0x12000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>horizontal_length</spirit:name>
@@ -1895,7 +1895,7 @@
       <spirit:modelParameter spirit:dataType="std_logic_vector(31 downto 0)">
         <spirit:name>image_buffer2_baseaddr</spirit:name>
         <spirit:displayName>Image Buffer2 Baseaddr</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.image_buffer2_baseaddr" spirit:bitStringLength="32">0x010E9001</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.image_buffer2_baseaddr" spirit:bitStringLength="32">0x110E9001</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -2043,12 +2043,12 @@
     <spirit:parameter>
       <spirit:name>image_buffer2_baseaddr</spirit:name>
       <spirit:displayName>Image Buffer2 Baseaddr</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.image_buffer2_baseaddr" spirit:bitStringLength="32">0x010E9001</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.image_buffer2_baseaddr" spirit:bitStringLength="32">0x110E9001</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>image_buffer1_baseaddr</spirit:name>
       <spirit:displayName>Image Buffer1 Baseaddr</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.image_buffer1_baseaddr" spirit:bitStringLength="32">0x02000000</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.image_buffer1_baseaddr" spirit:bitStringLength="32">0x12000000</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -2274,6 +2274,7 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.h_sync_pulse" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.horizontal_length" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.image_buffer1_baseaddr" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.image_buffer2_baseaddr" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.v_back_porch" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.v_front_porch" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.v_sync_pulse" xilinx:valueSource="user"/>
