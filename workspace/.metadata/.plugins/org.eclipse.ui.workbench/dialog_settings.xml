@@ -5,6 +5,7 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
 			<item value="S:\Downloads\src"/>
+			<item value="S:\Downloads\src_Video_feed"/>
 		</list>
 	</section>
 </section>

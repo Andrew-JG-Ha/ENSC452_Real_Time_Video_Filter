@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SD_Card_Processor/src/Real_Time_Video_Filter.c&apos; to &apos;main_SD.c&apos;" description="Rename resource &apos;Real_Time_Video_Filter.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Real_Time_Video_Filter.c" name="main_SD.c" stamp="1712476975944" updateReferences="true"/>
+</session>

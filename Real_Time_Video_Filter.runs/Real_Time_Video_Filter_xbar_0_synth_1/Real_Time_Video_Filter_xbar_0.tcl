@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "Real_Time_Video_Filter_xbar_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -91,7 +92,7 @@ set_property ip_output_repo s:/Documents/GitHub/Real_Time_Video_Filter/Real_Time
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet s:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_xbar_0/Real_Time_Video_Filter_xbar_0.xci
+read_ip -quiet S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_xbar_0/Real_Time_Video_Filter_xbar_0.xci
 set_property used_in_implementation false [get_files -all s:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_xbar_0/Real_Time_Video_Filter_xbar_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }

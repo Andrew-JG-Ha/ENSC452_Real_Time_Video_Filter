@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Apr  4 23:38:26 2024
+| Date         : Fri Apr  5 23:57:33 2024
 | Host         : Shonk running 64-bit major release  (build 9200)
 | Command      : report_drc -file Real_Time_Video_Filter_wrapper_drc_routed.rpt -pb Real_Time_Video_Filter_wrapper_drc_routed.pb -rpx Real_Time_Video_Filter_wrapper_drc_routed.rpx
 | Design       : Real_Time_Video_Filter_wrapper
@@ -29,8 +29,7 @@ Table of Contents
 | Rule      | Severity | Description                     | Violations |
 +-----------+----------+---------------------------------+------------+
 | CHECK-3   | Warning  | Report rule limit reached       | 1          |
-| PDRC-62   | Warning  | SLICEM_5lutO5_B5                | 1          |
-| PDRC-63   | Warning  | SLICEM_5lutO5_A5                | 1          |
+| PDRC-62   | Warning  | SLICEM_5lutO5_B5                | 2          |
 | PLCK-12   | Warning  | Clock Placer Checks             | 1          |
 | REQP-1839 | Warning  | RAMB36 async control check      | 20         |
 | RPBF-3    | Warning  | IO port buffering is incomplete | 1          |
@@ -47,12 +46,12 @@ Related violations: <none>
 
 PDRC-62#1 Warning
 SLICEM_5lutO5_B5  
-Dangling output pin O5 on site SLICE_X30Y67:B5LUT. For this programming the O5 output pin should have a signal.
+Dangling output pin O5 on site SLICE_X32Y61:B5LUT. For this programming the O5 output pin should have a signal.
 Related violations: <none>
 
-PDRC-63#1 Warning
-SLICEM_5lutO5_A5  
-Dangling output pin O5 on site SLICE_X30Y67:A5LUT. For this programming the O5 output pin should have a signal.
+PDRC-62#2 Warning
+SLICEM_5lutO5_B5  
+Dangling output pin O5 on site SLICE_X32Y66:B5LUT. For this programming the O5 output pin should have a signal.
 Related violations: <none>
 
 PLCK-12#1 Warning

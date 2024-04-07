@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Apr  4 23:36:31 2024
+| Date         : Fri Apr  5 23:55:47 2024
 | Host         : Shonk running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Real_Time_Video_Filter_wrapper_utilization_synth.rpt -pb Real_Time_Video_Filter_wrapper_utilization_synth.pb
 | Design       : Real_Time_Video_Filter_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   34 |     0 |       200 | 17.00 |
+| Bonded IOB                  |   42 |     0 |       200 | 21.00 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -146,8 +146,8 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| IBUF     |   24 |                  IO |
 | OBUF     |   18 |                  IO |
-| IBUF     |   16 |                  IO |
 +----------+------+---------------------+
 
 

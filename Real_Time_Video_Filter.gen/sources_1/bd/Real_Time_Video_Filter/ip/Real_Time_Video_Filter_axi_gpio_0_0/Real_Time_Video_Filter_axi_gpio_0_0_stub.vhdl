@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Mon Apr  1 17:33:36 2024
+-- Date        : Fri Apr  5 19:40:08 2024
 -- Host        : Shonk running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               s:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_axi_gpio_0_0/Real_Time_Video_Filter_axi_gpio_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top Real_Time_Video_Filter_axi_gpio_0_0 -prefix
+--               Real_Time_Video_Filter_axi_gpio_0_0_ Real_Time_Video_Filter_axi_gpio_0_0_stub.vhdl
 -- Design      : Real_Time_Video_Filter_axi_gpio_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1
@@ -34,7 +34,8 @@ entity Real_Time_Video_Filter_axi_gpio_0_0 is
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
     ip2intc_irpt : out STD_LOGIC;
-    gpio_io_i : in STD_LOGIC_VECTOR ( 4 downto 0 )
+    gpio_io_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    gpio2_io_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
 
 end Real_Time_Video_Filter_axi_gpio_0_0;
@@ -43,7 +44,7 @@ architecture stub of Real_Time_Video_Filter_axi_gpio_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "s_axi_aclk,s_axi_aresetn,s_axi_awaddr[8:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[8:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid,s_axi_rready,ip2intc_irpt,gpio_io_i[4:0]";
+attribute black_box_pad_pin of stub : architecture is "s_axi_aclk,s_axi_aresetn,s_axi_awaddr[8:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[8:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid,s_axi_rready,ip2intc_irpt,gpio_io_i[4:0],gpio2_io_i[7:0]";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "axi_gpio,Vivado 2020.2";
 begin

@@ -1,0 +1,140 @@
+#include "hsv.h"
+#include "camera.h"
+
+void raw_to_HSV_frame(int* source, int* destination) {
+	RGB rgb_data;
+	HSV hsv_data;
+
+	for (int j = 0; j < NUM_VGA_ELEMENTS; j++) {
+		//Isolate blue, green, and red components
+		rgb_data.b = (u8) (0x000000F0 & source[j] >> 4);
+		rgb_data.g = (u8) (0x00000F00 & source[j] >> 8);
+		rgb_data.r = (u8) (0x0000F000 & source[j] >> 16);
+
+		hsv_data = RGB_pixel_to_HSV_pixel(rgb_data);
+		hsv_data.h *= HSV_modifiers.hmod;
+		hsv_data.s *= HSV_modifiers.smod;
+		hsv_data.v *= HSV_modifiers.vmod;
+		rgb_data = HSV_pixel_to_RGB_pixel(hsv_data);
+
+		destination[j] = ((u32) (rgb_data.b) << 20) | ((u32) (rgb_data.g) << 12) | ((u32) (rgb_data.r) << 4);
+	}
+}
+
+void applySillyFilter(int* destination, int* hsv, int* edges) {
+	printf("SILLY FILTER\r\n");
+	for (int k = 0; k < NUM_VGA_ELEMENTS; k++) {
+		//0x00F0F0F0
+		//0x
+		if (((edges[k] >> 20) & 0xF) == 0xF) {
+			destination[k] = 0x00F0F0F0;
+		}
+		else {
+			destination[k] = hsv[k];
+		}
+	}
+}
+
+HSV RGB_pixel_to_HSV_pixel(RGB data) {
+	HSV hsv_data;
+	float red = (float) data.r/15.0;
+	float green = (float) data.g/15.0;
+	float blue = (float) data.b/15.0;
+
+	float cmax = (red > green) ? red : green;
+	cmax = (blue > cmax) ? blue : cmax;
+	float cmin = (red < green) ? red : green;
+	cmin = (blue < cmin) ? blue : cmin;
+
+	float delta = cmax - cmin;
+
+	//Hue Calculation: offsets of 0, 120, and 240 relate to the degree around the hue wheel
+	if (delta == 0) {
+		hsv_data.h = 0;
+	}
+	else if (cmax == red) {
+		hsv_data.h = 60*((green - blue)/delta);
+	}
+	else if (cmax == green) {
+		hsv_data.h = 60*((blue - red)/delta) + 120;
+	}
+	else if (cmax == blue) {
+		hsv_data.h = 60*((red - green)/delta) + 240;
+	}
+
+	//Saturation Calculation
+	hsv_data.s = (cmax == 0) ? 0 : delta/cmax;
+
+	//Value Calculation
+	hsv_data.v = cmax;
+
+	return hsv_data;
+}
+
+RGB HSV_pixel_to_RGB_pixel(HSV data) {
+	RGB rgb_data;
+	long integer;
+	float fractional, p, q, t;
+
+	data.s = (data.s < 0) ? 0 : data.s;
+	data.s = (data.s > 1) ? 1 : data.s;
+
+	if (data.s == 0) {
+		data.v = (data.v < 0) ? 0 : data.v;
+		data.v = (data.v > 1) ? 1 : data.v;
+		rgb_data.r = (u8) (data.v * 15);
+		rgb_data.g = (u8) (data.v * 15);
+		rgb_data.b = (u8) (data.v * 15);
+	}
+	data.h = (data.h > 360) ? 360 : data.h;
+	data.h = (data.h < 0) ? 0 : data.h;
+	data.h /= 60; // Normalize hue into the six segments of the colour wheel
+
+	//Determine the integer and fractional parts of the colour wheel segment
+	integer = (long) data.h;
+	fractional = data.h - integer;
+
+	p = data.v * (1 - data.s);
+	p = (p > 1) ? 1 : p;
+	p = (p < 0) ? 0 : p;
+	q = data.v * (1 - data.s * fractional);
+	q = (q > 1) ? 1 : q;
+	q = (q < 0) ? 0 : q;
+	t = data.v * (1 - data.s * (1 - fractional));
+	t = (t > 1) ? 1 : t;
+	t = (t < 0) ? 0 : t;
+
+	switch(integer) {
+		case 0: // 0th colour segment
+			rgb_data.r = (u8) (data.v * 15);
+			rgb_data.g = (u8) (t * 15);
+			rgb_data.b = (u8) (p * 15);
+			break;
+		case 1: // 1st colour segment
+			rgb_data.r = (u8) (q * 15);
+			rgb_data.g = (u8) (data.v * 15);
+			rgb_data.b = (u8) (p * 15);
+			break;
+		case 2: // 2nd colour segment
+			rgb_data.g = (u8) (data.v * 15);
+			rgb_data.r = (u8) (p * 15);
+			rgb_data.b = (u8) (t * 15);
+			break;
+		case 3: // 3rd colour segment
+			rgb_data.r = (u8) (p * 15);
+			rgb_data.g = (u8) (q * 15);
+			rgb_data.b = (u8) (data.v * 15);
+			break;
+		case 4: // 4th colour segment
+			rgb_data.r = (u8) (t * 15);
+			rgb_data.g = (u8) (p * 15);
+			rgb_data.b = (u8) (data.v * 15);
+			break;
+		default: // 5th colour segment
+			rgb_data.r = (u8) (data.v * 15);
+			rgb_data.g = (u8) (p * 15);
+			rgb_data.b = (u8) (q * 15);
+			break;
+	}
+	return rgb_data;
+}

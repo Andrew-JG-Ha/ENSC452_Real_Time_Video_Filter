@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Mon Apr  1 17:33:37 2024
+-- Date        : Fri Apr  5 19:40:08 2024
 -- Host        : Shonk running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               s:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_processing_system7_0_0/Real_Time_Video_Filter_processing_system7_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top Real_Time_Video_Filter_processing_system7_0_0 -prefix
+--               Real_Time_Video_Filter_processing_system7_0_0_ Real_Time_Video_Filter_processing_system7_0_0_stub.vhdl
 -- Design      : Real_Time_Video_Filter_processing_system7_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

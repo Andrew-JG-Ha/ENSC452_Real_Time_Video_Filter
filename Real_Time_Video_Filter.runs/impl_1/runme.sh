@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='S:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/impl_1'
+HD_PWD='S:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

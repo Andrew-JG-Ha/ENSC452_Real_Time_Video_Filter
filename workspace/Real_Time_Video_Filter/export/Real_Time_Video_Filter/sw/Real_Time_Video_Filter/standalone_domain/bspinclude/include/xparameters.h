@@ -315,7 +315,7 @@
 #define XPAR_AXI_GPIO_0_HIGHADDR 0x4120FFFF
 #define XPAR_AXI_GPIO_0_DEVICE_ID 0
 #define XPAR_AXI_GPIO_0_INTERRUPT_PRESENT 1
-#define XPAR_AXI_GPIO_0_IS_DUAL 0
+#define XPAR_AXI_GPIO_0_IS_DUAL 1
 
 
 /******************************************************************/
@@ -325,7 +325,7 @@
 #define XPAR_GPIO_0_HIGHADDR 0x4120FFFF
 #define XPAR_GPIO_0_DEVICE_ID XPAR_AXI_GPIO_0_DEVICE_ID
 #define XPAR_GPIO_0_INTERRUPT_PRESENT 1
-#define XPAR_GPIO_0_IS_DUAL 0
+#define XPAR_GPIO_0_IS_DUAL 1
 
 
 /******************************************************************/
@@ -577,11 +577,4 @@
 
 /******************************************************************/
 
-/* Xilinx FAT File System Library (XilFFs) User Settings */
-#define FILE_SYSTEM_INTERFACE_SD
-#define FILE_SYSTEM_USE_MKFS
-#define FILE_SYSTEM_NUM_LOGIC_VOL 2
-#define FILE_SYSTEM_USE_STRFUNC 0
-#define FILE_SYSTEM_SET_FS_RPATH 0
-#define FILE_SYSTEM_WORD_ACCESS
 #endif  /* end of protection macro */

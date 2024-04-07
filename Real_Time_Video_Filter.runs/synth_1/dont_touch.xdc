@@ -15,9 +15,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Real_Time_V
 # IP: bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_RGBX_AXI_Stream_0_0/Real_Time_Video_Filter_RGBX_AXI_Stream_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Real_Time_Video_Filter_RGBX_AXI_Stream_0_0 || ORIG_REF_NAME==Real_Time_Video_Filter_RGBX_AXI_Stream_0_0} -quiet] -quiet
 
-# IP: bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_ov7670_capture_0_0/Real_Time_Video_Filter_ov7670_capture_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Real_Time_Video_Filter_ov7670_capture_0_0 || ORIG_REF_NAME==Real_Time_Video_Filter_ov7670_capture_0_0} -quiet] -quiet
-
 # IP: bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_axi_vdma_0_0/Real_Time_Video_Filter_axi_vdma_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Real_Time_Video_Filter_axi_vdma_0_0 || ORIG_REF_NAME==Real_Time_Video_Filter_axi_vdma_0_0} -quiet] -quiet
 
@@ -48,10 +45,13 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Real_Time_V
 # IP: bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_axi_gpio_0_0/Real_Time_Video_Filter_axi_gpio_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Real_Time_Video_Filter_axi_gpio_0_0 || ORIG_REF_NAME==Real_Time_Video_Filter_axi_gpio_0_0} -quiet] -quiet
 
+# IP: bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_ov7670_capture_0_0/Real_Time_Video_Filter_ov7670_capture_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Real_Time_Video_Filter_ov7670_capture_0_0 || ORIG_REF_NAME==Real_Time_Video_Filter_ov7670_capture_0_0} -quiet] -quiet
+
 # IP: bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_auto_pc_0/Real_Time_Video_Filter_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Real_Time_Video_Filter_auto_pc_0 || ORIG_REF_NAME==Real_Time_Video_Filter_auto_pc_0} -quiet] -quiet
 
 # IP: bd/Real_Time_Video_Filter/ip/Real_Time_Video_Filter_auto_pc_1/Real_Time_Video_Filter_auto_pc_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Real_Time_Video_Filter_auto_pc_1 || ORIG_REF_NAME==Real_Time_Video_Filter_auto_pc_1} -quiet] -quiet
 
-# XDC: s:/Downloads/Testing/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/Real_Time_Video_Filter_ooc.xdc
+# XDC: s:/Documents/GitHub/Real_Time_Video_Filter/Real_Time_Video_Filter.gen/sources_1/bd/Real_Time_Video_Filter/Real_Time_Video_Filter_ooc.xdc

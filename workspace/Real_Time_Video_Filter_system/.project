@@ -4,7 +4,7 @@
 	<comment></comment>
 	<projects>
 		<project>Data_Processor</project>
-		<project>Video_Feed</project>
+		<project>SD_Card_Processor</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
