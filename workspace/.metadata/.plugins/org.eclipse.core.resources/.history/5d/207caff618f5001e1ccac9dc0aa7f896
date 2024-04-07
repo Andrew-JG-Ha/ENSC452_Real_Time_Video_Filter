@@ -1,0 +1,26 @@
+#ifndef FILTERS_H
+#define FILTERS_H
+
+#define SOBEL_BASE_ADDR 0x15000000
+
+/* ---------------------------------------------------------------------------- *
+ * 							Pre-Defined Filters									*
+ * ---------------------------------------------------------------------------- */
+int sobelKernel[9] = {1, 0, -1, 2, 0, -2, 1, 0 ,-1};
+int gaussianKernel[9] = {1, 2, 1, 2, 4, 2, 1, 2, 1};
+int sharpenKernel[9] = {0, -1, 0, -1, 5, -1, 0, -1, 0};
+int ridgeKernel[9] = {-1, -1, -1, -1, 8, -1, -1, -1, -1};
+
+/* ---------------------------------------------------------------------------- *
+ * 							Function Prototypes								*
+ * ---------------------------------------------------------------------------- */
+void applyKernelGrey(int* source, int* destination, int* filter);
+void applyKernelRGB(int* source, int* destination, int* filter, int scalingFactor);
+
+/* ---------------------------------------------------------------------------- *
+ * 							External Variable									*
+ * ---------------------------------------------------------------------------- */
+
+extern int* userDefinedFilter[9];
+
+#endif

@@ -1,0 +1,38 @@
+#ifndef FILTERS_H
+#define FILTERS_H
+
+#define SOBEL_BASE_ADDR 0x15000000
+
+typedef struct {
+	int centre;
+	int topLeft;
+	int top;
+	int topRight;
+	int right;
+	int botRight;
+	int bot;
+	int botLeft;
+	int left;
+} FILTER;
+
+/* ---------------------------------------------------------------------------- *
+ * 							Pre-Defined Filters									*
+ * ---------------------------------------------------------------------------- */
+int sobelKernel = filterConstructor({1, 0, -1, 2, 0, -2, 1, 0 ,-1});
+int gaussianKernel = {1, 2, 1, 2, 4, 2, 1, 2, 1};
+int sharpenKernel = {0, -1, 0, -1, 5, -1, 0, -1, 0};
+int ridgeKernel = {-1, -1, -1, -1, 8, -1, -1, -1, -1};
+
+/* ---------------------------------------------------------------------------- *
+ * 							Function Prototypes								*
+ * ---------------------------------------------------------------------------- */
+void applyKernelGrey(int* GRAYSCALE_BUFFER_ADDR, int* FILTER_BUFFER_ADDR, int* filter);
+void applyKernelRGB(int* RGB_BUFFER_ADDR, int* FILTER_BUFFER_ADDR, int* filter, int scalingFactor);
+FILTER filterConstructor(int* filterArray);
+
+/* ---------------------------------------------------------------------------- *
+ * 							External Variable									*
+ * ---------------------------------------------------------------------------- */
+extern
+
+#endif

@@ -1,61 +1,23 @@
 Nothing to build in platform 'Real_Time_Video_Filter'
 
-06:51:48 **** Incremental Build of configuration Debug for project Data_Processor ****
-make all 
-make --no-print-directory pre-build
-a9-linaro-pre-build-step
-' '
-make --no-print-directory main-build
-'Building file: ../src/hardware_functions.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/hardware_functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IS:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include -MMD -MP -MF"src/hardware_functions.d" -MT"src/hardware_functions.o" -o "src/hardware_functions.o" "../src/hardware_functions.c"
-'Finished building: ../src/hardware_functions.c'
-' '
-'Building target: Data_Processor.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LS:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bsplib/lib -o "Data_Processor.elf"  ./src/camera.o ./src/hardware_functions.o ./src/hsv.o ./src/main_Data.o ./src/platform.o ./src/sobelKernel.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Data_Processor.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Data_Processor.elf  |tee "Data_Processor.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  77620	   3708	  22688	 104016	  19650	Data_Processor.elf
-'Finished building: Data_Processor.elf.size'
-' '
-06:51:49 **** Incremental Build of configuration Debug for project SD_Card_Processor ****
+15:36:47 **** Incremental Build of configuration Debug for project Data_Processor ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
 make[1]: Nothing to be done for 'main-build'.
-06:51:50 **** Incremental Build of configuration Debug for project Real_Time_Video_Filter_system ****
+15:36:47 **** Incremental Build of configuration Debug for project SD_Card_Processor ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+make[1]: Nothing to be done for 'main-build'.
+15:36:48 **** Incremental Build of configuration Debug for project Real_Time_Video_Filter_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 64121 S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/Real_Time_Video_Filter.xpfm standalone_domain,standalone_ps7_cortexa9_1 S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif
-sdcard_gen --xpfm S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/Real_Time_Video_Filter.xpfm --sys_config Real_Time_Video_Filter --bif S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif --bitstream S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Data_Processor/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit --elf S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Data_Processor/Debug/Data_Processor.elf,ps7_cortexa9_0 --elf S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/SD_Card_Processor/Debug/SD_Card_Processor.elf,ps7_cortexa9_1
-creating BOOT.BIN using S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Data_Processor/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit
-Running S:/Xilinx/Vitis/2020.2/bin/bootgen  -image S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
-Nothing to build in platform 'Real_Time_Video_Filter'
-
-06:52:00 **** Incremental Build of configuration Debug for project Data_Processor ****
-make all 
-make --no-print-directory pre-build
-a9-linaro-pre-build-step
-' '
-make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
-06:52:01 **** Incremental Build of configuration Debug for project SD_Card_Processor ****
-make all 
-make --no-print-directory pre-build
-a9-linaro-pre-build-step
-' '
-make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
-06:52:01 **** Incremental Build of configuration Debug for project Real_Time_Video_Filter_system ****
-make all 
-Generating bif file for the system project
-generate_system_bif.bat 64121 S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/Real_Time_Video_Filter.xpfm standalone_domain,standalone_ps7_cortexa9_1 S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif
-sdcard_gen --xpfm S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/Real_Time_Video_Filter.xpfm --sys_config Real_Time_Video_Filter --bif S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif --bitstream S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Data_Processor/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit --elf S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Data_Processor/Debug/Data_Processor.elf,ps7_cortexa9_0 --elf S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/SD_Card_Processor/Debug/SD_Card_Processor.elf,ps7_cortexa9_1
-creating BOOT.BIN using S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Data_Processor/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit
-Running S:/Xilinx/Vitis/2020.2/bin/bootgen  -image S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+generate_system_bif.bat 61278 A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/Real_Time_Video_Filter.xpfm standalone_domain,standalone_ps7_cortexa9_1 A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif
+sdcard_gen --xpfm A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/Real_Time_Video_Filter.xpfm --sys_config Real_Time_Video_Filter --bif A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif --bitstream A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Data_Processor/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit --elf A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Data_Processor/Debug/Data_Processor.elf,ps7_cortexa9_0 --elf A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/SD_Card_Processor/Debug/SD_Card_Processor.elf,ps7_cortexa9_1
+creating BOOT.BIN using A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Data_Processor/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit
+Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

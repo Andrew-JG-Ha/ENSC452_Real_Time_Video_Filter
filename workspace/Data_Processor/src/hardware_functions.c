@@ -115,6 +115,64 @@ void BTN_Intr_Handler(void *InstancePtr)
 			STORE_IMAGE = 1;
 		}
 	}
+	else if (sw_value == 16) {
+		printf("Gaussian Smoothing is live!\r\n");
+		if (btn_value == 1) {
+			//BTNC
+			xil_printf("Taking a photo! Smile!\r\n");
+			Xil_DCacheDisable();
+			STORE_IMAGE = 1;
+		}
+	}
+	else if (sw_value == 32) {
+		printf("User-Defined Filtering is live!\r\n");
+
+		if (btn_value == 1) {
+			//BTNC
+			xil_printf("Taking a photo! Smile!\r\n");
+			Xil_DCacheDisable();
+			STORE_IMAGE = 1;
+		}
+		else if (btn_value == 8) {
+			if (currentFilterLoc % 10 == 9) {
+				// scaling factor
+				userDefinedScaling = (userDefinedScaling + 1) >= 8 ? 8 : (userDefinedScaling + 1);
+			}
+			else {
+				userDefinedFilter[currentFilterLoc] = (userDefinedFilter[currentFilterLoc] + 1) >= 16 ? 16 : userDefinedFilter[currentFilterLoc] + 1;
+			}
+
+		}
+		else if (btn_value == 4) {
+			if (currentFilterLoc % 10 == 9) {
+				// scaling factor
+				userDefinedScaling = (userDefinedScaling - 1) <= 1 ? 1 : (userDefinedScaling - 1);
+			}
+			else {
+				userDefinedFilter[currentFilterLoc] = (userDefinedFilter[currentFilterLoc] - 1) <= -16 ? -16 : userDefinedFilter[currentFilterLoc] - 1;
+			}
+		}
+
+		printf("---------------------------------------------------------\r\n");
+		printf("User-Defined Filter Settings are modifiable and are currently set to: \r\n");
+		printf("%-5d %-5d %-5d\n\n", userDefinedFilter[0], userDefinedFilter[1], userDefinedFilter[2]);
+		printf("%-5d %-5d %-5d\n\n", userDefinedFilter[3], userDefinedFilter[4], userDefinedFilter[5]);
+		printf("%-5d %-5d %-5d\n", userDefinedFilter[6], userDefinedFilter[7], userDefinedFilter[8]);
+		printf("Scaling factor: %3d \n", userDefinedScaling);
+		printf("Press BTNL to decrease the modifier and BTNR to increase the modifier.\r\n");
+		printf("Press BTNU or BTND to choose a filter value to change.\r\n");
+
+		if (btn_value == 16) {
+			currentFilterLoc = (currentFilterLoc + 1) >= 9 ? 9 : (currentFilterLoc + 1);
+		}
+		else if (btn_value == 2) {
+			currentFilterLoc = (currentFilterLoc - 1) <= 0 ? 0 : (currentFilterLoc - 1);
+		}
+
+		printf("Currently changing: %s.\r\n", filter_settings[currentFilterLoc]);
+		printf("---------------------------------------------------------\r\n");
+
+	}
 	else {
 		if (btn_value == 1) {
 			//BTNC

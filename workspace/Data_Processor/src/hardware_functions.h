@@ -28,6 +28,7 @@
  * ---------------------------------------------------------------------------- */
 
 #include "hsv.h"
+#include "filters.h"
 
 /* ---------------------------------------------------------------------------- *
  * 							Prototype Functions									*
@@ -68,6 +69,10 @@ int btn_value;
 int sw_value;
 extern HSV_mods HSV_modifiers;
 u32 current_HSV_setting;
+
+extern int userDefinedFilter[9];
+extern int userDefinedScaling;
+int currentFilterLoc;
 
 //Parameter Definitions
 #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR

@@ -16,12 +16,10 @@
 #define GRAYSCALE_BASE_ADDR 0x14000000
 #define HSV_BASE_ADDR 0x16000000
 
-void unpackCameraData(int* cameraDataBuffer, int* RGB_BUFFER_ADDR, int* GRAYSCALE_BUFFER_ADDR);
+void unpackCameraData(int* source, int* RGB_BUFFER_ADDR, int* GRAYSCALE_BUFFER_ADDR);
 
-void unpackGray(int* cameraDataBuffer, int* GRAYSCALE_BUFFER_ADDR);
+void unpackGray(int* source, int* destination);
 
-void unpackRGB(int* cameraDataBuffer, int* RGB_BUFFER_ADDR);
-
-//void unpackCameraData_withPorching(int* cameraDataBuffer, int* RGB_BUFFER_ADDR, int* GRAYSCALE_BUFFER_ADDR);
+void unpackRGB(int* source, int* destination);
 
 #endif

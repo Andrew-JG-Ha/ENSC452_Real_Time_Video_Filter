@@ -1,4 +1,4 @@
-06:52:00 **** Incremental Build of configuration Debug for project Data_Processor ****
+15:36:47 **** Incremental Build of configuration Debug for project Data_Processor ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -6,5 +6,5 @@ a9-linaro-pre-build-step
 make --no-print-directory main-build
 make[1]: Nothing to be done for 'main-build'.
 
-06:52:00 Build Finished (took 502ms)
+15:36:47 Build Finished (took 223ms)
 

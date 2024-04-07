@@ -32,3 +32,6 @@ bsp write
 bsp reload
 catch {bsp regenerate}
 platform generate -domains standalone_ps7_cortexa9_1 
+platform generate -domains standalone_domain,standalone_ps7_cortexa9_1,zynq_fsbl 
+platform clean
+platform generate

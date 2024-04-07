@@ -8,22 +8,22 @@ unsigned int fullHorizontalLength = 320;
 void unpackPixelRGB(int dataBit, int* pixel1_addr, int* pixel2_addr);
 void unpackPixelGray(int dataBit, int* pixel1_addr, int* pixel2_addr);
 
-void unpackGray(int* cameraDataBuffer, int* GRAYSCALE_BUFFER_ADDR) {
+void unpackGray(int* source, int* destination) {
 	for (int i = 0; i < CAM_DATA_BUFFER_SIZE; i++) {
-		unpackPixelGray(cameraDataBuffer[i], &GRAYSCALE_BUFFER_ADDR[2*i], &GRAYSCALE_BUFFER_ADDR[(2*i)+1]);
+		unpackPixelGray(source[i], &destination[2*i], &destination[(2*i)+1]);
 	}
 }
 
-void unpackRGB(int* cameraDataBuffer, int* RGB_BUFFER_ADDR) {
+void unpackRGB(int* source, int* destination) {
 	for (int i = 0; i < CAM_DATA_BUFFER_SIZE; i++) {
-		unpackPixelRGB(cameraDataBuffer[i], &RGB_BUFFER_ADDR[2*i], &RGB_BUFFER_ADDR[(2*i)+1]);
+		unpackPixelRGB(source[i], &destination[2*i], &destination[(2*i)+1]);
 	}
 }
 
-void unpackCameraData(int* cameraDataBuffer, int* RGB_BUFFER_ADDR, int* GRAYSCALE_BUFFER_ADDR) {
+void unpackCameraData(int* source, int* destinationRGB, int* destinationGray) {
 	for (int i = 0; i < CAM_DATA_BUFFER_SIZE; i++) {
-		unpackPixelRGB(cameraDataBuffer[i], &RGB_BUFFER_ADDR[2*i], &RGB_BUFFER_ADDR[(2*i)+1]);
-		unpackPixelGray(cameraDataBuffer[i], &GRAYSCALE_BUFFER_ADDR[2*i], &GRAYSCALE_BUFFER_ADDR[(2*i)+1]);
+		unpackPixelRGB(source[i], &destinationRGB[2*i], &destinationRGB[(2*i)+1]);
+		unpackPixelGray(source[i], &destinationGray[2*i], &destinationGray[(2*i)+1]);
 	}
 }
 

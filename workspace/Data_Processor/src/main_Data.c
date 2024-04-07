@@ -9,10 +9,10 @@
 #include "platform.h"
 #include "xil_printf.h"
 #include "camera.h"
+#include "filters.h"
 
 #include "xpseudo_asm.h"
 #include "xil_mmu.h"
-#include "sobelKernel.h"
 #include "hardware_functions.h"
 #include "hsv.h"
 
@@ -40,16 +40,16 @@ int* vgaBuffer = (int*) 0x12000000;
 int* grayBuffer = (int*) GRAYSCALE_BASE_ADDR;
 int* rgbBuffer = (int*) RGB_BASE_ADDR;
 int* sobelBuffer = (int*) SOBEL_BASE_ADDR;
-int* sobelBuffer2 = (int*) SOBEL_BASE_ADDR + 4*640*480;
 int* hsvBuffer = (int*) HSV_BASE_ADDR;
 
 HSV_mods HSV_modifiers = {1.0, 1.0, 1.0};
+int userDefinedFilter[9] = {0, 0, 0, 0, 1, 0, 0, 0, 0};
+int userDefinedScaling = 1;
 
 int sobelKernel[9] = {1, 0, -1, 2, 0, -2, 1, 0 ,-1};
-int gaussianKernel[9] = {1, 2, 1, 2, 4, 2, 1, 2, 1};
+int gaussianKernel[9] = {6, 12, 6, 12, 24, 12, 6, 12, 6};
 int sharpenKernel[9] = {0, -1, 0, -1, 5, -1, 0, -1, 0};
 int ridgeKernel[9] = {-1, -1, -1, -1, 8, -1, -1, -1, -1};
-
 
 int main() {
 	init_platform();
@@ -73,8 +73,6 @@ int main() {
 	if(status != XST_SUCCESS) return XST_FAILURE;
 
 	VGA_BUFFER = &vgaBuffer;
-
-    int data;
 
 	XAxiVdma vdma;  // VDMA instance
 
@@ -135,6 +133,7 @@ int main() {
 	Xil_Out32(XPAR_AXI_VDMA_0_BASEADDR + 0xA4, HSizeInput);
 	Xil_Out32(XPAR_AXI_VDMA_0_BASEADDR + 0xA0, VSizeInput);
 
+//    int data;
 //    for (int i = 0; i < 500; i++) {
 //    	data = writeBuffer1[i];
 //    	printf("Data = 0x%08x, Memory Location = 0x%08x\n", data, (&writeBuffer1[i]));
@@ -148,51 +147,54 @@ int main() {
 //    }
 
 	Xil_DCacheEnable();
-
-	printf("Starting Stall\n");
+	printf("Start Up ...");
 	for (int i = 0; i < 5000000; i++) {
 		int index = 0;
 		index = index + 1;
 	}
-	printf("Done Stall\n");
+	printf("....");
 
 	Xil_DCacheFlush();
-	printf("White Canvas Start\n");
+	printf("..");
 	for (int i = 0; i < 640*480; i++) {
 		vgaBuffer[i] = 0x00F0F0F0;
 	}
-	printf("White Canvas Done\n");
+
+	printf("...\n Start Up Done!\n");
 
     while(1) {
     	Xil_DCacheFlush();
-//    	for (int i = 0; i < 5000000; i++) {
-//    		if (i == 250000) {
-//    			printf("vgaBuffer: %p\r\n", (void*) vgaBuffer);
-//    		}
-//    	}
-
-//    	unpackCameraData(writeBuffer1, rgbBuffer, grayBuffer);
+//   	unpackCameraData(writeBuffer1, rgbBuffer, grayBuffer);
 //    	applyKernelRGB(rgbBuffer, sobelBuffer, gaussianKernel, 4);
 //    	applyKernelRGB(sobelBuffer, sobelBuffer2, gaussianKernel, 4);
 //    	applyKernelRGB(sobelBuffer2, vgaBuffer, gaussianKernel, 4);
     	switch (STORE_IMAGE) {
     		case 0:
-            	if (sw_value == 1) {
+            	if (sw_value == 1) { // HSV adjustment
             		raw_to_HSV_frame(writeBuffer1, vgaBuffer);
             	}
-            	else if(sw_value == 2) {
+            	else if(sw_value == 2) { // Silly
             		raw_to_HSV_frame(writeBuffer1, hsvBuffer);
             		unpackGray(writeBuffer1, grayBuffer);
             		applyKernelGrey(grayBuffer, sobelBuffer, sobelKernel);
             		applySillyFilter(vgaBuffer, hsvBuffer, sobelBuffer);
             	}
-            	else if(sw_value == 4) {
+            	else if(sw_value == 4) { // Grayscale
             		unpackGray(writeBuffer1, vgaBuffer);
             	}
-            	else if(sw_value == 8) {
+            	else if(sw_value == 8) { // Sobel Kernel
+            		unpackGray(writeBuffer1, grayBuffer);
             		applyKernelGrey(grayBuffer, vgaBuffer, sobelKernel);
             	}
-            	else {
+            	else if(sw_value == 16) { // Gaussian Blur
+            		unpackRGB(writeBuffer1, rgbBuffer);
+            		applyKernelRGB(rgbBuffer, vgaBuffer, gaussianKernel, 8);
+            	}
+            	else if (sw_value == 32) { // user defined
+            		unpackRGB(writeBuffer1, rgbBuffer);
+            		applyKernelRGB(rgbBuffer, vgaBuffer, userDefinedFilter, userDefinedScaling);
+            	}
+            	else { // default RGB
             		unpackRGB(writeBuffer1, vgaBuffer);
             	}
     			break;

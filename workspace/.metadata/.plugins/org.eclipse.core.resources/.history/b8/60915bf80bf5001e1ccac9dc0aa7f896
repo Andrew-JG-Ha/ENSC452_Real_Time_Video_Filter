@@ -1,0 +1,18 @@
+#ifndef FILTERS_H
+#define FILTERS_H
+
+#define SOBEL_BASE_ADDR 0x15000000
+
+int sobelKernel = {1, 0, -1, 2, 0, -2, 1, 0 ,-1};
+
+int gaussianKernel = {1, 2, 1, 2, 4, 2, 1, 2, 1};
+
+int sharpenKernel = {0, -1, 0, -1, 5, -1, 0, -1, 0};
+
+int ridgeKernel = {-1, -1, -1, -1, 8, -1, -1, -1, -1};
+
+void applyKernelGrey(int* GRAYSCALE_BUFFER_ADDR, int* FILTER_BUFFER_ADDR, int* filter);
+
+void applyKernelRGB(int* RGB_BUFFER_ADDR, int* FILTER_BUFFER_ADDR, int* filter, int scalingFactor);
+
+#endif
