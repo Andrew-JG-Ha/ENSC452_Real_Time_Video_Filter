@@ -1,23 +1,166 @@
 Nothing to build in platform 'Real_Time_Video_Filter'
 
-15:36:47 **** Incremental Build of configuration Debug for project Data_Processor ****
+16:58:46 **** Incremental Build of configuration Debug for project Data_Processor ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/hardware_functions.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/hardware_functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IS:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include -MMD -MP -MF"src/hardware_functions.d" -MT"src/hardware_functions.o" -o "src/hardware_functions.o" "../src/hardware_functions.c"
+In file included from ../src/hardware_functions.c:8:
+../src/hardware_functions.c: In function 'BTN_Intr_Handler':
+../src/camera.h:19:19: warning: passing argument 1 of 'memcpy' makes pointer from integer without a cast [-Wint-conversion]
+   19 | #define SD_BUFFER 0x18000000
+      |                   ^~~~~~~~~~
+      |                   |
+      |                   int
+../src/hardware_functions.c:51:11: note: in expansion of macro 'SD_BUFFER'
+   51 |    memcpy(SD_BUFFER, (void*) 0x12000000, 1228800);
+      |           ^~~~~~~~~
+In file included from S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include/xil_printf.h:13,
+                 from S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include/xil_io.h:46,
+                 from ../src/hardware_functions.h:14,
+                 from ../src/hardware_functions.c:7:
+s:\xilinx\vitis\2020.2\gnu\aarch32\nt\gcc-arm-none-eabi\aarch32-xilinx-eabi\usr\include\string.h:31:9: note: expected 'void * restrict' but argument is of type 'int'
+   31 | void *  memcpy (void *__restrict, const void *__restrict, size_t);
+      |         ^~~~~~
+'Finished building: ../src/hardware_functions.c'
+' '
+'Building file: ../src/main_Data.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_Data.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IS:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include -MMD -MP -MF"src/main_Data.d" -MT"src/main_Data.o" -o "src/main_Data.o" "../src/main_Data.c"
+../src/main_Data.c: In function 'main':
+../src/main_Data.c:73:13: warning: assignment to 'volatile int *' from incompatible pointer type 'int **' [-Wincompatible-pointer-types]
+   73 |  VGA_BUFFER = &vgaBuffer;
+      |             ^
+../src/main_Data.c:100:23: warning: assignment to 'UINTPTR' {aka 'unsigned int'} from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  100 |  frame_buffer_addr[0] = &(writeBuffer1[0]);
+      |                       ^
+../src/main_Data.c:101:23: warning: assignment to 'UINTPTR' {aka 'unsigned int'} from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  101 |  frame_buffer_addr[1] = &(writeBuffer2[0]);
+      |                       ^
+../src/main_Data.c:102:23: warning: assignment to 'UINTPTR' {aka 'unsigned int'} from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  102 |  frame_buffer_addr[2] = &(writeBuffer3[0]);
+      |                       ^
+../src/main_Data.c:126:45: warning: passing argument 2 of 'Xil_Out32' makes integer from pointer without a cast [-Wint-conversion]
+  126 |  Xil_Out32(XPAR_AXI_VDMA_0_BASEADDR + 0xAC, &(writeBuffer1[0]));
+      |                                             ^~~~~~~~~~~~~~~~~~
+      |                                             |
+      |                                             int *
+In file included from S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include/xaxivdma_hw.h:57,
+                 from S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include/xaxivdma.h:293,
+                 from ../src/main_Data.c:2:
+S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include/xil_io.h:203:48: note: expected 'u32' {aka 'long unsigned int'} but argument is of type 'int *'
+  203 | static INLINE void Xil_Out32(UINTPTR Addr, u32 Value)
+      |                                            ~~~~^~~~~
+../src/main_Data.c:127:45: warning: passing argument 2 of 'Xil_Out32' makes integer from pointer without a cast [-Wint-conversion]
+  127 |  Xil_Out32(XPAR_AXI_VDMA_0_BASEADDR + 0xB0, &(writeBuffer2[0]));
+      |                                             ^~~~~~~~~~~~~~~~~~
+      |                                             |
+      |                                             int *
+In file included from S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include/xaxivdma_hw.h:57,
+                 from S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include/xaxivdma.h:293,
+                 from ../src/main_Data.c:2:
+S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include/xil_io.h:203:48: note: expected 'u32' {aka 'long unsigned int'} but argument is of type 'int *'
+  203 | static INLINE void Xil_Out32(UINTPTR Addr, u32 Value)
+      |                                            ~~~~^~~~~
+../src/main_Data.c:128:45: warning: passing argument 2 of 'Xil_Out32' makes integer from pointer without a cast [-Wint-conversion]
+  128 |  Xil_Out32(XPAR_AXI_VDMA_0_BASEADDR + 0xB4, &(writeBuffer3[0]));
+      |                                             ^~~~~~~~~~~~~~~~~~
+      |                                             |
+      |                                             int *
+In file included from S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include/xaxivdma_hw.h:57,
+                 from S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include/xaxivdma.h:293,
+                 from ../src/main_Data.c:2:
+S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include/xil_io.h:203:48: note: expected 'u32' {aka 'long unsigned int'} but argument is of type 'int *'
+  203 | static INLINE void Xil_Out32(UINTPTR Addr, u32 Value)
+      |                                            ~~~~^~~~~
+In file included from ../src/main_Data.c:11:
+../src/camera.h:18:24: warning: passing argument 1 of 'memcpy' makes pointer from integer without a cast [-Wint-conversion]
+   18 | #define STORAGE_BUFFER 0x17000000
+      |                        ^~~~~~~~~~
+      |                        |
+      |                        int
+../src/main_Data.c:172:22: note: in expansion of macro 'STORAGE_BUFFER'
+  172 |               memcpy(STORAGE_BUFFER, writeBuffer1, CAM_DATA_BUFFER_SIZE*4);
+      |                      ^~~~~~~~~~~~~~
+In file included from S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include/xil_printf.h:13,
+                 from S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include/xil_io.h:46,
+                 from S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include/xaxivdma_hw.h:57,
+                 from S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bspinclude/include/xaxivdma.h:293,
+                 from ../src/main_Data.c:2:
+s:\xilinx\vitis\2020.2\gnu\aarch32\nt\gcc-arm-none-eabi\aarch32-xilinx-eabi\usr\include\string.h:31:9: note: expected 'void * restrict' but argument is of type 'int'
+   31 | void *  memcpy (void *__restrict, const void *__restrict, size_t);
+      |         ^~~~~~
+In file included from ../src/main_Data.c:11:
+../src/camera.h:18:24: warning: passing argument 1 of 'raw_to_HSV_frame' makes pointer from integer without a cast [-Wint-conversion]
+   18 | #define STORAGE_BUFFER 0x17000000
+      |                        ^~~~~~~~~~
+      |                        |
+      |                        int
+../src/main_Data.c:173:32: note: in expansion of macro 'STORAGE_BUFFER'
+  173 |               raw_to_HSV_frame(STORAGE_BUFFER, vgaBuffer);
+      |                                ^~~~~~~~~~~~~~
+In file included from ../src/main_Data.c:12:
+../src/editors.h:52:28: note: expected 'int *' but argument is of type 'int'
+   52 | void raw_to_HSV_frame(int* source, int* destination);
+      |                       ~~~~~^~~~~~
+At top level:
+../src/editors.h:69:14: warning: 'filter_settings' defined but not used [-Wunused-variable]
+   69 | static char *filter_settings[10] = {"TOP_LEFT", "TOP", "TOP_RIGHT", "LEFT", "CENTER", "RIGHT", "BOT_LEFT", "BOT", "BOT_RIGHT", "SCALING_FACTOR"};
+      |              ^~~~~~~~~~~~~~~
+../src/editors.h:60:14: warning: 'HSV_setting' defined but not used [-Wunused-variable]
+   60 | static char *HSV_setting[3] = {"HUE", "SATURATION", "VALUE"};
+      |              ^~~~~~~~~~~
+'Finished building: ../src/main_Data.c'
+' '
+'Building target: Data_Processor.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LS:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/bsplib/lib -o "Data_Processor.elf"  ./src/camera.o ./src/editors.o ./src/hardware_functions.o ./src/main_Data.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Data_Processor.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Data_Processor.elf  |tee "Data_Processor.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79524	   3860	  22688	 106072	  19e58	Data_Processor.elf
+'Finished building: Data_Processor.elf.size'
+' '
+16:58:48 **** Incremental Build of configuration Debug for project SD_Card_Processor ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
 make[1]: Nothing to be done for 'main-build'.
-15:36:47 **** Incremental Build of configuration Debug for project SD_Card_Processor ****
-make all 
-make --no-print-directory pre-build
-a9-linaro-pre-build-step
-' '
-make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
-15:36:48 **** Incremental Build of configuration Debug for project Real_Time_Video_Filter_system ****
+16:58:48 **** Incremental Build of configuration Debug for project Real_Time_Video_Filter_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 61278 A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/Real_Time_Video_Filter.xpfm standalone_domain,standalone_ps7_cortexa9_1 A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif
-sdcard_gen --xpfm A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/Real_Time_Video_Filter.xpfm --sys_config Real_Time_Video_Filter --bif A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif --bitstream A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Data_Processor/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit --elf A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Data_Processor/Debug/Data_Processor.elf,ps7_cortexa9_0 --elf A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/SD_Card_Processor/Debug/SD_Card_Processor.elf,ps7_cortexa9_1
-creating BOOT.BIN using A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Data_Processor/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit
-Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image A:/Documents/School/ENSC452/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+generate_system_bif.bat 53368 S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/Real_Time_Video_Filter.xpfm standalone_domain,standalone_ps7_cortexa9_1 S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif
+sdcard_gen --xpfm S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/Real_Time_Video_Filter.xpfm --sys_config Real_Time_Video_Filter --bif S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif --bitstream S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Data_Processor/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit --elf S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Data_Processor/Debug/Data_Processor.elf,ps7_cortexa9_0 --elf S:/Documents/GitHub/Real_Time_Video_Filter/workspace/SD_Card_Processor/Debug/SD_Card_Processor.elf,ps7_cortexa9_1
+creating BOOT.BIN using S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Data_Processor/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit
+Running S:/Xilinx/Vitis/2020.2/bin/bootgen  -image S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+Nothing to build in platform 'Real_Time_Video_Filter'
+
+16:58:57 **** Incremental Build of configuration Debug for project Data_Processor ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+make[1]: Nothing to be done for 'main-build'.
+16:58:58 **** Incremental Build of configuration Debug for project SD_Card_Processor ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+make[1]: Nothing to be done for 'main-build'.
+16:58:59 **** Incremental Build of configuration Debug for project Real_Time_Video_Filter_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 53368 S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/Real_Time_Video_Filter.xpfm standalone_domain,standalone_ps7_cortexa9_1 S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif
+sdcard_gen --xpfm S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/Real_Time_Video_Filter.xpfm --sys_config Real_Time_Video_Filter --bif S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/system.bif --bitstream S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Data_Processor/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit --elf S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Data_Processor/Debug/Data_Processor.elf,ps7_cortexa9_0 --elf S:/Documents/GitHub/Real_Time_Video_Filter/workspace/SD_Card_Processor/Debug/SD_Card_Processor.elf,ps7_cortexa9_1
+creating BOOT.BIN using S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Data_Processor/_ide/bitstream/Real_Time_Video_Filter_wrapper.bit
+Running S:/Xilinx/Vitis/2020.2/bin/bootgen  -image S:/Documents/GitHub/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

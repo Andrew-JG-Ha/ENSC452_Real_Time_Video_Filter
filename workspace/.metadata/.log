@@ -5004,3 +5004,419 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.launchbar.core 2 0 2024-04-07 16:44:02.735
 !MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:16.089
+!MESSAGE XSCT Command: [::hsi::utils::openhw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa], Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:18.051
+!MESSAGE XSCT command with result: [::hsi::utils::openhw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa], Result: [null, ]. Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:18.209
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss ], Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:18.214
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:18.215
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss], Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:18.218
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-04-07 16:58:18.219
+!MESSAGE Generating MD5 hash for file: S:\Downloads\Rebuild\Real_Time_Video_Filter\workspace\Real_Time_Video_Filter\export\Real_Time_Video_Filter\sw\Real_Time_Video_Filter\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:18.230
+!MESSAGE XSCT Command: [::hsi::utils::closesw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss], Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:18.232
+!MESSAGE XSCT command with result: [::hsi::utils::closesw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:19.911
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss ], Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:19.918
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss ], Result: [null, ]. Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:19.919
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss], Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:19.922
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_1",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-04-07 16:58:19.923
+!MESSAGE Generating MD5 hash for file: S:\Downloads\Rebuild\Real_Time_Video_Filter\workspace\Real_Time_Video_Filter\export\Real_Time_Video_Filter\sw\Real_Time_Video_Filter\standalone_ps7_cortexa9_1\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:19.925
+!MESSAGE XSCT Command: [::hsi::utils::closesw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss], Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:19.945
+!MESSAGE XSCT command with result: [::hsi::utils::closesw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss], Result: [null, ]. Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:21.712
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa], Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:21.725
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa], Result: [null, {"RGBX_AXI_Stream_0": {"hier_name": "RGBX_AXI_Stream_0",
+"type": "RGBX_AXI_Stream",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"RGB_to_RGBX_0": {"hier_name": "RGB_to_RGBX_0",
+"type": "RGB_to_RGBX",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_0": {"hier_name": "axi_gpio_0",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_mem_intercon": {"hier_name": "axi_mem_intercon",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"axi_vdma_0": {"hier_name": "axi_vdma_0",
+"type": "axi_vdma",
+"version": "6.3",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_0": {"hier_name": "clk_wiz_0",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"ov7670_capture_0": {"hier_name": "ov7670_capture_0",
+"type": "ov7670_capture",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"ov7670_controller_0": {"hier_name": "ov7670_controller_0",
+"type": "ov7670_controller",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"processing_system7_0": {"hier_name": "processing_system7_0",
+"type": "processing_system7",
+"version": "5.5",
+"ip_type": "",
+},
+"ps7_0_axi_periph": {"hier_name": "ps7_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"rst_ps7_0_100M": {"hier_name": "rst_ps7_0_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"rst_ps7_0_100M_1": {"hier_name": "rst_ps7_0_100M_1",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"vga_controller_0": {"hier_name": "vga_controller_0",
+"type": "vga_controller",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"ps7_clockc_0": {"hier_name": "ps7_clockc_0",
+"type": "ps7_clockc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_uart_1": {"hier_name": "ps7_uart_1",
+"type": "ps7_uart",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pl310_0": {"hier_name": "ps7_pl310_0",
+"type": "ps7_pl310",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pmu_0": {"hier_name": "ps7_pmu_0",
+"type": "ps7_pmu",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_0": {"hier_name": "ps7_qspi_0",
+"type": "ps7_qspi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_linear_0": {"hier_name": "ps7_qspi_linear_0",
+"type": "ps7_qspi_linear",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_axi_interconnect_0": {"hier_name": "ps7_axi_interconnect_0",
+"type": "ps7_axi_interconnect",
+"version": "1.00.a",
+"ip_type": "BUS",
+},
+"ps7_cortexa9_0": {"hier_name": "ps7_cortexa9_0",
+"type": "ps7_cortexa9",
+"version": "5.2",
+"ip_type": "PROCESSOR",
+},
+"ps7_cortexa9_1": {"hier_name": "ps7_cortexa9_1",
+"type": "ps7_cortexa9",
+"version": "5.2",
+"ip_type": "PROCESSOR",
+},
+"ps7_ddr_0": {"hier_name": "ps7_ddr_0",
+"type": "ps7_ddr",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_ethernet_0": {"hier_name": "ps7_ethernet_0",
+"type": "ps7_ethernet",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_usb_0": {"hier_name": "ps7_usb_0",
+"type": "ps7_usb",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_sd_0": {"hier_name": "ps7_sd_0",
+"type": "ps7_sdio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ttc_0": {"hier_name": "ps7_ttc_0",
+"type": "ps7_ttc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpio_0": {"hier_name": "ps7_gpio_0",
+"type": "ps7_gpio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ddrc_0": {"hier_name": "ps7_ddrc_0",
+"type": "ps7_ddrc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dev_cfg_0": {"hier_name": "ps7_dev_cfg_0",
+"type": "ps7_dev_cfg",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_xadc_0": {"hier_name": "ps7_xadc_0",
+"type": "ps7_xadc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ocmc_0": {"hier_name": "ps7_ocmc_0",
+"type": "ps7_ocmc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_coresight_comp_0": {"hier_name": "ps7_coresight_comp_0",
+"type": "ps7_coresight_comp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpv_0": {"hier_name": "ps7_gpv_0",
+"type": "ps7_gpv",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuc_0": {"hier_name": "ps7_scuc_0",
+"type": "ps7_scuc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_globaltimer_0": {"hier_name": "ps7_globaltimer_0",
+"type": "ps7_globaltimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_intc_dist_0": {"hier_name": "ps7_intc_dist_0",
+"type": "ps7_intc_dist",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_l2cachec_0": {"hier_name": "ps7_l2cachec_0",
+"type": "ps7_l2cachec",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_s": {"hier_name": "ps7_dma_s",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_iop_bus_config_0": {"hier_name": "ps7_iop_bus_config_0",
+"type": "ps7_iop_bus_config",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ram_0": {"hier_name": "ps7_ram_0",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_ram_1": {"hier_name": "ps7_ram_1",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_scugic_0": {"hier_name": "ps7_scugic_0",
+"type": "ps7_scugic",
+"version": "1.00.a",
+"ip_type": "INTERRUPT_CNTLR",
+},
+"ps7_scutimer_0": {"hier_name": "ps7_scutimer_0",
+"type": "ps7_scutimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuwdt_0": {"hier_name": "ps7_scuwdt_0",
+"type": "ps7_scuwdt",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_slcr_0": {"hier_name": "ps7_slcr_0",
+"type": "ps7_slcr",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_ns": {"hier_name": "ps7_dma_ns",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_0": {"hier_name": "ps7_afi_0",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_1": {"hier_name": "ps7_afi_1",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_2": {"hier_name": "ps7_afi_2",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_3": {"hier_name": "ps7_afi_3",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_m_axi_gp0": {"hier_name": "ps7_m_axi_gp0",
+"type": "ps7_m_axi_gp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:46.435
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss ], Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:46.440
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:46.441
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss], Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:46.457
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-04-07 16:58:46.458
+!MESSAGE Generating MD5 hash for file: S:\Downloads\Rebuild\Real_Time_Video_Filter\workspace\Real_Time_Video_Filter\export\Real_Time_Video_Filter\sw\Real_Time_Video_Filter\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:46.460
+!MESSAGE XSCT Command: [::hsi::utils::closesw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss], Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:46.462
+!MESSAGE XSCT command with result: [::hsi::utils::closesw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:48.072
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss ], Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:48.078
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss ], Result: [null, ]. Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:48.079
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss], Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:48.082
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_1",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-04-07 16:58:48.083
+!MESSAGE Generating MD5 hash for file: S:\Downloads\Rebuild\Real_Time_Video_Filter\workspace\Real_Time_Video_Filter\export\Real_Time_Video_Filter\sw\Real_Time_Video_Filter\standalone_ps7_cortexa9_1\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:48.084
+!MESSAGE XSCT Command: [::hsi::utils::closesw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss], Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:48.097
+!MESSAGE XSCT command with result: [::hsi::utils::closesw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss], Result: [null, ]. Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:57.783
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss ], Thread: Worker-9: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:57.787
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-9: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:57.788
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss], Thread: Worker-9: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:57.792
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-9: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-04-07 16:58:57.793
+!MESSAGE Generating MD5 hash for file: S:\Downloads\Rebuild\Real_Time_Video_Filter\workspace\Real_Time_Video_Filter\export\Real_Time_Video_Filter\sw\Real_Time_Video_Filter\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:57.794
+!MESSAGE XSCT Command: [::hsi::utils::closesw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss], Thread: Worker-9: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:57.797
+!MESSAGE XSCT command with result: [::hsi::utils::closesw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-9: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:58.534
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss ], Thread: Worker-9: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:58.539
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss ], Result: [null, ]. Thread: Worker-9: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:58.539
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss], Thread: Worker-9: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:58.542
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/hw/Real_Time_Video_Filter_wrapper.xsa S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_1",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-9: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-04-07 16:58:58.542
+!MESSAGE Generating MD5 hash for file: S:\Downloads\Rebuild\Real_Time_Video_Filter\workspace\Real_Time_Video_Filter\export\Real_Time_Video_Filter\sw\Real_Time_Video_Filter\standalone_ps7_cortexa9_1\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:58.543
+!MESSAGE XSCT Command: [::hsi::utils::closesw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss], Thread: Worker-9: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:58:58.545
+!MESSAGE XSCT command with result: [::hsi::utils::closesw S:/Downloads/Rebuild/Real_Time_Video_Filter/workspace/Real_Time_Video_Filter/export/Real_Time_Video_Filter/sw/Real_Time_Video_Filter/standalone_ps7_cortexa9_1/system.mss], Result: [null, ]. Thread: Worker-9: Building Workspace
