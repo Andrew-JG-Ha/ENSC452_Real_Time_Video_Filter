@@ -1,9 +1,7 @@
 #include "image_data.h"
 
 void storeImageInDDR() {
-//	rawDataStorage = (u8*)*VGA_BUFFER;
-	rawDataStorage = (u8*) 0x07000000;
-	memcpy(rawDataStorage, (u8*)*VGA_BUFFER,1228800);
+	rawDataStorage = (u8*)*VGA_BUFFER;
 	imageStorage = (u8*) 0x06000000;
 
 	u8 BMP_IMAGE_HEADER[] = {

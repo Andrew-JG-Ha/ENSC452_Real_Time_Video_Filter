@@ -4953,3 +4953,54 @@ Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-89: Launc
 
 !ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 15:37:01.452
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-89: Launching SystemDebugger_Real_Time_Video_Filter_system
+!SESSION 2024-04-07 16:11:44.555 -----------------------------------------------
+eclipse.buildId=2020.2
+java.version=11.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-04-07 16:12:01.644
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 4 2024-04-07 16:12:04.156
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:12:07.754
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:12:07.754
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:12:07.770
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:12:07.784
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:12:07.785
+!MESSAGE XSCT Command: [setws S:/Documents/GitHub/Real_Time_Video_Filter/workspace], Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:12:07.787
+!MESSAGE XSCT command with result: [setws S:/Documents/GitHub/Real_Time_Video_Filter/workspace], Result: [null, ]. Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:12:10.180
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:12:10.458
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:12:10.459
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-04-07 16:12:10.459
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, S:/Xilinx/Vitis/2020.2/data]. Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-04-07 16:44:02.734
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-04-07 16:44:02.734
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-04-07 16:44:02.735
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType

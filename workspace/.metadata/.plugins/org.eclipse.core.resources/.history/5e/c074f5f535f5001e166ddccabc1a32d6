@@ -2,7 +2,6 @@
 
 void storeImageInDDR() {
 //	rawDataStorage = (u8*)*VGA_BUFFER;
-	rawDataStorage = (u8*) 0x07000000;
 	memcpy(rawDataStorage, (u8*)*VGA_BUFFER,1228800);
 	imageStorage = (u8*) 0x06000000;
 

@@ -169,8 +169,7 @@ int main() {
     	switch (STORE_IMAGE) {
     		case 0:
             	if (sw_value == 1) { // HSV adjustment
-            		memcpy(STORAGE_BUFFER, writeBuffer1, CAM_DATA_BUFFER_SIZE*4);
-            		raw_to_HSV_frame(STORAGE_BUFFER, vgaBuffer);
+            		raw_to_HSV_frame(writeBuffer1, vgaBuffer);
             	}
             	else if(sw_value == 2) { // Silly
             		raw_to_HSV_frame(writeBuffer1, hsvBuffer);

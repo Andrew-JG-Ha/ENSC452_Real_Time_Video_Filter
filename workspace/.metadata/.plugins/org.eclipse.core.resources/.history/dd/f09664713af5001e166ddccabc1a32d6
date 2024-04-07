@@ -5,7 +5,6 @@
  */
 
 #include "hardware_functions.h"
-#include "camera.h"
 
 /* ---------------------------------------------------------------------------- *
  * 								gpio_init()		 							*
@@ -48,7 +47,6 @@ void BTN_Intr_Handler(void *InstancePtr)
 		if (btn_value == 1) {
 			//BTNC
 			xil_printf("Taking a photo! Smile!\r\n");
-			memcpy(SD_BUFFER, (void*) 0x12000000, 1228800);
 			Xil_DCacheDisable();
 			STORE_IMAGE = 1;
 		}
