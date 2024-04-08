@@ -4,7 +4,7 @@
 void raw_to_HSV_frame(int* source, int* destination) {
 	RGB rgb_data;
 	HSV hsv_data;
-
+	printf("I am started\n");
 	for (int j = 0; j < NUM_VGA_ELEMENTS/2; j++) {
 
 		//Isolate blue, green, and red components
@@ -34,6 +34,7 @@ void raw_to_HSV_frame(int* source, int* destination) {
 
 		destination[2*j + 1] = ((u32) (rgb_data.b) << 20) | ((u32) (rgb_data.g) << 12) | ((u32) (rgb_data.r) << 4);
 	}
+	printf("I am ended\n");
 }
 
 void applySillyFilter(int* destination, int* hsv, int* edges) {

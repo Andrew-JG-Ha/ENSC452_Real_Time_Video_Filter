@@ -18,6 +18,7 @@
 
 #define COMM_VAL (*(volatile unsigned long *)(0xFFFF0000))
 #define VGA_BUFFER (*(volatile int **)(0xFFFF00FF))
+#define SD_BUFFER (*(volatile int **)(0xFFFF01FF))
 
 #define packagedHSize 320
 

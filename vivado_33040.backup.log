@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Apr  7 07:38:49 2024
+# Process ID: 33040
+# Current directory: A:/Documents/School/ENSC452/Real_Time_Video_Filter
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent29540 A:\Documents\School\ENSC452\Real_Time_Video_Filter\Real_Time_Video_Filter.xpr
+# Log file: A:/Documents/School/ENSC452/Real_Time_Video_Filter/vivado.log
+# Journal file: A:/Documents/School/ENSC452/Real_Time_Video_Filter\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.xpr
+INFO: [Project 1-313] Project file moved from 'S:/Documents/GitHub/Real_Time_Video_Filter' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'a:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.ip_user_files'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+open_bd_design {A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/sources_1/bd/Real_Time_Video_Filter/Real_Time_Video_Filter.bd}
+Reading block design file <A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/sources_1/bd/Real_Time_Video_Filter/Real_Time_Video_Filter.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- ShakeebZacky:user:RGB_to_RGBX:1.0 - RGB_to_RGBX_0
+Adding component instance block -- Andrew_Ha:user:RGBX_AXI_Stream:1.0 - RGBX_AXI_Stream_0
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding component instance block -- user.org:user:vga_controller:1.0 - vga_controller_0
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M_1
+Adding component instance block -- xilinx.com:module_ref:ov7670_controller:1.0 - ov7670_controller_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:module_ref:ov7670_capture:1.0 - ov7670_capture_0
+Successfully read diagram <Real_Time_Video_Filter> from block design file <A:/Documents/School/ENSC452/Real_Time_Video_Filter/Real_Time_Video_Filter.srcs/sources_1/bd/Real_Time_Video_Filter/Real_Time_Video_Filter.bd>
+open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1206.312 ; gain = 0.000
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
